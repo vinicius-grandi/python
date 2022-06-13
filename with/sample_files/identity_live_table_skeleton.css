@@ -1,0 +1,362 @@
+/* LEFT MENU + CONTENT */
+.sk {
+  display: none;
+  flex-flow: column nowrap;
+  margin-bottom: 20px;
+  position: relative;
+}
+.sk--myfs {
+  padding: 12px;
+}
+.sk__w {
+  display: grid;
+  grid-template-columns: 107px 82px 47px 98px auto 140px;
+  grid-template-rows: 30px;
+  gap: 0 8px;
+  margin: 10px 0 16px;
+}
+.sk__w--tv {
+  grid-template-columns: 107px 82px 47px 98px 36px auto 140px;
+}
+.sk--myfs .sk__w {
+  margin-bottom: 12px;
+}
+.teamResultsFixturesTab .sk__w {
+  display: none;
+}
+.isSportPage .sk__w {
+  margin-top: 0;
+}
+.isSportPage .sk__w > div {
+  display: block;
+}
+.isSportPage .sk__w > div:nth-of-type(2),
+.isSportPage .sk__w > div:nth-of-type(3),
+.isSportPage .sk__w > div:nth-of-type(8),
+.isSportPage .sk__w > div:nth-of-type(10) {
+  display: none;
+}
+.myfs .sk__w {
+  margin-top: 0;
+}
+.myfs .sk__w :nth-of-type(2) {
+  display: block;
+  background-color: var(--color-skeleton-1);
+}
+.sk__w > div {
+  display: none;
+  background-color: var(--color-skeleton-1);
+  border-radius: 8px;
+}
+.sk__w :nth-of-type(1) {
+  display: block;
+  background-color: var(--color-skeleton-2);
+}
+.sk__w :nth-last-of-type(4) {
+  background-color: transparent;
+}
+.sk__w :nth-last-of-type(2) {
+  background-color: var(--color-skeleton-2);
+}
+.sk__c {
+  height: 58px;
+  background-color: var(--color-skeleton-1);
+}
+.myfs .sk__c {
+  border-radius: 8px;
+}
+.sk__t {
+  height: 27px;
+  background-color: var(--color-skeleton-2);
+}
+.sk__b {
+  display: none;
+}
+.teamResultsFixturesTab .sk__b,
+.oneLineLayout .sk__b {
+  display: grid;
+}
+.sk > div:nth-of-type(2) {
+  margin-top: 0;
+}
+.sk__h {
+  background-color: var(--color-skeleton-1);
+  height: 32px;
+  margin-top: 12px;
+  border-radius: 8px;
+}
+#my-teams-left-menu .sk__h {
+  margin-top: 0;
+  margin-bottom: 8px;
+  background-color: var(--color-skeleton-2);
+}
+.sk__s {
+  background-color: var(--color-skeleton-2);
+  height: 32px;
+  border-radius: 4px;
+}
+.sk__r {
+  display: grid;
+  grid-template-columns: 26px 73px auto 123px;
+  grid-template-rows: 48px;
+  border-bottom: 1px solid var(--color-skeleton-1);
+}
+.oneLineLayout .sk__r {
+  grid-template-rows: 35px;
+}
+.sk__r > div,
+.sk__r > div::after {
+  align-self: center;
+  background: var(--color-skeleton-1);
+  background-image: linear-gradient(to right, var(--color-skeleton-1) 0%, var(--color-skeleton-2) 20%, var(--color-skeleton-1) 40%, var(--color-skeleton-1) 100%);
+  background-repeat: no-repeat;
+  background-size: 800px 104px;
+  -webkit-animation-duration: 1.5s;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-name: placeholderShimmer;
+  -webkit-animation-timing-function: linear;
+}
+.oneLineLayout .sk__r--a div:nth-of-type(3) {
+  max-width: 180px;
+}
+.sk__r :nth-of-type(1) {
+  width: 13px;
+  height: 13px;
+  justify-self: center;
+  border-radius: 4px;
+}
+.sk__r :nth-of-type(2) {
+  width: 40px;
+  height: 13px;
+  justify-self: center;
+  border-radius: 4px;
+}
+.sk__r :nth-of-type(3) {
+  max-width: 108px;
+  width: 100%;
+  height: 13px;
+  position: relative;
+  margin: -19px 0 0 20px;
+  border-radius: 4px;
+}
+.sk__r :nth-of-type(3)::after {
+  content: "";
+  background-color: var(--color-skeleton-1);
+  margin-top: 19px;
+  position: absolute;
+  width: 92px;
+  height: 13px;
+  border-radius: 4px;
+}
+.oneLineLayout .sk__r :nth-of-type(3) {
+  max-width: 220px;
+  position: initial;
+  margin-top: initial;
+  justify-self: center;
+  align-self: center;
+  margin-left: -20px;
+}
+.oneLineLayout .sk__r :nth-of-type(3)::after {
+  display: none;
+}
+.sk__r :nth-of-type(4) {
+  width: 60px;
+  height: 13px;
+  justify-self: right;
+  border-radius: 4px;
+}
+.teamResultsFixturesTab .sk__r :nth-of-type(4) {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+.sk__n {
+  padding: 12px 0;
+  display: grid;
+  grid-template: "f     .    b" 24px "f     .    ." 4px "f     .    c" 84px "f     .    ." 6px "f     .    s" 14px / 208px 16px 1fr;
+}
+.sk__n + .sk__n {
+  border-top: solid 1px var(--color-support-1);
+}
+.sk__n div {
+  border-radius: 4px;
+}
+.sk__nb {
+  grid-area: b;
+  display: flex;
+}
+.sk__nb div {
+  width: 100px;
+  background-color: var(--color-support-1);
+  border-radius: 4px;
+}
+.sk__nf {
+  grid-area: f;
+  background: var(--color-skeleton-1) url(/res/_fs/build/document.fe6a790.svg) no-repeat center / 32px auto;
+  border-radius: 8px !important;
+}
+.sk__nc {
+  grid-area: c;
+}
+.sk__nh div {
+  height: 18px;
+  margin-bottom: 4px;
+}
+.sk__nh--s {
+  width: 50%;
+}
+.sk__nh--m {
+  width: 70%;
+}
+.sk__nh--l {
+  width: 100%;
+}
+.sk__nt div {
+  height: 12px;
+  margin-bottom: 4px;
+}
+.sk__nt--s {
+  width: 70%;
+}
+.sk__nt--m {
+  width: 80%;
+}
+.sk__nt--l {
+  width: 90%;
+}
+.sk__ns {
+  grid-area: s;
+  width: 90px;
+}
+.sk__na {
+  background: var(--color-skeleton-1);
+  background-image: linear-gradient(to right, var(--color-skeleton-1) 0%, var(--color-skeleton-2) 20%, var(--color-skeleton-1) 40%, var(--color-skeleton-1) 100%);
+  background-repeat: no-repeat;
+  background-size: 800px 104px;
+  -webkit-animation-duration: 1.5s;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-name: placeholderShimmer;
+  -webkit-animation-timing-function: linear;
+}
+@media only screen and (max-width: 799px) {
+  .sk--myfs {
+    padding: 12px 0;
+  }
+  .sk__w {
+    grid-template-columns: 107px 42px 61px 82px 0 0 0 0 0 0;
+    grid-template-rows: 30px;
+    overflow: hidden;
+  }
+  .sk__w--tv {
+    grid-template-columns: 107px 42px 61px 82px 36px 0 0 0 0 0;
+  }
+  .sk--myfsTimeline .sk__s {
+    height: 36px;
+  }
+  .sk__n {
+    padding: 12px 16px;
+  }
+  .sk__h {
+    height: 48px;
+    margin-top: 0;
+    border-radius: 0;
+  }
+  .sk__s {
+    height: 40px;
+    border-radius: 0;
+  }
+  .sk__r {
+    grid-template-columns: 31px 0 auto 73px;
+  }
+  .sk__r :nth-of-type(2) {
+    visibility: hidden;
+  }
+  .sk__r :nth-of-type(4) {
+    margin-right: 10px;
+  }
+  .oneLineLayout .sk__r {
+    grid-template-rows: 46px;
+  }
+  .oneLineLayout .sk__r--a div:nth-of-type(3) {
+    max-width: 100px;
+  }
+  .oneLineLayout .sk__r :nth-of-type(3) {
+    max-width: 108px;
+    margin: -19px 0 0 0;
+    justify-self: left;
+  }
+  .oneLineLayout .sk__r :nth-of-type(3)::after {
+    max-width: 92px;
+    display: block;
+  }
+  .twoLineLayout .sk__r :nth-of-type(3) {
+    margin: -19px 0 0 0;
+  }
+}
+@media only screen and (max-width: 639px) {
+  .sk__w {
+    padding: 0 8px;
+    margin: 12px 0;
+  }
+  .isSportPage .sk__w {
+    margin-top: 12px;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .sk__n {
+    padding: 12px 0;
+    grid-template: " .     f     .    b" 18px " .     f     .    ." 4px " .     f     .    c" auto " .     f     .    s" 13px / 12px 120px 12px 1fr;
+  }
+  .sk__nf {
+    height: 70px;
+  }
+  .sk__nt {
+    display: none;
+  }
+  .sk__nh div {
+    height: 14px;
+  }
+}
+/* show/hide logic ---> */
+.filters ~ .sk .sk__w {
+  display: none !important;
+}
+body:not(.fcp-skeleton) .sk {
+  display: none !important;
+}
+#teamResultsFixturesTab .sk {
+  display: block !important;
+}
+.fcp-skeleton.loading .sk,
+.fcp-skeleton.myfs .sk {
+  display: flex;
+}
+/* show/hide logic <--- */
+/* for short sports and myGames  ---> */
+.fcp-skeleton.loading .loadingOverlay {
+  background: transparent;
+}
+.fcp-skeleton.loading .loadingAnimation,
+.fcp-skeleton.loading .event:not([class*="event--"]),
+.fcp-skeleton.loading .copyright,
+.fcp-skeleton.loading .odds__message {
+  display: none;
+}
+.fcp-skeleton.loading .event--myGames ~ .sk:not(.sk--special) > div {
+  display: none;
+}
+.fcp-skeleton.loading .event--myGames ~ .sk--special > div {
+  display: none;
+}
+/* for short sports and myTeams  <--- */
+@-webkit-keyframes placeholderShimmer {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+}
+

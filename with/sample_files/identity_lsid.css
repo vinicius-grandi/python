@@ -1,0 +1,441 @@
+/* LEFT MENU + CONTENT */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+#lsid-window {
+  position: fixed;
+  z-index: var(--zIndex-modalWindow) !important;
+  background-color: var(--color-support-5);
+  border-radius: 8px;
+}
+#lsid-window.long {
+  position: absolute;
+}
+#lsid-window[data-window-name="login"] {
+  border-radius: 12px;
+}
+.detailbody #lsid-window[data-window-name="newTermsOfUse1"] + div#lsid-window-mask,
+.detailbody #lsid-window[data-window-name="newTermsOfUse2"] + div#lsid-window-mask,
+.detailbody #lsid-window[data-window-name="deleteAccount"] + div#lsid-window-mask,
+.detailbody #lsid-window[data-window-name="registration-ok-message"] + div#lsid-window-mask {
+  display: block !important;
+}
+#lsid-window .header {
+  display: block;
+  background-color: initial;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--color-combination-2);
+  line-height: 40px;
+  padding: 8px 56px 8px 24px;
+  border-bottom: 1px solid var(--color-support-1);
+}
+#lsid-window h1 {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--color-combination-2);
+  line-height: 40px;
+  padding: 8px 56px 8px 24px;
+  margin: initial;
+  border-bottom: 1px solid var(--color-support-1);
+}
+#lsid-window .err-msg-wrapper {
+  color: var(--color-red);
+  padding-top: 8px;
+}
+#lsid-window .content {
+  width: 332px;
+  padding: 24px 32px 32px;
+  box-sizing: border-box;
+}
+#lsid-window [type="text"],
+#lsid-window [type="password"] {
+  border-radius: 8px;
+  height: 40px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 12px;
+  margin: 0;
+  color: var(--color-combination-2);
+  background-color: var(--color-combination-11);
+  border: 1px solid var(--color-combination-12);
+}
+#lsid-window [type="text"]:focus,
+#lsid-window [type="password"]:focus {
+  outline: none;
+  border-color: var(--color-combination-13);
+}
+#lsid-window [type="submit"],
+#lsid-window [type="button"] {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 8px;
+  box-sizing: border-box;
+  letter-spacing: 0.4px;
+  text-align: center;
+  padding: 12px;
+  width: 100%;
+  cursor: pointer;
+  border: none;
+  white-space: normal;
+  min-height: 40px;
+  -webkit-appearance: none;
+}
+#lsid-window-close {
+  top: 20px;
+  right: 24px;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-image: url("data:image/svg+xml, <svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 20 20%27 fill=%27%23999999%27><path d=%27m19 0-9 9-9-9-1 1 9 9-9 9 1 1 9-9 9 9 1-1-9-9 9-9z%27/></svg>");
+  background-repeat: no-repeat;
+  z-index: 2;
+}
+#lsid-window[data-window-name=registration-ok-message] #lsid-window-close {
+  top: 20px;
+}
+#lsid-window-close:hover {
+  opacity: 0.7;
+}
+#lsid-window-mask {
+  z-index: var(--zIndex-modalMask) !important;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: none;
+  background: #1e2426;
+}
+#lsid-loading {
+  display: grid;
+  position: absolute;
+  width: 194px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  place-items: center;
+  border-radius: 6px;
+  background-color: var(--color-support-5);
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  row-gap: 12px;
+  padding: 28px 20px 20px;
+  box-sizing: border-box;
+  color: var(--color-support-4);
+  z-index: var(--zIndex-loading);
+}
+#lsid-loading::before {
+  content: "";
+  display: flex;
+  border: 4px solid var(--color-support-1);
+  border-top-color: var(--color-seccondary-3);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  animation: spin 1.8s ease-in-out infinite;
+}
+.content-wrap {
+  display: flex;
+  justify-content: center;
+}
+.lsid-messages {
+  width: 332px;
+  padding: 46px 32px 32px;
+  box-sizing: border-box;
+  display: grid;
+  row-gap: 24px;
+  place-items: center;
+  background-color: var(--color-support-5);
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+}
+.lsid-messages .header-message:not(.err) {
+  width: 66px;
+  height: 48px;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml, <svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 65.9 48%27><path d=%27m10.1 26.4c-.2-1.2-.2-2.4-.1-3.6l-9.9-.9c-.2 2-.1 4.1.3 6.3.4 2.1 1 4.1 1.9 6l9-4.2c-.6-1.1-.9-2.3-1.2-3.6m3.1 6.6-7.6 6.4c2.3 2.7 5.1 4.8 8.2 6.3l4.2-9c-1.8-.8-3.5-2.1-4.8-3.7m13.2 4.9c-1.2.2-2.5.3-3.7.2l-.9 9.9c2 .2 4.1.1 6.3-.3.7-.1 1.4-.3 2-.5l-2.6-9.6c-.2.1-.6.2-1.1.3m-4.8-27.8c1.7-.3 3.4-.3 5 0l4.2-9.1c-3.5-1-7.2-1.3-11-.6-9.4 1.6-16.6 8.7-19 17.4l9.6 2.6c1.4-5.2 5.6-9.3 11.2-10.3m11.4 24.7 6.4 7.6c1.6-1.4 3-2.9 4.2-4.6l-8.1-5.7c-.7 1-1.5 1.9-2.5 2.7m14.9-12.9-9.9.9c.1.8.1 1.6 0 2.5l9.9.9c.1-1.5.1-2.9 0-4.3%27 fill=%27%23001e28%27 /><path d=%27m35.2 0-9.2 19.8 39.9-19.8z%27 fill=%27%23ff0046%27 /></svg>");
+}
+.theme--dark .lsid-messages .header-message:not(.err) {
+  background-image: url("data:image/svg+xml, <svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 65.9 48%27><path d=%27m10.1 26.4c-.2-1.2-.2-2.4-.1-3.6l-9.9-.9c-.2 2-.1 4.1.3 6.3.4 2.1 1 4.1 1.9 6l9-4.2c-.6-1.1-.9-2.3-1.2-3.6m3.1 6.6-7.6 6.4c2.3 2.7 5.1 4.8 8.2 6.3l4.2-9c-1.8-.8-3.5-2.1-4.8-3.7m13.2 4.9c-1.2.2-2.5.3-3.7.2l-.9 9.9c2 .2 4.1.1 6.3-.3.7-.1 1.4-.3 2-.5l-2.6-9.6c-.2.1-.6.2-1.1.3m-4.8-27.8c1.7-.3 3.4-.3 5 0l4.2-9.1c-3.5-1-7.2-1.3-11-.6-9.4 1.6-16.6 8.7-19 17.4l9.6 2.6c1.4-5.2 5.6-9.3 11.2-10.3m11.4 24.7 6.4 7.6c1.6-1.4 3-2.9 4.2-4.6l-8.1-5.7c-.7 1-1.5 1.9-2.5 2.7m14.9-12.9-9.9.9c.1.8.1 1.6 0 2.5l9.9.9c.1-1.5.1-2.9 0-4.3%27 fill=%27%23ffffff%27 /><path d=%27m35.2 0-9.2 19.8 39.9-19.8z%27 fill=%27%23ff0046%27 /></svg>");
+}
+[class*="_ss"] .lsid-messages .header-message:not(.err) {
+  background-image: url("data:image/svg+xml, <svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 260 260%27><path fill=%27%23001E28%27 d=%27M225.333 0H34.667L0 34.667v190.666L34.667 260h190.666L260 225.333V34.667z%27/><path d=%27m202.9 33.002 24.102 24.092V203.9l-24.073 24.102H56.075L32.002 203.9V57.084l24.112-24.082H202.9zm-5.558 13.387H136.19v168.216h61.182l16.224-16.253v-135.7l-16.254-16.263zm-74.538 0H61.652L45.389 62.632v135.72l16.243 16.253h61.172V46.39zM77.3 91.036c1.365 0 2.643.517 3.579 1.472l9.828 9.828a5.034 5.034 0 0 1 1.482 3.588v45.728c0 .321.204.546.526.546h19.325c.321 0 .536.204.536.526v11.72c0 .321-.215.526-.536.526H59.547c-.322 0-.527-.205-.527-.526v-11.72c0-.322.205-.526.527-.526H78.87c.322 0 .536-.225.536-.546v-45.299c0-1.384-1.17-2.545-2.535-2.545H59.547c-.322 0-.527-.204-.527-.526v-11.73c0-.311.205-.516.527-.516zm109.653-.007a5.01 5.01 0 0 1 3.588 1.482l9.828 9.818a5.065 5.065 0 0 1 1.472 3.598v44.138a5.07 5.07 0 0 1-1.472 3.608l-9.828 9.818c-.946.956-2.223 1.472-3.588 1.472h-23.77c-1.366 0-2.643-.516-3.589-1.472l-9.828-9.818a5.07 5.07 0 0 1-1.472-3.608v-44.138c0-1.375.527-2.642 1.472-3.598l9.828-9.818a5.01 5.01 0 0 1 3.588-1.482zm-.42 12.782h-22.922c-1.482 0-2.544 1.16-2.544 2.545v43.3c0 1.365 1.062 2.545 2.544 2.545h22.923c1.365 0 2.525-1.18 2.525-2.545v-43.3c0-1.384-1.16-2.545-2.525-2.545z%27 fill=%27%23FFF%27/></svg>");
+}
+[class*="_scoreboard"] .lsid-messages .header-message:not(.err) {
+  background-image: url("data:image/svg+xml, <svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 260 260%27><rect fill=%27%23001E28%27 width=%27260%27 height=%27260%27 rx=%2760%27/><path d=%27M62.582 38 62 223l160-92.051L62.582 38zm131.308 89.447-40.465 11.585-48.14-63.269 88.605 51.684zm-90.172-33.812L73.19 167.029 73.504 64.2l30.214 29.434zm8.213 9.115 29.498 38.751-48.096 6.264 18.598-45.015zm-32.787 97.596 10.317-40.884 78.601-10.237-88.918 51.121z%27 fill=%27%23FFF%27/></svg>");
+}
+.lsid-messages .header-message.err {
+  width: 52px;
+  height: 45px;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml, <svg viewBox=%270 0 52 45%27 xmlns=%27http://www.w3.org/2000/svg%27><path clip-rule=%27evenodd%27 d=%27m27.5 0h-2.9l-24.6 42.5 1.5 2.5h49.1l1.5-2.5zm1 39.4v.5h-5.1v-5.1-.5h5.1zm0-8.5v.5h-5.1v-18.7-.5h5.1z%27 fill=%27%23dc0000%27 fill-rule=%27evenodd%27/></svg>");
+}
+[class*="_ss"] .lsid-messages .header-message.err {
+  background-image: url("data:image/svg+xml, <svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 260 260%27><path fill=%27%23001E28%27 d=%27M225.333 0H34.667L0 34.667v190.666L34.667 260h190.666L260 225.333V34.667z%27/><path d=%27m202.9 33.002 24.102 24.092V203.9l-24.073 24.102H56.075L32.002 203.9V57.084l24.112-24.082H202.9zm-5.558 13.387H136.19v168.216h61.182l16.224-16.253v-135.7l-16.254-16.263zm-74.538 0H61.652L45.389 62.632v135.72l16.243 16.253h61.172V46.39zM77.3 91.036c1.365 0 2.643.517 3.579 1.472l9.828 9.828a5.034 5.034 0 0 1 1.482 3.588v45.728c0 .321.204.546.526.546h19.325c.321 0 .536.204.536.526v11.72c0 .321-.215.526-.536.526H59.547c-.322 0-.527-.205-.527-.526v-11.72c0-.322.205-.526.527-.526H78.87c.322 0 .536-.225.536-.546v-45.299c0-1.384-1.17-2.545-2.535-2.545H59.547c-.322 0-.527-.204-.527-.526v-11.73c0-.311.205-.516.527-.516zm109.653-.007a5.01 5.01 0 0 1 3.588 1.482l9.828 9.818a5.065 5.065 0 0 1 1.472 3.598v44.138a5.07 5.07 0 0 1-1.472 3.608l-9.828 9.818c-.946.956-2.223 1.472-3.588 1.472h-23.77c-1.366 0-2.643-.516-3.589-1.472l-9.828-9.818a5.07 5.07 0 0 1-1.472-3.608v-44.138c0-1.375.527-2.642 1.472-3.598l9.828-9.818a5.01 5.01 0 0 1 3.588-1.482zm-.42 12.782h-22.922c-1.482 0-2.544 1.16-2.544 2.545v43.3c0 1.365 1.062 2.545 2.544 2.545h22.923c1.365 0 2.525-1.18 2.525-2.545v-43.3c0-1.384-1.16-2.545-2.525-2.545z%27 fill=%27%23FFF%27/></svg>");
+}
+[class*="_scoreboard"] .lsid-messages .header-message.err {
+  background-image: url("data:image/svg+xml, <svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 260 260%27><rect fill=%27%23001E28%27 width=%27260%27 height=%27260%27 rx=%2760%27/><path d=%27M62.582 38 62 223l160-92.051L62.582 38zm131.308 89.447-40.465 11.585-48.14-63.269 88.605 51.684zm-90.172-33.812L73.19 167.029 73.504 64.2l30.214 29.434zm8.213 9.115 29.498 38.751-48.096 6.264 18.598-45.015zm-32.787 97.596 10.317-40.884 78.601-10.237-88.918 51.121z%27 fill=%27%23FFF%27/></svg>");
+}
+.lsid-messages .message {
+  border-radius: initial;
+  letter-spacing: initial;
+  word-break: break-word;
+  user-select: initial;
+  cursor: initial;
+  display: block;
+  font-size: 18px;
+  text-align: center;
+}
+.lsid-messages .message.err {
+  color: var(--color-red);
+}
+.deleteAccountForm__buttons {
+  display: grid;
+  row-gap: 16px;
+  margin-top: 24px;
+}
+.deleteAccountForm #delete-account-no {
+  background-color: var(--color-secondary-3);
+  color: var(--color-white);
+}
+.deleteAccountForm #delete-account-no:hover {
+  background-color: var(--color-secondary-1);
+}
+.deleteAccountForm #delete-account-yes {
+  background-color: transparent;
+  color: var(--color-red);
+  border: solid 1px var(--color-support-2);
+}
+.deleteAccountForm #delete-account-yes:hover {
+  background-color: var(--color-red);
+  color: #ffffff;
+  border-color: transparent;
+}
+.forgottenPassword #forgotten-password-form {
+  display: grid;
+  row-gap: 16px;
+  margin-top: 24px;
+}
+.forgottenPassword #send {
+  background-color: var(--color-secondary-3);
+  color: var(--color-white);
+}
+.forgottenPassword #send:hover {
+  background-color: var(--color-secondary-1);
+}
+.passwordchange #passwordchange-form {
+  display: grid;
+  row-gap: 8px;
+}
+.passwordchange .sign-up-form-element {
+  margin-top: 8px;
+}
+.passwordchange #passwordchange {
+  background-color: var(--color-secondary-3);
+  color: var(--color-white);
+}
+.passwordchange #passwordchange:hover {
+  background-color: var(--color-secondary-1);
+}
+.newTermsOfUse2 #terms-agree {
+  background-color: var(--color-secondary-3);
+  color: var(--color-white);
+}
+.newTermsOfUse2 #terms-agree:hover {
+  background-color: var(--color-secondary-1);
+}
+.newTermsOfUse2 #terms-logout {
+  border: 1px solid var(--color-secondary-3);
+  color: var(--color-secondary-2);
+  background-color: transparent;
+}
+.newTermsOfUse2 #terms-logout:hover {
+  background-color: var(--color-secondary-3);
+  color: #ffffff;
+}
+.newTermsOfUse2 #delete-account-link {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 8px;
+  box-sizing: border-box;
+  letter-spacing: 0.4px;
+  text-align: center;
+  width: 100%;
+  cursor: pointer;
+  color: var(--color-red);
+  background-color: transparent;
+  border: solid 1px var(--color-support-2);
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.newTermsOfUse2 #delete-account-link:hover {
+  background-color: var(--color-red);
+  color: #ffffff;
+  border-color: transparent;
+}
+.newTermsOfUse2Form__text a {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+.newTermsOfUse2Form__text a:hover {
+  text-decoration: none;
+}
+.newTermsOfUse2Form__buttons {
+  display: grid;
+  row-gap: 16px;
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+.newTermsOfUse2Form__links {
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+.newTermsOfUse1 #terms-agree {
+  background-color: var(--color-secondary-3);
+  color: #ffffff;
+}
+.newTermsOfUse1 #terms-agree:hover {
+  background-color: var(--color-secondary-1);
+}
+.newTermsOfUse1 #terms-disagree {
+  border: 1px solid var(--color-secondary-3);
+  color: var(--color-secondary-2);
+  background-color: transparent;
+}
+.newTermsOfUse1 #terms-disagree:hover {
+  background-color: var(--color-secondary-3);
+  color: #ffffff;
+}
+.newTermsOfUse1Form__text a {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+.newTermsOfUse1Form__text a:hover {
+  text-decoration: none;
+}
+.newTermsOfUse1Form__buttons {
+  display: grid;
+  row-gap: 16px;
+  margin-top: 24px;
+}
+.contents__passwordChange .settings {
+  display: initial;
+  width: initial;
+  max-width: initial;
+  align-content: initial;
+  overflow-y: initial;
+}
+.contents__passwordChange .backButton {
+  display: none;
+}
+.contents__passwordChange .err-msg-wrapper {
+  padding-top: 8px;
+}
+.contents__passwordChange #settings-form {
+  display: grid;
+  row-gap: 8px;
+}
+.contents__passwordChange #settings {
+  margin-top: 8px;
+  background-color: var(--color-secondary-3);
+  color: var(--color-white);
+}
+.contents__passwordChange #settings:hover {
+  background-color: var(--color-secondary-1);
+}
+@media only screen and (max-width: 688px) {
+  .detailbody #lsid-window[data-window-name="newTermsOfUse1"],
+  .detailbody #lsid-window[data-window-name="newTermsOfUse2"],
+  .detailbody #lsid-window.registration,
+  .detailbody #lsid-window[data-window-name="deleteAccount"],
+  .detailbody #lsid-window[data-window-name="registration-ok-message"] {
+    border-radius: 8px;
+    margin: 0 auto;
+  }
+  .detailbody #lsid-window[data-window-name="newTermsOfUse1"] .content,
+  .detailbody #lsid-window[data-window-name="newTermsOfUse2"] .content,
+  .detailbody #lsid-window.registration .content,
+  .detailbody #lsid-window[data-window-name="deleteAccount"] .content,
+  .detailbody #lsid-window[data-window-name="registration-ok-message"] .content {
+    width: auto;
+    padding: 24px 32px 32px;
+    box-sizing: border-box;
+  }
+  .detailbody #lsid-window[data-window-name="newTermsOfUse1"],
+  .detailbody #lsid-window[data-window-name="newTermsOfUse2"] {
+    max-width: fit-content;
+  }
+  .detailbody #lsid-window.registration,
+  .detailbody #lsid-window[data-window-name="registration-ok-message"],
+  .detailbody #lsid-window[data-window-name="deleteAccount"] {
+    max-width: 264px;
+  }
+  .detailbody #lsid-window[data-window-name="deleteAccount"] .content {
+    width: auto;
+  }
+}
+@media only screen and (max-width: 639px) {
+  #lsid-window {
+    left: 0 !important;
+    right: 0 !important;
+    border-radius: 8px 8px 0 0;
+  }
+  #lsid-window .content {
+    width: 100%;
+  }
+  body:not(.detailbody) #lsid-window-mask,
+  body:not(.detailbody) #lsid-window-close {
+    display: none !important;
+  }
+  .detailbody .lsid-messages {
+    position: unset;
+    width: unset;
+    left: unset;
+    transform: unset;
+  }
+  .lsid-messages {
+    position: fixed;
+    width: 264px;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  .content-wrap {
+    display: block !important;
+  }
+  .contents__passwordChange .backButton {
+    display: none;
+  }
+  .contents__passwordChange .backButton__arrow {
+    width: 40px;
+    height: 56px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .contents__passwordChange .backButton__arrow::after {
+    content: "";
+    display: flex;
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg) translate(3px, -3px);
+    border-style: solid;
+    border-color: currentColor;
+    border-width: 0 0 1px 1px;
+  }
+  .contents__passwordChange .backButton__text {
+    display: none;
+  }
+}
+

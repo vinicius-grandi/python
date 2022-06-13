@@ -1,0 +1,194 @@
+/* LEFT MENU + CONTENT */
+.eventStar {
+  position: relative;
+  flex: 0 0 18px;
+  width: 18px;
+  height: 18px;
+  margin: auto 0;
+  cursor: pointer;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+  --color-symbol-star-fill: transparent;
+  --color-symbol-star-outline: #c8cdcd;
+}
+.eventStar::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  width: 23px;
+  height: 23px;
+}
+.eventStar--active {
+  fill: unset;
+  stroke: unset;
+  --color-symbol-star-fill: var(--color-yellow) !important;
+  --color-symbol-star-outline: var(--color-yellow) !important;
+}
+.eventStar--live {
+  position: relative;
+  grid-area: check;
+  width: 18px;
+  height: 18px;
+  margin: auto;
+}
+.event__header--no-my-games .eventStar--live {
+  position: absolute;
+  top: 4px;
+  left: 0;
+}
+@media only screen and (max-width: 799px) {
+  .event__header--no-my-games .eventStar--live {
+    top: 14px;
+  }
+}
+.eventStar--head {
+  margin: 0 auto;
+}
+.star--interactive .eventStar {
+  margin: unset;
+  --color-symbol-star-outline: var(--color-support-3);
+}
+.star--interactive .eventStar--active {
+  --color-symbol-star-outline: var(--color-yellow);
+}
+.eventStarTouchZone {
+  grid-area: check;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+}
+@media only screen and (max-width: 799px) {
+  .eventStarTouchZone {
+    width: 26px;
+    margin-right: 4px;
+  }
+}
+.eventStars {
+  flex: 0 0 16px;
+  height: 17px;
+}
+.eventSubscriber {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  flex: 0 0 32px;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+.eventSubscriber::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: transparent;
+  opacity: 0;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+}
+.eventSubscriber:hover::before {
+  opacity: 0.15;
+}
+@media (hover: hover) {
+  .eventSubscriber:hover::before {
+    background-color: var(--color-support-3);
+  }
+}
+.eventSubscriber--liveTable {
+  grid-area: check;
+}
+.eventSubscriber--head {
+  margin-left: 4px;
+}
+.event__header .eventSubscriber__star svg {
+  --color-symbol-star-outline: var(--color-combination-23);
+}
+.searchResult .eventSubscriber__star svg:not(.myTeamsIcon--active) {
+  --color-symbol-star-outline: var(--color-support-2);
+}
+@media (hover: hover) {
+  .eventSubscriber__star:not(.eventSubscriber__star--active):hover svg {
+    --color-symbol-star-fill: transparent;
+    --color-symbol-star-outline: var(--color-support-3);
+  }
+}
+@media (hover: hover) {
+  .eventSubscriber__star.eventSubscriber__star--active:hover svg {
+    --color-symbol-star-fill: var(--color-yellow);
+    --color-symbol-star-outline: var(--color-yellow);
+  }
+}
+.eventSubscriber__star--event {
+  grid-area: check;
+}
+.eventSubscriber__star--active:hover::before {
+  opacity: 0.15;
+}
+@media (hover: hover) {
+  .eventSubscriber__star--active:hover::before {
+    background-color: var(--color-yellow);
+  }
+}
+.eventSubscriber__pin {
+  margin-left: 2px;
+}
+.eventSubscriber__pin:hover::before {
+  opacity: 0.15;
+}
+@media (hover: hover) {
+  .eventSubscriber__pin:hover::before {
+    background-color: var(--color-support-3);
+  }
+}
+.eventSubscriber__pin:hover:not(.eventSubscriber__pin--active) svg {
+  --pin-outline: var(--color-support-4);
+}
+.eventSubscriber__pin--active svg {
+  --pin-fill: var(--color-pin);
+  --pin-outline: var(--color-pin);
+}
+.eventSubscriber__pin--active:hover::before {
+  opacity: 0.15;
+}
+@media (hover: hover) {
+  .eventSubscriber__pin--active:hover::before {
+    background-color: var(--color-pin);
+  }
+}
+.eventSubscriberWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  z-index: 1;
+}
+.eventPin {
+  flex: 0 0 18px;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  z-index: var(--zIndex-scrollTo);
+  --pin-fill: transparent;
+  --pin-outline: var(--color-support-3);
+}
+.eventPin--active {
+  --pin-fill: var(--color-pin);
+  --pin-outline: var(--color-pin);
+}
+.eventPin--active:hover::before {
+  content: "";
+}
+@media (hover: hover) {
+  .eventPin--active:hover::before {
+    background-color: var(--color-pin);
+  }
+}
+

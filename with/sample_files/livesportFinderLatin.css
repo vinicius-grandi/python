@@ -1,0 +1,22 @@
+/* @FS_LESS: "../..";
+@FS_LESS_WEB: "../../web";
+@FS_LESS_REACT: "../../react";
+@FS_LESS_LEGACY: "../../legacy"; */
+@font-face {
+  font-family: 'LivesportFinderLatin';
+  font-style: normal;
+  font-weight: normal;
+  font-display: fallback;
+  src: url("/res/font/LivesportFinderLatin-Regular_Static.woff2") format("woff2");
+}
+@font-face {
+  font-family: 'LivesportFinderLatin';
+  font-style: normal;
+  font-weight: bold;
+  font-display: fallback;
+  src: url("/res/font/LivesportFinderLatin-Bold_Static.woff2") format("woff2");
+}
+body {
+  font-family: 'LivesportFinderLatin', Arial, sans-serif;
+}
+

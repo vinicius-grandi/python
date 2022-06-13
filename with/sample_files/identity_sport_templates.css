@@ -1,0 +1,1237 @@
+/* LEFT MENU + CONTENT */
+.event.event--topScores .american-football .event__match,
+.event.myfs .american-football .event__match {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeService homeScore homePart1 homePart2 homePart3 homePart4 homePart5 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayService awayScore awayPart1 awayPart2 awayPart3 awayPart4 awayPart5 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr 19px 34px 34px 34px 34px 34px 34px 28px 24px 24px 38px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event.event--topScores .american-football .event__match,
+  .event.myfs .american-football .event__match {
+    grid-template: "check       .           .        .               .           .           .           .           .           .       " 5px "check       dropdown    homeLogo homeParticipant iconStr     iconTv      homeService stage       homeScore   liveIcon" minmax(19px, auto) "check       dropdown    awayLogo awayParticipant iconStr     iconTv      awayService stage       awayScore   liveIcon" minmax(19px, auto) "check       .           .        .               .           .           .           .           .           .       " 5px / max-content max-content var(--width-logo, 0) 1fr max-content max-content max-content max-content max-content 46px;
+  }
+  .event.event--topScores .american-football .event__match--live,
+  .event.myfs .american-football .event__match--live,
+  .event.event--topScores .american-football .event__match--scheduled,
+  .event.myfs .american-football .event__match--scheduled {
+    grid-template-areas: "check .        .        .               .		 .      .     .           .         .       " "check dropdown homeLogo homeParticipant iconStr iconTv stage homeService homeScore liveIcon" "check dropdown awayLogo awayParticipant iconStr iconTv stage awayService awayScore liveIcon" "check .        .        .               .		 .      .     .           .         .       ";
+  }
+}
+.event.odds .american-football .event__match--twoLine {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeScore homePartScore odd1 odd2 liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayScore awayPartScore odd1 odd2 liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr 34px 34px 59px 59px 31px;
+}
+.event.odds .american-football .event__match--twoLineUS {
+  grid-template: " check       stageOrTime homeLogo             homeParticipant homeScore homeSpread1 homeSpread2 homeMoneyline homeTotal1 homeTotal2 liveIcon" minmax(30px, auto) " check       stageOrTime awayLogo             awayParticipant awayScore awaySpread1 awaySpread2 awayMoneyline awayTotal1 awayTotal2 liveIcon" minmax(30px, auto) / max-content 69px var(--width-logo, 0) 1fr 49px 59px 59px 59px 59px 59px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event.odds .american-football .event__match {
+    grid-template: " check .                    .               .                 .                  .                     .                 .   odds        .       " 4px " check homeLogo             homeParticipant stage             rounds             homeScoreInRegulation homeScore         .   odds        liveIcon" minmax(19px, auto) " check awayLogo             awayParticipant stage             rounds             awayScoreInRegulation awayScore         .   odds        liveIcon" minmax(19px, auto) " check .                    .               .                 .                  .                     .                 .   odds        .       " 4px / 31px var(--width-logo, 0) 1fr fit-content(48px) fit-content(100px) max-content fit-content(90px) 8px max-content 31px;
+  }
+  .event.odds .american-football .event__match--scheduled {
+    grid-template-columns: 31px var(--width-logo, 0) 1fr 34px fit-content(100px) max-content fit-content(40px) 8px max-content 31px;
+  }
+}
+.event .american-football .event__match {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeService             homeScore homePart1 homePart2 homePart3 homePart4 homePart5 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayService             awayScore awayPart1 awayPart2 awayPart3 awayPart4 awayPart5 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr var(--width-service, 0) 34px 34px 34px 34px 34px 34px 28px 24px 24px 38px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event .american-football .event__match {
+    grid-template: " check       .                        .                    .               .           .           .           .           .           .         .                     .           .           .           .           .           .           .                    .        " 5px " check       dropdown                 homeLogo             homeParticipant iconStr     iconTv      stage       resultsTime homeService rounds    homeScoreInRegulation homePart1   homePart2   homeScore   homeCurrent homeLegs    homeSets    liveIcon             .        " minmax(19px, auto) " check       dropdown                 awayLogo             awayParticipant iconStr     iconTv      stage       resultsTime awayService rounds    awayScoreInRegulation awayPart1   awayPart2   awayScore   awayCurrent awayLegs    awaySets    liveIcon             .        " minmax(19px, auto) " check       .                        .                    .               .           .           .           .           .           .         .                     .           .           .           .           .           .           .                    .        " 5px " extraInfo   extraInfo                extraInfo            extraInfo       extraInfo   extraInfo   extraInfo   extraInfo   extraInfo   extraInfo extraInfo             extraInfo   extraInfo   extraInfo   extraInfo   extraInfo   extraInfo   extraInfo            extraInfo" max-content " pitchers    pitchers                 pitchers             pitchers        pitchers    pitchers    pitchers    pitchers    pitchers    pitchers  pitchers              pitchers    pitchers    pitchers    pitchers    pitchers    pitchers    pitchers             pitchers " max-content / max-content var(--width-dropdown, 0) var(--width-logo, 0) 1fr max-content max-content auto max-content max-content auto max-content max-content max-content max-content max-content max-content max-content var(--width-live, 0) var(--width-cricket, 0);
+  }
+  .event .american-football .event__match .extraInfo {
+    grid-template: " .        ." 4px " sentence ." max-content / 1fr 5px;
+  }
+}
+/* LEFT MENU + CONTENT */
+.event.event--topScores .aussie-rules .event__match,
+.event.myfs .aussie-rules .event__match {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeScore homePart1 .    homePart2 homePart3 homePart4 homePart5 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayScore awayPart1 .    awayPart2 awayPart3 awayPart4 awayPart5 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr 34px 34px 12px 31px 31px 31px 31px 28px 24px 24px 38px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event.event--topScores .aussie-rules .event__match,
+  .event.myfs .aussie-rules .event__match {
+    grid-template: "check       .           .                    .               .           .           .           .           .           .                     .           .       " 5px "check       dropdown    homeLogo             homeParticipant score       iconStr     iconTv      resultsTime stage       homeScoreInRegulation homeScore   liveIcon" minmax(19px, auto) "check       dropdown    awayLogo             awayParticipant score       iconStr     iconTv      resultsTime stage       awayScoreInRegulation awayScore   liveIcon" minmax(19px, auto) "check       .           .                    .               .           .           .           .           .           .                     .           .       " 5px / max-content max-content var(--width-logo, 0) 1fr max-content max-content max-content max-content max-content max-content max-content 46px;
+  }
+}
+.event.odds .aussie-rules .event__match--twoLine {
+  grid-template: " check       stageOrTime homeLogo             homeParticipant homeScore odd1 odd2 liveIcon" minmax(23px, auto) " check       stageOrTime awayLogo             awayParticipant awayScore odd1 odd2 liveIcon" minmax(23px, auto) / max-content 69px var(--width-logo, 0) 1fr 100px 59px 59px 31px;
+}
+.event.odds .aussie-rules .event__match--twoLineUS {
+  grid-template: " check       stageOrTime homeLogo             homeParticipant homeScore homeSpread1 homeSpread2 homeMoneyline homeTotal1 homeTotal2 liveIcon" minmax(30px, auto) " check       stageOrTime awayLogo             awayParticipant awayScore awaySpread1 awaySpread2 awayMoneyline awayTotal1 awayTotal2 liveIcon" minmax(30px, auto) / max-content 69px var(--width-logo, 0) 1fr 100px 59px 59px 59px 59px 59px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event.odds .aussie-rules .event__match {
+    grid-template: " check .                    .               .                 .                  .                     .                 .   odds        .       " 4px " check homeLogo             homeParticipant stage             rounds             homeScoreInRegulation homeScore         .   odds        liveIcon" minmax(19px, auto) " check awayLogo             awayParticipant stage             rounds             awayScoreInRegulation awayScore         .   odds        liveIcon" minmax(19px, auto) " check .                    .               .                 .                  .                     .                 .   odds        .       " 4px / 31px var(--width-logo, 0) 1fr fit-content(48px) fit-content(100px) max-content fit-content(90px) 8px max-content 31px;
+  }
+  .event.odds .aussie-rules .event__match--scheduled {
+    grid-template-columns: 31px var(--width-logo, 0) 1fr 34px fit-content(100px) max-content fit-content(40px) 8px max-content 31px;
+  }
+}
+.event .aussie-rules .event__match {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeScore homePart1 .    homePart2 homePart3 homePart4 homePart5 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayScore awayPart1 .    awayPart2 awayPart3 awayPart4 awayPart5 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr 34px 34px 12px 31px 31px 31px 31px 28px 24px 24px 38px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event .aussie-rules .event__match {
+    grid-template: " check       .                        .                    .               .           .           .           .           .           .           .                     .           .           .           .           .           .           .       " 5px " check       dropdown                 homeLogo             homeParticipant iconStr     iconTv      resultsTime stage       homeService rounds      homeScoreInRegulation homePart1   homePart2   homeScore   homeCurrent homeLegs    homeSets    liveIcon" minmax(19px, auto) " check       dropdown                 awayLogo             awayParticipant iconStr     iconTv      resultsTime stage       awayService rounds      awayScoreInRegulation awayPart1   awayPart2   awayScore   awayCurrent awayLegs    awaySets    liveIcon" minmax(19px, auto) " check       .                        .                    .               .           .           .           .           .           .           .                     .           .           .           .           .           .           .       " 5px / max-content var(--width-dropdown, 0) var(--width-logo, 0) 1fr max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content var(--width-live, 0);
+  }
+}
+/* LEFT MENU + CONTENT */
+.event.event--topScores .badminton .event__match,
+.event.myfs .badminton .event__match {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeService homeScore homePart1 homePart2 homePart3 homePart4 homePart5 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayService awayScore awayPart1 awayPart2 awayPart3 awayPart4 awayPart5 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr 19px 34px 34px 34px 34px 34px 34px 28px 24px 24px 38px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event.event--topScores .badminton .event__match,
+  .event.myfs .badminton .event__match {
+    grid-template: "check       .           .        .               .           .           .           .           .           .		      .           .       " 5px "check       dropdown    homeLogo homeParticipant iconStr     iconTv      stage       homeService homePart1   resultsTime homeScore   liveIcon" minmax(19px, auto) "check       dropdown    awayLogo awayParticipant iconStr     iconTv      stage       awayService awayPart1   resultsTime awayScore   liveIcon" minmax(19px, auto) "check       .           .        .               .           .           .           .           .           .		      .           .       " 5px / max-content max-content var(--width-logo, 0) 1fr max-content max-content max-content max-content max-content max-content max-content 46px;
+  }
+  .event.event--topScores .badminton .event__match--scheduled,
+  .event.myfs .badminton .event__match--scheduled {
+    grid-template: "check       .           .        .               .		      .           .           .           .           .       " 5px "check       dropdown    homeLogo homeParticipant iconStr 	  iconTv      stage       homeService homeScore   liveIcon" minmax(19px, auto) "check       dropdown    awayLogo awayParticipant iconStr 	  iconTv      stage       awayService awayScore   liveIcon" minmax(19px, auto) "check       .           .        .               .		      .           .           .           .           .       " 5px / max-content max-content var(--width-logo, 0) 1fr max-content max-content max-content max-content max-content 46px;
+  }
+}
+.event.odds .badminton .event__match--twoLine {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeScore homePartScore odd1 odd2 liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayScore awayPartScore odd1 odd2 liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr 34px 34px 59px 59px 31px;
+}
+.event.odds .badminton .event__match--twoLineUS {
+  grid-template: " check       stageOrTime homeLogo             homeParticipant homeScore homeSpread1 homeSpread2 homeMoneyline homeTotal1 homeTotal2 liveIcon" minmax(30px, auto) " check       stageOrTime awayLogo             awayParticipant awayScore awaySpread1 awaySpread2 awayMoneyline awayTotal1 awayTotal2 liveIcon" minmax(30px, auto) / max-content 69px var(--width-logo, 0) 1fr 49px 59px 59px 59px 59px 59px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event.odds .badminton .event__match {
+    grid-template: " check .                    .               .                 .                  .                     .                 .   odds        .       " 4px " check homeLogo             homeParticipant stage             rounds             homeScoreInRegulation homeScore         .   odds        liveIcon" minmax(19px, auto) " check awayLogo             awayParticipant stage             rounds             awayScoreInRegulation awayScore         .   odds        liveIcon" minmax(19px, auto) " check .                    .               .                 .                  .                     .                 .   odds        .       " 4px / 31px var(--width-logo, 0) 1fr fit-content(48px) fit-content(100px) max-content fit-content(90px) 8px max-content 31px;
+  }
+  .event.odds .badminton .event__match--scheduled {
+    grid-template-columns: 31px var(--width-logo, 0) 1fr 34px fit-content(100px) max-content fit-content(40px) 8px max-content 31px;
+  }
+}
+.event .badminton .event__match {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeService             homeScore homePart1 homePart2 homePart3 homePart4 homePart5 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayService             awayScore awayPart1 awayPart2 awayPart3 awayPart4 awayPart5 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr var(--width-service, 0) 34px 34px 34px 34px 34px 34px 28px 24px 24px 38px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event .badminton .event__match {
+    grid-template: "check       .                        .                    .               .           .           .           .           .           .                     .           .           .           .           .           .           .           .       " 5px "check       dropdown                 homeLogo             homeParticipant iconStr     iconTv      stage       homeService rounds      homeScoreInRegulation homePart1   homePart2   resultsTime homeScore   homeCurrent homeLegs    homeSets    liveIcon" minmax(19px, auto) "check       dropdown                 awayLogo             awayParticipant iconStr     iconTv      stage       awayService rounds      awayScoreInRegulation awayPart1   awayPart2   resultsTime awayScore   awayCurrent awayLegs    awaySets    liveIcon" minmax(19px, auto) "check       .                        .                    .               .           .           .           .           .           .                     .           .           .           .           .           .           .           .       " 5px / max-content var(--width-dropdown, 0) var(--width-logo, 0) 1fr max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content var(--width-live, 0);
+  }
+}
+/* LEFT MENU + CONTENT */
+.event.event--topScores .bandy .event__match,
+.event.myfs .bandy .event__match {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeService homeScore homePart1 homePart2 homePart3 homePart4 homePart5 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayService awayScore awayPart1 awayPart2 awayPart3 awayPart4 awayPart5 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr 19px 34px 34px 34px 34px 34px 34px 28px 24px 24px 38px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event.event--topScores .bandy .event__match,
+  .event.myfs .bandy .event__match {
+    grid-template: "check       .           .                    .               .           .           .           .           .           .                     .           .       " 5px "check       dropdown    homeLogo             homeParticipant score       iconStr     iconTv      resultsTime stage       homeScoreInRegulation homeScore   liveIcon" minmax(19px, auto) "check       dropdown    awayLogo             awayParticipant score       iconStr     iconTv      resultsTime stage       awayScoreInRegulation awayScore   liveIcon" minmax(19px, auto) "check       .           .                    .               .           .           .           .           .           .                     .           .       " 5px / max-content max-content var(--width-logo, 0) 1fr max-content max-content max-content max-content max-content max-content max-content 46px;
+  }
+}
+.event.odds .bandy .event__match--twoLine {
+  grid-template: " check       stageOrTime homeLogo             homeParticipant homeScore homePartScore odd1 odd2 odd3            liveIcon" minmax(19px, auto) " check       stageOrTime awayLogo             awayParticipant awayScore awayPartScore odd1 odd2 odd3            liveIcon" minmax(19px, auto) / max-content 69px var(--width-logo, 0) 1fr 34px 34px 59px 59px minmax(0, auto) 31px;
+}
+.event.odds .bandy .event__match--twoLineUS {
+  grid-template: " check       stageOrTime homeLogo             homeParticipant homeScore homeSpread1 homeSpread2 homeMoneyline homeTotal1 homeTotal2 liveIcon" minmax(30px, auto) " check       stageOrTime awayLogo             awayParticipant awayScore awaySpread1 awaySpread2 awayMoneyline awayTotal1 awayTotal2 liveIcon" minmax(30px, auto) / max-content 69px var(--width-logo, 0) 1fr 49px 59px 59px 59px 59px 59px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event.odds .bandy .event__match {
+    grid-template: " check .                    .               .                 .                  .                     .                 .   odds        .       " 4px " check homeLogo             homeParticipant stage             rounds             homeScoreInRegulation homeScore         .   odds        liveIcon" minmax(19px, auto) " check awayLogo             awayParticipant stage             rounds             awayScoreInRegulation awayScore         .   odds        liveIcon" minmax(19px, auto) " check .                    .               .                 .                  .                     .                 .   odds        .       " 4px / 31px var(--width-logo, 0) 1fr fit-content(48px) fit-content(100px) max-content fit-content(90px) 8px max-content 31px;
+  }
+  .event.odds .bandy .event__match--scheduled {
+    grid-template-columns: 31px var(--width-logo, 0) 1fr 34px fit-content(100px) max-content fit-content(40px) 8px max-content 31px;
+  }
+}
+.event .bandy .event__match {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeScore                 homePart1 homePart2 homePart3 homePart4 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayScore                 awayPart1 awayPart2 awayPart3 awayPart4 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr var(--width-result, 34px) 34px 34px 34px 34px 28px 24px 24px 38px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event .bandy .event__match {
+    grid-template: " check       .                        .                    .               .           .           .           .           .           .           .                     .           .           .           .           .           .           .       " 5px " check       dropdown                 homeLogo             homeParticipant iconStr     iconTv      resultsTime stage       homeService rounds      homeScoreInRegulation homePart1   homePart2   homeScore   homeCurrent homeLegs    homeSets    liveIcon" minmax(19px, auto) " check       dropdown                 awayLogo             awayParticipant iconStr     iconTv      resultsTime stage       awayService rounds      awayScoreInRegulation awayPart1   awayPart2   awayScore   awayCurrent awayLegs    awaySets    liveIcon" minmax(19px, auto) " check       .                        .                    .               .           .           .           .           .           .           .                     .           .           .           .           .           .           .       " 5px / max-content var(--width-dropdown, 0) var(--width-logo, 0) 1fr max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content var(--width-live, 0);
+  }
+}
+/* LEFT MENU + CONTENT */
+.event.event--topScores .baseball .event__match,
+.event.myfs .baseball .event__match {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeService homeScore homePart1 homePart2 homePart3 homePart4 homePart5 homePart6 homePart7 iconStr  iconInf  iconTv   iconStd  liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayService awayScore awayPart1 awayPart2 awayPart3 awayPart4 awayPart5 awayPart6 awayPart7 iconStr  iconInf  iconTv   iconStd  liveIcon" minmax(23px, auto) " pitchers    pitchers                 pitchers    pitchers             pitchers        pitchers    pitchers  pitchers  pitchers  pitchers  pitchers  pitchers  pitchers  pitchers  pitchers pitchers pitchers pitchers pitchers" max-content / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr 19px 34px 24px 24px 24px 24px 24px 25px 25px 28px 24px 24px 38px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event.event--topScores .baseball .event__match,
+  .event.myfs .baseball .event__match {
+    grid-template: " check 	     .           .        				.               .       	  .           .     	  .     	  .        	  .		  " 5px " check 	     dropdown    homeLogo 				homeParticipant iconStr 	  iconTv      homeService stage 	  homeScore   liveIcon" minmax(19px, auto) " check 	     dropdown    awayLogo 				awayParticipant iconStr 	  iconTv      awayService stage 	  awayScore   liveIcon" minmax(19px, auto) " check 	     .           .        				.               .       	  .           .     	  .     	  .           .		  " 5px " pitchers       pitchers    pitchers 				pitchers     	pitchers      pitchers    pitchers    pitchers    pitchers    pitchers" max-content / max-content max-content var(--width-logo, 0) 1fr max-content max-content max-content max-content max-content 46px;
+  }
+  .event.event--topScores .baseball .event__match--live,
+  .event.myfs .baseball .event__match--live,
+  .event.event--topScores .baseball .event__match--scheduled,
+  .event.myfs .baseball .event__match--scheduled {
+    grid-template-areas: "check    .         .        .               .        .        .        .           .         . " "check    dropdown  homeLogo homeParticipant iconStr  iconTv   stage    homeService homeScore liveIcon " "check    dropdown  awayLogo awayParticipant iconStr  iconTv   stage    awayService awayScore liveIcon " "check    .         .        .               .        .        .        .           .         . " "pitchers pitchers  pitchers pitchers        pitchers pitchers pitchers pitchers    pitchers  pitchers ";
+  }
+}
+.event.odds .baseball .event__match--twoLine {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeScore homePartScore odd1 odd2 liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayScore awayPartScore odd1 odd2 liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr 34px 34px 59px 59px 31px;
+}
+.event.odds .baseball .event__match--twoLineUS {
+  grid-template: " check       stageOrTime homeLogo             homeParticipant homeScore homeSpread1 homeSpread2 homeMoneyline homeTotal1 homeTotal2 liveIcon" minmax(30px, auto) " check       stageOrTime awayLogo             awayParticipant awayScore awaySpread1 awaySpread2 awayMoneyline awayTotal1 awayTotal2 liveIcon" minmax(30px, auto) / max-content 69px var(--width-logo, 0) 1fr 49px 59px 59px 59px 59px 59px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event.odds .baseball .event__match {
+    grid-template: " check .                    .               .                 .                  .                     .                 .   odds        .       " 4px " check homeLogo             homeParticipant stage             rounds             homeScoreInRegulation homeScore         .   odds        liveIcon" minmax(19px, auto) " check awayLogo             awayParticipant stage             rounds             awayScoreInRegulation awayScore         .   odds        liveIcon" minmax(19px, auto) " check .                    .               .                 .                  .                     .                 .   odds        .       " 4px / 31px var(--width-logo, 0) 1fr fit-content(48px) fit-content(100px) max-content fit-content(90px) 8px max-content 31px;
+  }
+  .event.odds .baseball .event__match--scheduled {
+    grid-template-columns: 31px var(--width-logo, 0) 1fr 34px fit-content(100px) max-content fit-content(40px) 8px max-content 31px;
+  }
+}
+.event .baseball .event__match {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeService             homeScore iconStr  iconInf  iconTv   iconStd  liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayService             awayScore iconStr  iconInf  iconTv   iconStd  liveIcon" minmax(23px, auto) " pitchers    pitchers                 pitchers    pitchers             pitchers        pitchers                pitchers  pitchers pitchers pitchers pitchers pitchers" max-content / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr var(--width-service, 0) 34px 28px 24px 24px 38px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event .baseball .event__match {
+    grid-template: " check       .                        .                    .               .           .           .           .           .           .         .                     .           .           .           .           .           .           .                    .        " 5px " check       dropdown                 homeLogo             homeParticipant iconStr     iconTv      stage       resultsTime homeService rounds    homeScoreInRegulation homePart1   homePart2   homeScore   homeCurrent homeLegs    homeSets    liveIcon             .        " minmax(19px, auto) " check       dropdown                 awayLogo             awayParticipant iconStr     iconTv      stage       resultsTime awayService rounds    awayScoreInRegulation awayPart1   awayPart2   awayScore   awayCurrent awayLegs    awaySets    liveIcon             .        " minmax(19px, auto) " check       .                        .                    .               .           .           .           .           .           .         .                     .           .           .           .           .           .           .                    .        " 5px " extraInfo   extraInfo                extraInfo            extraInfo       extraInfo   extraInfo   extraInfo   extraInfo   extraInfo   extraInfo extraInfo             extraInfo   extraInfo   extraInfo   extraInfo   extraInfo   extraInfo   extraInfo            extraInfo" max-content " pitchers    pitchers                 pitchers             pitchers        pitchers    pitchers    pitchers    pitchers    pitchers    pitchers  pitchers              pitchers    pitchers    pitchers    pitchers    pitchers    pitchers    pitchers             pitchers " max-content / max-content var(--width-dropdown, 0) var(--width-logo, 0) 1fr max-content max-content auto max-content max-content auto max-content max-content max-content max-content max-content max-content max-content var(--width-live, 0) var(--width-cricket, 0);
+  }
+  .event .baseball .event__match .extraInfo {
+    grid-template: " .        ." 4px " sentence ." max-content / 1fr 5px;
+  }
+}
+/* LEFT MENU + CONTENT */
+.event.event--topScores .basketball .event__match,
+.event.myfs .basketball .event__match {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeService homeScore homePart1 homePart2 homePart3 homePart4 homePart5 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayService awayScore awayPart1 awayPart2 awayPart3 awayPart4 awayPart5 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr 19px 34px 34px 34px 34px 34px 34px 28px 24px 24px 38px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event.event--topScores .basketball .event__match,
+  .event.myfs .basketball .event__match {
+    grid-template: "check       .           .                    .               .           .           .           .           .           .                     .           .       " 5px "check       dropdown    homeLogo             homeParticipant score       iconStr     iconTv      resultsTime stage       homeScoreInRegulation homeScore   liveIcon" minmax(19px, auto) "check       dropdown    awayLogo             awayParticipant score       iconStr     iconTv      resultsTime stage       awayScoreInRegulation awayScore   liveIcon" minmax(19px, auto) "check       .           .                    .               .           .           .           .           .           .                     .           .       " 5px / max-content max-content var(--width-logo, 0) 1fr max-content max-content max-content max-content max-content max-content max-content 46px;
+  }
+}
+.event.odds .basketball .event__match--twoLine {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeScore homePartScore odd1 odd2 liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayScore awayPartScore odd1 odd2 liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr 34px 34px 59px 59px 31px;
+}
+.event.odds .basketball .event__match--twoLineUS {
+  grid-template: " check       stageOrTime homeLogo             homeParticipant homeScore homeSpread1 homeSpread2 homeMoneyline homeTotal1 homeTotal2 liveIcon" minmax(30px, auto) " check       stageOrTime awayLogo             awayParticipant awayScore awaySpread1 awaySpread2 awayMoneyline awayTotal1 awayTotal2 liveIcon" minmax(30px, auto) / max-content 69px var(--width-logo, 0) 1fr 49px 59px 59px 59px 59px 59px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event.odds .basketball .event__match {
+    grid-template: " check .                    .               .                 .                  .                     .                 .   odds        .       " 4px " check homeLogo             homeParticipant stage             rounds             homeScoreInRegulation homeScore         .   odds        liveIcon" minmax(19px, auto) " check awayLogo             awayParticipant stage             rounds             awayScoreInRegulation awayScore         .   odds        liveIcon" minmax(19px, auto) " check .                    .               .                 .                  .                     .                 .   odds        .       " 4px / 31px var(--width-logo, 0) 1fr fit-content(48px) fit-content(100px) max-content fit-content(90px) 8px max-content 31px;
+  }
+  .event.odds .basketball .event__match--scheduled {
+    grid-template-columns: 31px var(--width-logo, 0) 1fr 34px fit-content(100px) max-content fit-content(40px) 8px max-content 31px;
+  }
+}
+.event .basketball .event__match {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeService             homeScore homePart1 homePart2 homePart3 homePart4 homePart5 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayService             awayScore awayPart1 awayPart2 awayPart3 awayPart4 awayPart5 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr var(--width-service, 0) 34px 34px 34px 34px 34px 34px 28px 24px 24px 38px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event .basketball .event__match {
+    grid-template: " check       .                        .                    .               .           .           .           .           .           .           .                     .           .           .           .           .           .           .       " 5px " check       dropdown                 homeLogo             homeParticipant iconStr     iconTv      resultsTime stage       homeService rounds      homeScoreInRegulation homePart1   homePart2   homeScore   homeCurrent homeLegs    homeSets    liveIcon" minmax(19px, auto) " check       dropdown                 awayLogo             awayParticipant iconStr     iconTv      resultsTime stage       awayService rounds      awayScoreInRegulation awayPart1   awayPart2   awayScore   awayCurrent awayLegs    awaySets    liveIcon" minmax(19px, auto) " check       .                        .                    .               .           .           .           .           .           .           .                     .           .           .           .           .           .           .       " 5px / max-content var(--width-dropdown, 0) var(--width-logo, 0) 1fr max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content var(--width-live, 0);
+  }
+}
+/* LEFT MENU + CONTENT */
+.event.event--topScores .beach-soccer .event__match,
+.event.myfs .beach-soccer .event__match {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeService homeScore homePart1 homePart2 homePart3 homePart4 homePart5 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayService awayScore awayPart1 awayPart2 awayPart3 awayPart4 awayPart5 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr 19px 34px 34px 34px 34px 34px 34px 28px 24px 24px 38px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event.event--topScores .beach-soccer .event__match,
+  .event.myfs .beach-soccer .event__match {
+    grid-template: "check       .           .                    .               .           .           .           .           .           .                     .           .       " 5px "check       dropdown    homeLogo             homeParticipant score       iconStr     iconTv      resultsTime stage       homeScoreInRegulation homeScore   liveIcon" minmax(19px, auto) "check       dropdown    awayLogo             awayParticipant score       iconStr     iconTv      resultsTime stage       awayScoreInRegulation awayScore   liveIcon" minmax(19px, auto) "check       .           .                    .               .           .           .           .           .           .                     .           .       " 5px / max-content max-content var(--width-logo, 0) 1fr max-content max-content max-content max-content max-content max-content max-content 46px;
+  }
+}
+.event.odds .beach-soccer .event__match--twoLine {
+  grid-template: " check       stageOrTime homeLogo             homeParticipant homeScore homePartScore odd1 odd2 odd3            liveIcon" minmax(19px, auto) " check       stageOrTime awayLogo             awayParticipant awayScore awayPartScore odd1 odd2 odd3            liveIcon" minmax(19px, auto) / max-content 69px var(--width-logo, 0) 1fr 34px 34px 59px 59px minmax(0, auto) 31px;
+}
+.event.odds .beach-soccer .event__match--twoLineUS {
+  grid-template: " check       stageOrTime homeLogo             homeParticipant homeScore homeSpread1 homeSpread2 homeMoneyline homeTotal1 homeTotal2 liveIcon" minmax(30px, auto) " check       stageOrTime awayLogo             awayParticipant awayScore awaySpread1 awaySpread2 awayMoneyline awayTotal1 awayTotal2 liveIcon" minmax(30px, auto) / max-content 69px var(--width-logo, 0) 1fr 49px 59px 59px 59px 59px 59px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event.odds .beach-soccer .event__match {
+    grid-template: " check .                    .               .                 .                  .                     .                 .   odds        .       " 4px " check homeLogo             homeParticipant stage             rounds             homeScoreInRegulation homeScore         .   odds        liveIcon" minmax(19px, auto) " check awayLogo             awayParticipant stage             rounds             awayScoreInRegulation awayScore         .   odds        liveIcon" minmax(19px, auto) " check .                    .               .                 .                  .                     .                 .   odds        .       " 4px / 31px var(--width-logo, 0) 1fr fit-content(48px) fit-content(100px) max-content fit-content(90px) 8px max-content 31px;
+  }
+  .event.odds .beach-soccer .event__match--scheduled {
+    grid-template-columns: 31px var(--width-logo, 0) 1fr 34px fit-content(100px) max-content fit-content(40px) 8px max-content 31px;
+  }
+}
+.event .beach-soccer .event__match {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeService             homeScore homePart1 homePart2 homePart3 homePart4 homePart5 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayService             awayScore awayPart1 awayPart2 awayPart3 awayPart4 awayPart5 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr var(--width-service, 0) 34px 34px 34px 34px 34px 34px 28px 24px 24px 38px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event .beach-soccer .event__match {
+    grid-template: " check       .                        .                    .               .           .           .           .           .           .           .                     .           .           .           .           .           .           .       " 5px " check       dropdown                 homeLogo             homeParticipant iconStr     iconTv      resultsTime stage       homeService rounds      homeScoreInRegulation homePart1   homePart2   homeScore   homeCurrent homeLegs    homeSets    liveIcon" minmax(19px, auto) " check       dropdown                 awayLogo             awayParticipant iconStr     iconTv      resultsTime stage       awayService rounds      awayScoreInRegulation awayPart1   awayPart2   awayScore   awayCurrent awayLegs    awaySets    liveIcon" minmax(19px, auto) " check       .                        .                    .               .           .           .           .           .           .           .                     .           .           .           .           .           .           .       " 5px / max-content var(--width-dropdown, 0) var(--width-logo, 0) 1fr max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content var(--width-live, 0);
+  }
+}
+/* LEFT MENU + CONTENT */
+.event.event--topScores .beach-volleyball .event__match,
+.event.myfs .beach-volleyball .event__match {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeService homeScore homePart1 homePart2 homePart3 homePart4 homePart5 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayService awayScore awayPart1 awayPart2 awayPart3 awayPart4 awayPart5 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr 19px 34px 34px 34px 34px 34px 34px 28px 24px 24px 38px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event.event--topScores .beach-volleyball .event__match,
+  .event.myfs .beach-volleyball .event__match {
+    grid-template: "check       .           .        .               .           .           .           .           .           .		      .           .       " 5px "check       dropdown    homeLogo homeParticipant iconStr     iconTv      stage       homeService homePart1   resultsTime homeScore   liveIcon" minmax(19px, auto) "check       dropdown    awayLogo awayParticipant iconStr     iconTv      stage       awayService awayPart1   resultsTime awayScore   liveIcon" minmax(19px, auto) "check       .           .        .               .           .           .           .           .           .		      .           .       " 5px / max-content max-content var(--width-logo, 0) 1fr max-content max-content max-content max-content max-content max-content max-content 46px;
+  }
+  .event.event--topScores .beach-volleyball .event__match--scheduled,
+  .event.myfs .beach-volleyball .event__match--scheduled {
+    grid-template: "check       .           .        .               .		      .           .           .           .           .       " 5px "check       dropdown    homeLogo homeParticipant iconStr 	  iconTv      stage       homeService homeScore   liveIcon" minmax(19px, auto) "check       dropdown    awayLogo awayParticipant iconStr 	  iconTv      stage       awayService awayScore   liveIcon" minmax(19px, auto) "check       .           .        .               .		      .           .           .           .           .       " 5px / max-content max-content var(--width-logo, 0) 1fr max-content max-content max-content max-content max-content 46px;
+  }
+}
+.event.odds .beach-volleyball .event__match--twoLine {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeScore homePartScore odd1 odd2 liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayScore awayPartScore odd1 odd2 liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr 34px 34px 59px 59px 31px;
+}
+.event.odds .beach-volleyball .event__match--twoLineUS {
+  grid-template: " check       stageOrTime homeLogo             homeParticipant homeScore homeSpread1 homeSpread2 homeMoneyline homeTotal1 homeTotal2 liveIcon" minmax(30px, auto) " check       stageOrTime awayLogo             awayParticipant awayScore awaySpread1 awaySpread2 awayMoneyline awayTotal1 awayTotal2 liveIcon" minmax(30px, auto) / max-content 69px var(--width-logo, 0) 1fr 49px 59px 59px 59px 59px 59px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event.odds .beach-volleyball .event__match {
+    grid-template: " check .                    .               .                 .                  .                     .                 .   odds        .       " 4px " check homeLogo             homeParticipant stage             rounds             homeScoreInRegulation homeScore         .   odds        liveIcon" minmax(19px, auto) " check awayLogo             awayParticipant stage             rounds             awayScoreInRegulation awayScore         .   odds        liveIcon" minmax(19px, auto) " check .                    .               .                 .                  .                     .                 .   odds        .       " 4px / 31px var(--width-logo, 0) 1fr fit-content(48px) fit-content(100px) max-content fit-content(90px) 8px max-content 31px;
+  }
+  .event.odds .beach-volleyball .event__match--scheduled {
+    grid-template-columns: 31px var(--width-logo, 0) 1fr 34px fit-content(100px) max-content fit-content(40px) 8px max-content 31px;
+  }
+}
+.event .beach-volleyball .event__match {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeService             homeScore homePart1 homePart2 homePart3 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayService             awayScore awayPart1 awayPart2 awayPart3 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr var(--width-service, 0) 34px 34px 34px 34px 28px 24px 24px 38px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event .beach-volleyball .event__match {
+    grid-template: "check       .                        .                    .               .           .           .           .           .           .                     .           .           .           .           .           .           .           .       " 5px "check       dropdown                 homeLogo             homeParticipant iconStr     iconTv      stage       homeService rounds      homeScoreInRegulation homePart1   homePart2   resultsTime homeScore   homeCurrent homeLegs    homeSets    liveIcon" minmax(19px, auto) "check       dropdown                 awayLogo             awayParticipant iconStr     iconTv      stage       awayService rounds      awayScoreInRegulation awayPart1   awayPart2   resultsTime awayScore   awayCurrent awayLegs    awaySets    liveIcon" minmax(19px, auto) "check       .                        .                    .               .           .           .           .           .           .                     .           .           .           .           .           .           .           .       " 5px / max-content var(--width-dropdown, 0) var(--width-logo, 0) 1fr max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content var(--width-live, 0);
+  }
+}
+/* LEFT MENU + CONTENT */
+.event.event--topScores .boxing .event__match,
+.event.myfs .boxing .event__match {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant rounds iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant rounds iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr 169px 28px 24px 24px 38px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event.event--topScores .boxing .event__match,
+  .event.myfs .boxing .event__match {
+    grid-template: "check       .           .                    .               .           .		      .            .     	         .       " 5px "check       dropdown    homeLogo             homeParticipant iconStr 	  iconTv      stage 	  rounds 	   		 liveIcon" minmax(19px, auto) "check       dropdown    awayLogo             awayParticipant iconStr 	  iconTv      stage 	  rounds 	   		 liveIcon" minmax(19px, auto) "check       .           .                    .               .		      .           .     	  .      	   		 .       " 5px / max-content max-content var(--width-logo, 0) 1fr max-content max-content max-content fit-content(118px) 46px;
+  }
+  .event.event--topScores .boxing .event__match--scheduled,
+  .event.myfs .boxing .event__match--scheduled {
+    grid-template-areas: "check .        .        .               .	     .      .     .         .       " "check dropdown homeLogo homeParticipant iconStr iconTv stage homeScore liveIcon" "check dropdown awayLogo awayParticipant iconStr iconTv stage awayScore liveIcon" "check .        .        .               .	     .      .     .         .       ";
+  }
+}
+.event.odds .boxing .event__match--twoLine {
+  grid-template: " check       stageOrTime homeLogo             homeParticipant rounds          odd1 odd2 odd3 liveIcon" minmax(23px, auto) " check       stageOrTime awayLogo             awayParticipant rounds          odd1 odd2 odd3 liveIcon" minmax(23px, auto) / max-content 69px var(--width-logo, 0) 1fr minmax(0, auto) 59px 59px 59px 31px;
+}
+.event.odds .boxing .event__match--twoLineUS {
+  grid-template: " check       stageOrTime homeLogo             homeParticipant rounds homeSpread1 homeSpread2 homeMoneyline homeTotal1 homeTotal2 liveIcon" minmax(30px, auto) " check       stageOrTime awayLogo             awayParticipant rounds awaySpread1 awaySpread2 awayMoneyline awayTotal1 awayTotal2 liveIcon" minmax(30px, auto) / max-content 69px var(--width-logo, 0) 1fr 143px 59px 59px 59px 59px 59px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event.odds .boxing .event__match {
+    grid-template: " check .                    .               .                 .                  .                     .                 .   odds        .       " 4px " check homeLogo             homeParticipant stage             rounds             homeScoreInRegulation homeScore         .   odds        liveIcon" minmax(19px, auto) " check awayLogo             awayParticipant stage             rounds             awayScoreInRegulation awayScore         .   odds        liveIcon" minmax(19px, auto) " check .                    .               .                 .                  .                     .                 .   odds        .       " 4px / 31px var(--width-logo, 0) 1fr fit-content(48px) fit-content(100px) max-content fit-content(90px) 8px max-content 31px;
+  }
+  .event.odds .boxing .event__match--scheduled {
+    grid-template-columns: 31px var(--width-logo, 0) 1fr 34px fit-content(100px) max-content fit-content(40px) 8px max-content 31px;
+  }
+}
+.event .boxing .event__match {
+  grid-template: " check       dropdown    stageOrTime homeLogo    homeParticipant rounds iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) " check       dropdown    stageOrTime awayLogo    awayParticipant rounds iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) / max-content max-content 69px max-content 1fr 169px 28px 24px 24px 38px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event .boxing .event__match {
+    grid-template: " check       .                        .                    .               .           .           .            .           .                         .                     .           .           .           .       " 5px " check       dropdown                 homeLogo             homeParticipant iconStr     iconTv      stage        resultsTime rounds                    homeScoreInRegulation homePart1   homePart2   homeScore   liveIcon" minmax(19px, auto) " check       dropdown                 awayLogo             awayParticipant iconStr     iconTv      stage        resultsTime rounds                    awayScoreInRegulation awayPart1   awayPart2   awayScore   liveIcon" minmax(19px, auto) " check       .                        .                    .               .           .           .            .           .                         .                     .           .           .           .       " 5px / max-content var(--width-dropdown, 0) var(--width-logo, 0) auto max-content max-content min-content max-content minmax(auto, max-content) max-content max-content max-content max-content var(--width-live, 0);
+  }
+}
+/* LEFT MENU + CONTENT */
+.event.event--topScores .cricket .event__match,
+.event.myfs .cricket .event__match {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeService homeScore homeRunRate iconStr   iconInf   iconTv    iconStd   liveIcon " minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayService awayScore awayRunRate iconStr   iconInf   iconTv    iconStd   liveIcon " minmax(23px, auto) " extraInfo   extraInfo                extraInfo   extraInfo            extraInfo       extraInfo   extraInfo extraInfo   extraInfo extraInfo extraInfo extraInfo extraInfo" max-content / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr 19px 140px 64px 28px 24px 24px 38px 31px;
+}
+.event.event--topScores .cricket .event__match .extraInfo,
+.event.myfs .cricket .event__match .extraInfo {
+  grid-template: " .   sentence .     batsmanAndBowler ." max-content " .   overs    overs overs            ." max-content / 5px auto 5px 1fr 5px;
+}
+@media only screen and (max-width: 799px) {
+  .event.event--topScores .cricket .event__match,
+  .event.myfs .cricket .event__match {
+    grid-template: " check       .                        .                    .               .           .          .                               .           .           .           .                     .           .           .           .           .           .           .                    .        " 5px " check       dropdown                 homeLogo             homeParticipant iconStr     iconTv     stage                           resultsTime homeService rounds      homeScoreInRegulation homePart1   homePart2   homeScore   homeCurrent homeLegs    homeSets    liveIcon             .        " minmax(19px, auto) " check       dropdown                 awayLogo             awayParticipant iconStr     iconTv     stage                           resultsTime awayService rounds      awayScoreInRegulation awayPart1   awayPart2   awayScore   awayCurrent awayLegs    awaySets    liveIcon             .        " minmax(19px, auto) " check       .                        .                    .               .           .          .                               .           .           .           .                     .           .           .           .           .           .           .                    .        " 5px " extraInfo   extraInfo                extraInfo            extraInfo       extraInfo   extraInfo  extraInfo                       extraInfo   extraInfo   extraInfo   extraInfo             extraInfo   extraInfo   extraInfo   extraInfo   extraInfo   extraInfo   extraInfo            extraInfo" max-content " pitchers    pitchers                 pitchers             pitchers        pitchers    pitchers   pitchers                        pitchers    pitchers    pitchers    pitchers              pitchers    pitchers    pitchers    pitchers    pitchers    pitchers    pitchers             pitchers " max-content / max-content var(--width-dropdown, 0) var(--width-logo, 0) 1fr max-content max-content var(--width-stage, max-content) max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content var(--width-live, 0) var(--width-cricket, 0);
+  }
+}
+.event.odds .cricket .event__match--twoLine {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeScore homePartScore odd1 odd2 liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayScore awayPartScore odd1 odd2 liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr 34px 34px 59px 59px 31px;
+}
+.event.odds .cricket .event__match--twoLineUS {
+  grid-template: " check       stageOrTime homeLogo             homeParticipant homeScore homeSpread1 homeSpread2 homeMoneyline homeTotal1 homeTotal2 liveIcon" minmax(30px, auto) " check       stageOrTime awayLogo             awayParticipant awayScore awaySpread1 awaySpread2 awayMoneyline awayTotal1 awayTotal2 liveIcon" minmax(30px, auto) / max-content 69px var(--width-logo, 0) 1fr 49px 59px 59px 59px 59px 59px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event.odds .cricket .event__match {
+    grid-template: " check .                    .               .                 .                  .                     .                 .   odds        .       " 4px " check homeLogo             homeParticipant stage             rounds             homeScoreInRegulation homeScore         .   odds        liveIcon" minmax(19px, auto) " check awayLogo             awayParticipant stage             rounds             awayScoreInRegulation awayScore         .   odds        liveIcon" minmax(19px, auto) " check .                    .               .                 .                  .                     .                 .   odds        .       " 4px / 31px var(--width-logo, 0) 1fr fit-content(48px) fit-content(100px) max-content fit-content(90px) 8px max-content 31px;
+  }
+  .event.odds .cricket .event__match--scheduled {
+    grid-template-columns: 31px var(--width-logo, 0) 1fr 34px fit-content(100px) max-content fit-content(40px) 8px max-content 31px;
+  }
+}
+.event .cricket .event__match {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeService             homeScore homeRunRate iconStr   iconInf   iconTv    iconStd   liveIcon " minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayService             awayScore awayRunRate iconStr   iconInf   iconTv    iconStd   liveIcon " minmax(23px, auto) " extraInfo   extraInfo                extraInfo   extraInfo            extraInfo       extraInfo               extraInfo extraInfo   extraInfo extraInfo extraInfo extraInfo extraInfo" max-content / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr var(--width-service, 0) 150px 70px 28px 24px 24px 38px 31px;
+}
+.event .cricket .event__match .extraInfo {
+  grid-template: " .   sentence .     batsmanAndBowler ." max-content " .   overs    overs overs            ." max-content / 5px auto 5px 1fr 5px;
+}
+@media only screen and (max-width: 799px) {
+  .event .cricket .event__match {
+    grid-template: " check       .                        .                    .               .           .          .                               .           .           .           .                     .           .           .           .           .           .           .                    .        " 5px " check       dropdown                 homeLogo             homeParticipant iconStr     iconTv     stage                           resultsTime homeService rounds      homeScoreInRegulation homePart1   homePart2   homeScore   homeCurrent homeLegs    homeSets    liveIcon             .        " minmax(19px, auto) " check       dropdown                 awayLogo             awayParticipant iconStr     iconTv     stage                           resultsTime awayService rounds      awayScoreInRegulation awayPart1   awayPart2   awayScore   awayCurrent awayLegs    awaySets    liveIcon             .        " minmax(19px, auto) " check       .                        .                    .               .           .          .                               .           .           .           .                     .           .           .           .           .           .           .                    .        " 5px " extraInfo   extraInfo                extraInfo            extraInfo       extraInfo   extraInfo  extraInfo                       extraInfo   extraInfo   extraInfo   extraInfo             extraInfo   extraInfo   extraInfo   extraInfo   extraInfo   extraInfo   extraInfo            extraInfo" max-content " pitchers    pitchers                 pitchers             pitchers        pitchers    pitchers   pitchers                        pitchers    pitchers    pitchers    pitchers              pitchers    pitchers    pitchers    pitchers    pitchers    pitchers    pitchers             pitchers " max-content / max-content var(--width-dropdown, 0) var(--width-logo, 0) 1fr max-content max-content var(--width-stage, max-content) max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content var(--width-live, 0) var(--width-cricket, 0);
+  }
+}
+/* LEFT MENU + CONTENT */
+.event.odds .cycling {
+  /* LEFT MENU + CONTENT */
+}
+.event.odds .cycling .event__match {
+  grid-template: " check rating participantName participantTeam odd1 odd2 odd3 odd4" minmax(var(--height-oneline), auto) / 23px 52px 1fr 1fr 59px 59px 59px 59px;
+}
+@media only screen and (max-width: 799px) {
+  .event.odds .cycling .event__match--noDuel {
+    grid-template: " check .      .           	   .   " 8px " check rating participantName time" minmax(19px, auto) " check rating participantTeam .   " max-content " check .      .           	   .   " 8px " .     odds   odds        	   odds" max-content / 31px 34px 1fr 100px;
+  }
+}
+.event .cycling .event__match {
+  grid-template: " check       dropdown                 rating                 homeLogo    participantName participantTeam time" minmax(var(--height-oneline), auto) / max-content var(--width-dropdown, 0) var(--width-rating, 0) max-content 1fr 1fr 100px;
+}
+@media only screen and (max-width: 799px) {
+  .event .cycling .event__match {
+    grid-template: " check       .                        .      .               .   " 8px " check       dropdown                 rating participantName time" minmax(19px, auto) " check       dropdown                 rating participantTeam .   " minmax(19px, auto) " check       .                        .      .               .   " 8px / max-content var(--width-dropdown, 0) 50px 1fr 100px;
+  }
+}
+/* LEFT MENU + CONTENT */
+.event.event--topScores .darts .event__match,
+.event.myfs .darts .event__match {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeService homeSets homeLegs homeCurrent frames iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayService awaySets awayLegs awayCurrent frames iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr 19px 34px 34px 34px 34px 28px 24px 24px 38px 31px;
+}
+.event.event--topScores .darts .event__match__header--duel,
+.event.myfs .darts .event__match__header--duel {
+  grid-template: " .           .    .    .   .    sets legs points .    .     ." 23px / max-content 69px 23px 1fr 19px 34px 34px 34px 34px 114px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event.event--topScores .darts .event__match,
+  .event.myfs .darts .event__match {
+    grid-template: "check       .           .        .               .		      .           .           .     	  .		      .           .       " 5px "check       dropdown    homeLogo homeParticipant iconStr 	  iconTv      homeService stage 	  resultsTime homeScore   liveIcon" minmax(19px, auto) "check       dropdown    awayLogo awayParticipant iconStr 	  iconTv      awayService stage 	  resultsTime awayScore   liveIcon" minmax(19px, auto) "check       .           .        .               .		      .           .           .     	  .		      .           .       " 5px / max-content max-content var(--width-logo, 0) 1fr max-content max-content max-content max-content max-content max-content 46px;
+  }
+  .event.event--topScores .darts .event__match--scheduled,
+  .event.myfs .darts .event__match--scheduled {
+    grid-template: "check       .           .        .               .           .	   	      .      	 .     	      .           .       " 5px "check       dropdown    homeLogo homeParticipant iconStr 	  iconTv 	  stage 	 homeService  homeScore   liveIcon" minmax(19px, auto) "check       dropdown    awayLogo awayParticipant iconStr     iconTv 	  stage 	 awayService  awayScore   liveIcon" minmax(19px, auto) "check       .           .        .               .           .	   	      .      	 .     	      .           .       " 5px / max-content max-content var(--width-logo, 0) 1fr max-content max-content max-content max-content max-content 46px;
+  }
+  .event.event--topScores .darts .event__match--live,
+  .event.myfs .darts .event__match--live {
+    grid-template: "check       .           .        .               .		      .           .     	  .           .           .           .           .       " 5px "check       dropdown    homeLogo homeParticipant iconStr 	  iconTv      stage 	  homeService homeCurrent homeLegs    homeSets    liveIcon" minmax(19px, auto) "check       dropdown    awayLogo awayParticipant iconStr 	  iconTv      stage 	  awayService awayCurrent awayLegs    awaySets    liveIcon" minmax(19px, auto) "check       .           .        .               .		      .           .     	  .           .           .           .           .       " 5px / max-content max-content var(--width-logo, 0) 1fr max-content max-content max-content max-content max-content max-content max-content 46px;
+  }
+}
+.event.odds .darts .event__match--twoLine {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeScore homePartScore odd1 odd2 liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayScore awayPartScore odd1 odd2 liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr 34px 34px 59px 59px 31px;
+}
+.event.odds .darts .event__match--twoLineUS {
+  grid-template: " check       stageOrTime homeLogo             homeParticipant homeScore homeSpread1 homeSpread2 homeMoneyline homeTotal1 homeTotal2 liveIcon" minmax(30px, auto) " check       stageOrTime awayLogo             awayParticipant awayScore awaySpread1 awaySpread2 awayMoneyline awayTotal1 awayTotal2 liveIcon" minmax(30px, auto) / max-content 69px var(--width-logo, 0) 1fr 49px 59px 59px 59px 59px 59px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event.odds .darts .event__match {
+    grid-template: " check .                    .               .                 .                  .                     .                 .   odds        .       " 4px " check homeLogo             homeParticipant stage             rounds             homeScoreInRegulation homeScore         .   odds        liveIcon" minmax(19px, auto) " check awayLogo             awayParticipant stage             rounds             awayScoreInRegulation awayScore         .   odds        liveIcon" minmax(19px, auto) " check .                    .               .                 .                  .                     .                 .   odds        .       " 4px / 31px var(--width-logo, 0) 1fr fit-content(48px) fit-content(100px) max-content fit-content(90px) 8px max-content 31px;
+  }
+  .event.odds .darts .event__match--scheduled {
+    grid-template-columns: 31px var(--width-logo, 0) 1fr 34px fit-content(100px) max-content fit-content(40px) 8px max-content 31px;
+  }
+}
+.event .darts .event__match {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeService             homeSets homeLegs homeCurrent frames iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayService             awaySets awayLegs awayCurrent frames iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr var(--width-service, 0) 34px 34px 34px 34px 28px 24px 24px 38px 31px;
+}
+.event .darts .event__match__header--duel {
+  grid-template: " .           .    .   .                       sets legs points .    .     ." 23px / max-content 69px 1fr var(--width-service, 0) 34px 34px 34px 34px 114px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event .darts .event__match {
+    grid-template: " check       .                        .                    .               .           .           .           .           .           .         .                     .           .           .           .           .           .           .                    .        " 5px " check       dropdown                 homeLogo             homeParticipant iconStr     iconTv      stage       resultsTime homeService rounds    homeScoreInRegulation homePart1   homePart2   homeScore   homeCurrent homeLegs    homeSets    liveIcon             .        " minmax(19px, auto) " check       dropdown                 awayLogo             awayParticipant iconStr     iconTv      stage       resultsTime awayService rounds    awayScoreInRegulation awayPart1   awayPart2   awayScore   awayCurrent awayLegs    awaySets    liveIcon             .        " minmax(19px, auto) " check       .                        .                    .               .           .           .           .           .           .         .                     .           .           .           .           .           .           .                    .        " 5px " extraInfo   extraInfo                extraInfo            extraInfo       extraInfo   extraInfo   extraInfo   extraInfo   extraInfo   extraInfo extraInfo             extraInfo   extraInfo   extraInfo   extraInfo   extraInfo   extraInfo   extraInfo            extraInfo" max-content " pitchers    pitchers                 pitchers             pitchers        pitchers    pitchers    pitchers    pitchers    pitchers    pitchers  pitchers              pitchers    pitchers    pitchers    pitchers    pitchers    pitchers    pitchers             pitchers " max-content / max-content var(--width-dropdown, 0) var(--width-logo, 0) 1fr max-content max-content auto max-content max-content auto max-content max-content max-content max-content max-content max-content max-content var(--width-live, 0) var(--width-cricket, 0);
+  }
+  .event .darts .event__match .extraInfo {
+    grid-template: " .        ." 4px " sentence ." max-content / 1fr 5px;
+  }
+}
+/* LEFT MENU + CONTENT */
+.event.event--topScores .esports .event__match,
+.event.myfs .esports .event__match {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeService homeScore homePart1 homePart2 homePart3 homePart4 homePart5 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayService awayScore awayPart1 awayPart2 awayPart3 awayPart4 awayPart5 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr 19px 34px 34px 34px 34px 34px 34px 28px 24px 24px 38px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event.event--topScores .esports .event__match,
+  .event.myfs .esports .event__match {
+    grid-template: "check       .           .                    .               .           .           .           .           .           .                     .           .       " 5px "check       dropdown    homeLogo             homeParticipant score       iconStr     iconTv      resultsTime stage       homeScoreInRegulation homeScore   liveIcon" minmax(19px, auto) "check       dropdown    awayLogo             awayParticipant score       iconStr     iconTv      resultsTime stage       awayScoreInRegulation awayScore   liveIcon" minmax(19px, auto) "check       .           .                    .               .           .           .           .           .           .                     .           .       " 5px / max-content max-content var(--width-logo, 0) 1fr max-content max-content max-content max-content max-content max-content max-content 46px;
+  }
+}
+.event.odds .esports .event__match--twoLine {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeScore homePartScore odd1 odd2 liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayScore awayPartScore odd1 odd2 liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr 34px 34px 59px 59px 31px;
+}
+.event.odds .esports .event__match--twoLineUS {
+  grid-template: " check       stageOrTime homeLogo             homeParticipant homeScore homeSpread1 homeSpread2 homeMoneyline homeTotal1 homeTotal2 liveIcon" minmax(30px, auto) " check       stageOrTime awayLogo             awayParticipant awayScore awaySpread1 awaySpread2 awayMoneyline awayTotal1 awayTotal2 liveIcon" minmax(30px, auto) / max-content 69px var(--width-logo, 0) 1fr 49px 59px 59px 59px 59px 59px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event.odds .esports .event__match {
+    grid-template: " check .                    .               .                 .                  .                     .                 .   odds        .       " 4px " check homeLogo             homeParticipant stage             rounds             homeScoreInRegulation homeScore         .   odds        liveIcon" minmax(19px, auto) " check awayLogo             awayParticipant stage             rounds             awayScoreInRegulation awayScore         .   odds        liveIcon" minmax(19px, auto) " check .                    .               .                 .                  .                     .                 .   odds        .       " 4px / 31px var(--width-logo, 0) 1fr fit-content(48px) fit-content(100px) max-content fit-content(90px) 8px max-content 31px;
+  }
+  .event.odds .esports .event__match--scheduled {
+    grid-template-columns: 31px var(--width-logo, 0) 1fr 34px fit-content(100px) max-content fit-content(40px) 8px max-content 31px;
+  }
+}
+.event .esports .event__match {
+  grid-template: " check       dropdown                 stageOrTime homeLogo    homeParticipant homeScore iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo    awayParticipant awayScore iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px max-content 1fr 34px 28px 24px 24px 38px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event .esports .event__match {
+    grid-template: " check       .                        .                    .               .           .           .           .           .           .           .                     .           .           .           .           .           .           .       " 5px " check       dropdown                 homeLogo             homeParticipant iconStr     iconTv      resultsTime stage       homeService rounds      homeScoreInRegulation homePart1   homePart2   homeScore   homeCurrent homeLegs    homeSets    liveIcon" minmax(19px, auto) " check       dropdown                 awayLogo             awayParticipant iconStr     iconTv      resultsTime stage       awayService rounds      awayScoreInRegulation awayPart1   awayPart2   awayScore   awayCurrent awayLegs    awaySets    liveIcon" minmax(19px, auto) " check       .                        .                    .               .           .           .           .           .           .           .                     .           .           .           .           .           .           .       " 5px / max-content var(--width-dropdown, 0) var(--width-logo, 0) 1fr max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content var(--width-live, 0);
+  }
+}
+/* LEFT MENU + CONTENT */
+.event.event--topScores .field-hockey .event__match,
+.event.myfs .field-hockey .event__match {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeService homeScore homePart1 homePart2 homePart3 homePart4 homePart5 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayService awayScore awayPart1 awayPart2 awayPart3 awayPart4 awayPart5 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr 19px 34px 34px 34px 34px 34px 34px 28px 24px 24px 38px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event.event--topScores .field-hockey .event__match,
+  .event.myfs .field-hockey .event__match {
+    grid-template: "check       .           .                    .               .           .           .           .           .           .                     .           .       " 5px "check       dropdown    homeLogo             homeParticipant score       iconStr     iconTv      resultsTime stage       homeScoreInRegulation homeScore   liveIcon" minmax(19px, auto) "check       dropdown    awayLogo             awayParticipant score       iconStr     iconTv      resultsTime stage       awayScoreInRegulation awayScore   liveIcon" minmax(19px, auto) "check       .           .                    .               .           .           .           .           .           .                     .           .       " 5px / max-content max-content var(--width-logo, 0) 1fr max-content max-content max-content max-content max-content max-content max-content 46px;
+  }
+}
+.event.odds .field-hockey .event__match--twoLine {
+  grid-template: " check       stageOrTime homeLogo             homeParticipant homeScore homePartScore odd1 odd2 odd3            liveIcon" minmax(19px, auto) " check       stageOrTime awayLogo             awayParticipant awayScore awayPartScore odd1 odd2 odd3            liveIcon" minmax(19px, auto) / max-content 69px var(--width-logo, 0) 1fr 34px 34px 59px 59px minmax(0, auto) 31px;
+}
+.event.odds .field-hockey .event__match--twoLineUS {
+  grid-template: " check       stageOrTime homeLogo             homeParticipant homeScore homeSpread1 homeSpread2 homeMoneyline homeTotal1 homeTotal2 liveIcon" minmax(30px, auto) " check       stageOrTime awayLogo             awayParticipant awayScore awaySpread1 awaySpread2 awayMoneyline awayTotal1 awayTotal2 liveIcon" minmax(30px, auto) / max-content 69px var(--width-logo, 0) 1fr 49px 59px 59px 59px 59px 59px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event.odds .field-hockey .event__match {
+    grid-template: " check .                    .               .                 .                  .                     .                 .   odds        .       " 4px " check homeLogo             homeParticipant stage             rounds             homeScoreInRegulation homeScore         .   odds        liveIcon" minmax(19px, auto) " check awayLogo             awayParticipant stage             rounds             awayScoreInRegulation awayScore         .   odds        liveIcon" minmax(19px, auto) " check .                    .               .                 .                  .                     .                 .   odds        .       " 4px / 31px var(--width-logo, 0) 1fr fit-content(48px) fit-content(100px) max-content fit-content(90px) 8px max-content 31px;
+  }
+  .event.odds .field-hockey .event__match--scheduled {
+    grid-template-columns: 31px var(--width-logo, 0) 1fr 34px fit-content(100px) max-content fit-content(40px) 8px max-content 31px;
+  }
+}
+.event .field-hockey .event__match {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeScore                 homePart1 homePart2 homePart3 homePart4 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayScore                 awayPart1 awayPart2 awayPart3 awayPart4 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr var(--width-result, 34px) 34px 34px 34px 34px 28px 24px 24px 38px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event .field-hockey .event__match {
+    grid-template: " check       .                        .                    .               .           .           .           .           .           .           .                     .           .           .           .           .           .           .       " 5px " check       dropdown                 homeLogo             homeParticipant iconStr     iconTv      resultsTime stage       homeService rounds      homeScoreInRegulation homePart1   homePart2   homeScore   homeCurrent homeLegs    homeSets    liveIcon" minmax(19px, auto) " check       dropdown                 awayLogo             awayParticipant iconStr     iconTv      resultsTime stage       awayService rounds      awayScoreInRegulation awayPart1   awayPart2   awayScore   awayCurrent awayLegs    awaySets    liveIcon" minmax(19px, auto) " check       .                        .                    .               .           .           .           .           .           .           .                     .           .           .           .           .           .           .       " 5px / max-content var(--width-dropdown, 0) var(--width-logo, 0) 1fr max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content var(--width-live, 0);
+  }
+}
+/* LEFT MENU + CONTENT */
+.event.event--topScores .floorball .event__match,
+.event.myfs .floorball .event__match {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeService homeScore homePart1 homePart2 homePart3 homePart4 homePart5 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayService awayScore awayPart1 awayPart2 awayPart3 awayPart4 awayPart5 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr 19px 34px 34px 34px 34px 34px 34px 28px 24px 24px 38px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event.event--topScores .floorball .event__match,
+  .event.myfs .floorball .event__match {
+    grid-template: "check       .           .                    .               .           .           .           .           .           .                     .           .       " 5px "check       dropdown    homeLogo             homeParticipant score       iconStr     iconTv      resultsTime stage       homeScoreInRegulation homeScore   liveIcon" minmax(19px, auto) "check       dropdown    awayLogo             awayParticipant score       iconStr     iconTv      resultsTime stage       awayScoreInRegulation awayScore   liveIcon" minmax(19px, auto) "check       .           .                    .               .           .           .           .           .           .                     .           .       " 5px / max-content max-content var(--width-logo, 0) 1fr max-content max-content max-content max-content max-content max-content max-content 46px;
+  }
+}
+.event.odds .floorball .event__match--twoLine {
+  grid-template: " check       stageOrTime homeLogo             homeParticipant homeScore homePartScore odd1 odd2 odd3            liveIcon" minmax(19px, auto) " check       stageOrTime awayLogo             awayParticipant awayScore awayPartScore odd1 odd2 odd3            liveIcon" minmax(19px, auto) / max-content 69px var(--width-logo, 0) 1fr 34px 34px 59px 59px minmax(0, auto) 31px;
+}
+.event.odds .floorball .event__match--twoLineUS {
+  grid-template: " check       stageOrTime homeLogo             homeParticipant homeScore homeSpread1 homeSpread2 homeMoneyline homeTotal1 homeTotal2 liveIcon" minmax(30px, auto) " check       stageOrTime awayLogo             awayParticipant awayScore awaySpread1 awaySpread2 awayMoneyline awayTotal1 awayTotal2 liveIcon" minmax(30px, auto) / max-content 69px var(--width-logo, 0) 1fr 49px 59px 59px 59px 59px 59px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event.odds .floorball .event__match {
+    grid-template: " check .                    .               .                 .                  .                     .                 .   odds        .       " 4px " check homeLogo             homeParticipant stage             rounds             homeScoreInRegulation homeScore         .   odds        liveIcon" minmax(19px, auto) " check awayLogo             awayParticipant stage             rounds             awayScoreInRegulation awayScore         .   odds        liveIcon" minmax(19px, auto) " check .                    .               .                 .                  .                     .                 .   odds        .       " 4px / 31px var(--width-logo, 0) 1fr fit-content(48px) fit-content(100px) max-content fit-content(90px) 8px max-content 31px;
+  }
+  .event.odds .floorball .event__match--scheduled {
+    grid-template-columns: 31px var(--width-logo, 0) 1fr 34px fit-content(100px) max-content fit-content(40px) 8px max-content 31px;
+  }
+}
+.event .floorball .event__match {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeService             homeScore homePart1 homePart2 homePart3 homePart4 homePart5 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayService             awayScore awayPart1 awayPart2 awayPart3 awayPart4 awayPart5 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr var(--width-service, 0) 34px 34px 34px 34px 34px 34px 28px 24px 24px 38px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event .floorball .event__match {
+    grid-template: " check       .                        .                    .               .           .           .           .           .           .           .                     .           .           .           .           .           .           .       " 5px " check       dropdown                 homeLogo             homeParticipant iconStr     iconTv      resultsTime stage       homeService rounds      homeScoreInRegulation homePart1   homePart2   homeScore   homeCurrent homeLegs    homeSets    liveIcon" minmax(19px, auto) " check       dropdown                 awayLogo             awayParticipant iconStr     iconTv      resultsTime stage       awayService rounds      awayScoreInRegulation awayPart1   awayPart2   awayScore   awayCurrent awayLegs    awaySets    liveIcon" minmax(19px, auto) " check       .                        .                    .               .           .           .           .           .           .           .                     .           .           .           .           .           .           .       " 5px / max-content var(--width-dropdown, 0) var(--width-logo, 0) 1fr max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content var(--width-live, 0);
+  }
+}
+/* LEFT MENU + CONTENT */
+.event.event--topScores .futsal .event__match,
+.event.myfs .futsal .event__match {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeScore homePart1 homePart2 homePart3 homePart4 homePart5 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayScore awayPart1 awayPart2 awayPart3 awayPart4 awayPart5 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr 34px 34px 34px 34px 34px 34px 28px 24px 24px 38px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event.event--topScores .futsal .event__match,
+  .event.myfs .futsal .event__match {
+    grid-template: "check       .           .                    .               .           .           .           .           .           .                     .           .       " 5px "check       dropdown    homeLogo             homeParticipant score       iconStr     iconTv      resultsTime stage       homeScoreInRegulation homeScore   liveIcon" minmax(19px, auto) "check       dropdown    awayLogo             awayParticipant score       iconStr     iconTv      resultsTime stage       awayScoreInRegulation awayScore   liveIcon" minmax(19px, auto) "check       .           .                    .               .           .           .           .           .           .                     .           .       " 5px / max-content max-content var(--width-logo, 0) 1fr max-content max-content max-content max-content max-content max-content max-content 46px;
+  }
+}
+.event.odds .futsal .event__match--twoLine {
+  grid-template: " check       stageOrTime homeLogo             homeParticipant homeScore homePartScore odd1 odd2 odd3            liveIcon" minmax(23px, auto) " check       stageOrTime awayLogo             awayParticipant awayScore awayPartScore odd1 odd2 odd3            liveIcon" minmax(23px, auto) / max-content 69px var(--width-logo, 0) 1fr 34px 34px 59px 59px minmax(0, auto) 31px;
+}
+.event.odds .futsal .event__match--twoLineUS {
+  grid-template: " check       stageOrTime homeLogo             homeParticipant homeScore homeSpread1 homeSpread2 homeMoneyline homeTotal1 homeTotal2 liveIcon" minmax(30px, auto) " check       stageOrTime awayLogo             awayParticipant awayScore awaySpread1 awaySpread2 awayMoneyline awayTotal1 awayTotal2 liveIcon" minmax(30px, auto) / max-content 69px var(--width-logo, 0) 1fr 49px 59px 59px 59px 59px 59px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event.odds .futsal .event__match {
+    grid-template: " check .                    .               .                 .                  .                     .                 .   odds        .       " 4px " check homeLogo             homeParticipant stage             rounds             homeScoreInRegulation homeScore         .   odds        liveIcon" minmax(19px, auto) " check awayLogo             awayParticipant stage             rounds             awayScoreInRegulation awayScore         .   odds        liveIcon" minmax(19px, auto) " check .                    .               .                 .                  .                     .                 .   odds        .       " 4px / 31px var(--width-logo, 0) 1fr fit-content(48px) fit-content(100px) max-content fit-content(90px) 8px max-content 31px;
+  }
+  .event.odds .futsal .event__match--scheduled {
+    grid-template-columns: 31px var(--width-logo, 0) 1fr 34px fit-content(100px) max-content fit-content(40px) 8px max-content 31px;
+  }
+}
+.event .futsal .event__match--twoLine {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeScore homePart1 homePart2 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayScore awayPart1 awayPart2 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr 34px 34px 34px 28px 24px 24px 38px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event .futsal .event__match {
+    grid-template: " check       .                        .                    .               .           .           .           .           .           .           .                     .           .           .           .           .           .           .       " 5px " check       dropdown                 homeLogo             homeParticipant iconStr     iconTv      resultsTime stage       homeService rounds      homeScoreInRegulation homePart1   homePart2   homeScore   homeCurrent homeLegs    homeSets    liveIcon" minmax(19px, auto) " check       dropdown                 awayLogo             awayParticipant iconStr     iconTv      resultsTime stage       awayService rounds      awayScoreInRegulation awayPart1   awayPart2   awayScore   awayCurrent awayLegs    awaySets    liveIcon" minmax(19px, auto) " check       .                        .                    .               .           .           .           .           .           .           .                     .           .           .           .           .           .           .       " 5px / max-content var(--width-dropdown, 0) var(--width-logo, 0) 1fr max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content var(--width-live, 0);
+  }
+}
+/* LEFT MENU + CONTENT */
+.event.odds .golf {
+  /* LEFT MENU + CONTENT */
+}
+.event.odds .golf .event__match--noDuel {
+  grid-template: " check rating participantName par  odd1 odd2 odd3 odd4" minmax(var(--height-oneline), auto) / 23px 47px 1fr 41px 59px 59px 59px 59px;
+}
+.event.odds .golf .event__match--twoLineUS {
+  grid-template: " check stageOrTime homeParticipant result homeSpread1 homeSpread2 homeMoneyline homeTotal1 homeTotal2" minmax(23px, auto) " check stageOrTime awayParticipant result awaySpread1 awaySpread2 awayMoneyline awayTotal1 awayTotal2" minmax(23px, auto) / 23px 69px 1fr 80px 55px 55px 57px 55px 55px;
+}
+.event.odds .golf .event__match--twoLine {
+  grid-template: " check stageOrTime homeParticipant result odd1 odd2" minmax(23px, auto) " check stageOrTime awayParticipant result odd1 odd2" minmax(23px, auto) / 23px 69px 1fr 80px 59px 59px;
+}
+@media screen and (max-width: 799px) {
+  .event.odds .golf .event__match--twoLine {
+    grid-template: " check .               .     .      .   odds 		 .       " 5px " check homeParticipant stage result .   odds 		 liveIcon" minmax(19px, auto) " check awayParticipant stage result .   odds 		 liveIcon" minmax(19px, auto) " check .               .     .      .   odds 		 .       " 5px / 31px 1fr 34px 60px 8px max-content 35px;
+  }
+  .event.odds .golf .event__match--twoLine.event__match--scheduled {
+    grid-template: " .     .               .     .         .   odds 	    .       " 5px " check homeParticipant stage homeScore .   odds 	    liveIcon" minmax(19px, auto) " check awayParticipant stage awayScore .   odds 	    liveIcon" minmax(19px, auto) " .     .               .     .         .   odds 	    .       " 5px / 31px 1fr 34px 60px 8px max-content 35px;
+  }
+  .event.odds .golf .event__match--noDuel {
+    grid-template: " check .      .           	   .    .   " 8px " check rating participantName par  hole" minmax(19px, auto) " check .      .           	   .    .   " 8px " .     odds   odds        	   odds odds" max-content / 31px 34px 1fr 34px 60px;
+  }
+}
+.event .golf .event__match {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeScore result iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayScore result iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr 34px 80px 28px 24px 24px 38px 31px;
+}
+.event .golf .event__match--noDuel {
+  grid-template: " check       dropdown                 rating                 participantName par  hole today       round1 round2 round3 round4 roundAll" minmax(var(--height-oneline), auto) / max-content var(--width-dropdown, 0) var(--width-rating, 0) 1fr 41px 56px max-content 41px 41px 41px 41px 41px;
+}
+@media only screen and (max-width: 799px) {
+  .event .golf .event__match--noDuel {
+    grid-template: " check       .                        .      .               .    .   " 8px " check       dropdown                 rating participantName par  hole" minmax(19px, auto) " check       .                        .      .               .    .   " 8px / max-content var(--width-dropdown, 0) 50px 1fr 34px 60px;
+  }
+  .event .golf .event__match--twoLine {
+    grid-template: " check       .                        .                    .               .          .            .           .           .           .           .       " 5px " check       dropdown                 .                    homeParticipant iconStr     iconTv      stage 	    resultsTime homeScore   result      liveIcon" minmax(19px, auto) " check       dropdown                 .                    awayParticipant iconStr     iconTv      stage 	    resultsTime awayScore   result      liveIcon" minmax(19px, auto) " check       .                        .                    .               .           .           .           .           .           .           .       " 5px / max-content var(--width-dropdown, 0) var(--width-logo, 0) 1fr max-content max-content max-content max-content max-content max-content 46px;
+  }
+}
+/* LEFT MENU + CONTENT */
+.event.event--topScores .handball .event__match,
+.event.myfs .handball .event__match {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeService homeScore homePart1 homePart2 homePart3 homePart4 homePart5 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayService awayScore awayPart1 awayPart2 awayPart3 awayPart4 awayPart5 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr 19px 34px 34px 34px 34px 34px 34px 28px 24px 24px 38px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event.event--topScores .handball .event__match,
+  .event.myfs .handball .event__match {
+    grid-template: "check       .           .                    .               .           .           .           .           .           .                     .           .       " 5px "check       dropdown    homeLogo             homeParticipant score       iconStr     iconTv      resultsTime stage       homeScoreInRegulation homeScore   liveIcon" minmax(19px, auto) "check       dropdown    awayLogo             awayParticipant score       iconStr     iconTv      resultsTime stage       awayScoreInRegulation awayScore   liveIcon" minmax(19px, auto) "check       .           .                    .               .           .           .           .           .           .                     .           .       " 5px / max-content max-content var(--width-logo, 0) 1fr max-content max-content max-content max-content max-content max-content max-content 46px;
+  }
+}
+.event.odds .handball .event__match--twoLine {
+  grid-template: " check       stageOrTime homeLogo             homeParticipant homeScore homePartScore odd1 odd2 odd3            liveIcon" minmax(19px, auto) " check       stageOrTime awayLogo             awayParticipant awayScore awayPartScore odd1 odd2 odd3            liveIcon" minmax(19px, auto) / max-content 69px var(--width-logo, 0) 1fr 34px 34px 59px 59px minmax(0, auto) 31px;
+}
+.event.odds .handball .event__match--twoLineUS {
+  grid-template: " check       stageOrTime homeLogo             homeParticipant homeScore homeSpread1 homeSpread2 homeMoneyline homeTotal1 homeTotal2 liveIcon" minmax(30px, auto) " check       stageOrTime awayLogo             awayParticipant awayScore awaySpread1 awaySpread2 awayMoneyline awayTotal1 awayTotal2 liveIcon" minmax(30px, auto) / max-content 69px var(--width-logo, 0) 1fr 49px 59px 59px 59px 59px 59px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event.odds .handball .event__match {
+    grid-template: " check .                    .               .                 .                  .                     .                 .   odds        .       " 4px " check homeLogo             homeParticipant stage             rounds             homeScoreInRegulation homeScore         .   odds        liveIcon" minmax(19px, auto) " check awayLogo             awayParticipant stage             rounds             awayScoreInRegulation awayScore         .   odds        liveIcon" minmax(19px, auto) " check .                    .               .                 .                  .                     .                 .   odds        .       " 4px / 31px var(--width-logo, 0) 1fr fit-content(48px) fit-content(100px) max-content fit-content(90px) 8px max-content 31px;
+  }
+  .event.odds .handball .event__match--scheduled {
+    grid-template-columns: 31px var(--width-logo, 0) 1fr 34px fit-content(100px) max-content fit-content(40px) 8px max-content 31px;
+  }
+}
+.event .handball .event__match {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeScore                 homePart1 homePart2 homePart3 homePart4 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayScore                 awayPart1 awayPart2 awayPart3 awayPart4 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr var(--width-result, 34px) 34px 34px 34px 34px 28px 24px 24px 38px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event .handball .event__match {
+    grid-template: " check       .                        .                    .               .           .           .           .           .           .           .                     .           .           .           .           .           .           .       " 5px " check       dropdown                 homeLogo             homeParticipant iconStr     iconTv      resultsTime stage       homeService rounds      homeScoreInRegulation homePart1   homePart2   homeScore   homeCurrent homeLegs    homeSets    liveIcon" minmax(19px, auto) " check       dropdown                 awayLogo             awayParticipant iconStr     iconTv      resultsTime stage       awayService rounds      awayScoreInRegulation awayPart1   awayPart2   awayScore   awayCurrent awayLegs    awaySets    liveIcon" minmax(19px, auto) " check       .                        .                    .               .           .           .           .           .           .           .                     .           .           .           .           .           .           .       " 5px / max-content var(--width-dropdown, 0) var(--width-logo, 0) 1fr max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content var(--width-live, 0);
+  }
+}
+/* LEFT MENU + CONTENT */
+.event.event--topScores .hockey .event__match,
+.event.myfs .hockey .event__match {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeScore homePart1 homePart2 homePart3 homePart4 homePart5 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayScore awayPart1 awayPart2 awayPart3 awayPart4 awayPart5 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr 34px 34px 34px 34px 34px 34px 28px 24px 24px 38px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event.event--topScores .hockey .event__match,
+  .event.myfs .hockey .event__match {
+    grid-template: "check       .           .                    .               .           .           .           .           .           .                     .           .       " 5px "check       dropdown    homeLogo             homeParticipant score       iconStr     iconTv      resultsTime stage       homeScoreInRegulation homeScore   liveIcon" minmax(19px, auto) "check       dropdown    awayLogo             awayParticipant score       iconStr     iconTv      resultsTime stage       awayScoreInRegulation awayScore   liveIcon" minmax(19px, auto) "check       .           .                    .               .           .           .           .           .           .                     .           .       " 5px / max-content max-content var(--width-logo, 0) 1fr max-content max-content max-content max-content max-content max-content max-content 46px;
+  }
+}
+.event.odds .hockey .event__match--twoLine {
+  grid-template: " check       stageOrTime homeLogo             homeParticipant homeScore homePartScore odd1 odd2 odd3            liveIcon" minmax(19px, auto) " check       stageOrTime awayLogo             awayParticipant awayScore awayPartScore odd1 odd2 odd3            liveIcon" minmax(19px, auto) / max-content 69px var(--width-logo, 0) 1fr 34px 34px 59px 59px minmax(0, auto) 31px;
+}
+.event.odds .hockey .event__match--twoLineUS {
+  grid-template: " check       stageOrTime homeLogo             homeParticipant homeScore homeSpread1 homeSpread2 homeMoneyline homeTotal1 homeTotal2 liveIcon" minmax(30px, auto) " check       stageOrTime awayLogo             awayParticipant awayScore awaySpread1 awaySpread2 awayMoneyline awayTotal1 awayTotal2 liveIcon" minmax(30px, auto) / max-content 69px var(--width-logo, 0) 1fr 49px 59px 59px 59px 59px 59px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event.odds .hockey .event__match {
+    grid-template: " check .                    .               .                 .                  .                     .                 .   odds        .       " 4px " check homeLogo             homeParticipant stage             rounds             homeScoreInRegulation homeScore         .   odds        liveIcon" minmax(19px, auto) " check awayLogo             awayParticipant stage             rounds             awayScoreInRegulation awayScore         .   odds        liveIcon" minmax(19px, auto) " check .                    .               .                 .                  .                     .                 .   odds        .       " 4px / 31px var(--width-logo, 0) 1fr fit-content(48px) fit-content(100px) max-content fit-content(90px) 8px max-content 31px;
+  }
+  .event.odds .hockey .event__match--scheduled {
+    grid-template-columns: 31px var(--width-logo, 0) 1fr 34px fit-content(100px) max-content fit-content(40px) 8px max-content 31px;
+  }
+}
+.event .hockey .event__match {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeService             homeScore homePart1 homePart2 homePart3 homePart4 homePart5 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayService             awayScore awayPart1 awayPart2 awayPart3 awayPart4 awayPart5 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr var(--width-service, 0) 34px 34px 34px 34px 34px 34px 28px 24px 24px 38px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event .hockey .event__match {
+    grid-template: " check       .                        .                    .               .           .           .           .           .           .           .                     .           .           .           .           .           .           .       " 5px " check       dropdown                 homeLogo             homeParticipant iconStr     iconTv      resultsTime stage       homeService rounds      homeScoreInRegulation homePart1   homePart2   homeScore   homeCurrent homeLegs    homeSets    liveIcon" minmax(19px, auto) " check       dropdown                 awayLogo             awayParticipant iconStr     iconTv      resultsTime stage       awayService rounds      awayScoreInRegulation awayPart1   awayPart2   awayScore   awayCurrent awayLegs    awaySets    liveIcon" minmax(19px, auto) " check       .                        .                    .               .           .           .           .           .           .           .                     .           .           .           .           .           .           .       " 5px / max-content var(--width-dropdown, 0) var(--width-logo, 0) 1fr max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content var(--width-live, 0);
+  }
+}
+/* LEFT MENU + CONTENT */
+.event.odds .horse-racing .event__match {
+  grid-template: " check       rating participantName participantTeam distance odd1 odd2" minmax(var(--height-oneline), auto) / max-content 52px 1fr 1fr 59px 59px 59px;
+}
+@media only screen and (max-width: 799px) {
+  .event.odds .horse-racing .event__match {
+    grid-template: " check .      .           	  .       " 8px " check rating participantName distance" minmax(19px, auto) " check rating participantTeam .       " max-content " check .      .           	  .       " 8px " .     odds   odds        	  odds    " max-content / 31px 34px 1fr 70px;
+  }
+}
+.event .horse-racing .event__match {
+  grid-template: " check       dropdown                 rating                 homeLogo    participantName participantTeam age  weight distance price" minmax(var(--height-oneline), auto) / max-content var(--width-dropdown, 0) var(--width-rating, 0) max-content 1fr 1fr 50px 50px 50px 50px;
+}
+@media only screen and (max-width: 799px) {
+  .event .horse-racing .event__match--noDuel {
+    grid-template: " check       .                        .      .               .       " 8px " check       dropdown                 rating participantName distance" minmax(19px, auto) " check       dropdown                 rating participantTeam .       " minmax(19px, auto) " check       .                        .      .               .       " 8px / max-content var(--width-dropdown, 0) 40px 1fr 70px;
+  }
+}
+/* LEFT MENU + CONTENT */
+.event.event--topScores .kabaddi .event__match,
+.event.myfs .kabaddi .event__match {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeService homeScore homePart1 homePart2 homePart3 homePart4 homePart5 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayService awayScore awayPart1 awayPart2 awayPart3 awayPart4 awayPart5 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr 19px 34px 34px 34px 34px 34px 34px 28px 24px 24px 38px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event.event--topScores .kabaddi .event__match,
+  .event.myfs .kabaddi .event__match {
+    grid-template: "check       .           .                    .               .           .           .           .           .           .                     .           .       " 5px "check       dropdown    homeLogo             homeParticipant score       iconStr     iconTv      resultsTime stage       homeScoreInRegulation homeScore   liveIcon" minmax(19px, auto) "check       dropdown    awayLogo             awayParticipant score       iconStr     iconTv      resultsTime stage       awayScoreInRegulation awayScore   liveIcon" minmax(19px, auto) "check       .           .                    .               .           .           .           .           .           .                     .           .       " 5px / max-content max-content var(--width-logo, 0) 1fr max-content max-content max-content max-content max-content max-content max-content 46px;
+  }
+}
+.event.odds .kabaddi .event__match--twoLine {
+  grid-template: " check       stageOrTime homeLogo             homeParticipant homeScore homePartScore odd1 odd2 odd3            liveIcon" minmax(19px, auto) " check       stageOrTime awayLogo             awayParticipant awayScore awayPartScore odd1 odd2 odd3            liveIcon" minmax(19px, auto) / max-content 69px var(--width-logo, 0) 1fr 34px 34px 59px 59px minmax(0, auto) 31px;
+}
+.event.odds .kabaddi .event__match--twoLineUS {
+  grid-template: " check       stageOrTime homeLogo             homeParticipant homeScore homeSpread1 homeSpread2 homeMoneyline homeTotal1 homeTotal2 liveIcon" minmax(30px, auto) " check       stageOrTime awayLogo             awayParticipant awayScore awaySpread1 awaySpread2 awayMoneyline awayTotal1 awayTotal2 liveIcon" minmax(30px, auto) / max-content 69px var(--width-logo, 0) 1fr 49px 59px 59px 59px 59px 59px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event.odds .kabaddi .event__match {
+    grid-template: " check .                    .               .                 .                  .                     .                 .   odds        .       " 4px " check homeLogo             homeParticipant stage             rounds             homeScoreInRegulation homeScore         .   odds        liveIcon" minmax(19px, auto) " check awayLogo             awayParticipant stage             rounds             awayScoreInRegulation awayScore         .   odds        liveIcon" minmax(19px, auto) " check .                    .               .                 .                  .                     .                 .   odds        .       " 4px / 31px var(--width-logo, 0) 1fr fit-content(48px) fit-content(100px) max-content fit-content(90px) 8px max-content 31px;
+  }
+  .event.odds .kabaddi .event__match--scheduled {
+    grid-template-columns: 31px var(--width-logo, 0) 1fr 34px fit-content(100px) max-content fit-content(40px) 8px max-content 31px;
+  }
+}
+.event .kabaddi .event__match {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeService             homeScore homePart1 homePart2 homePart3 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayService             awayScore awayPart1 awayPart2 awayPart3 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr var(--width-service, 0) 34px 34px 34px 34px 28px 24px 24px 38px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event .kabaddi .event__match {
+    grid-template: " check       .                        .                    .               .           .           .           .           .           .           .                     .           .           .           .           .           .           .       " 5px " check       dropdown                 homeLogo             homeParticipant iconStr     iconTv      resultsTime stage       homeService rounds      homeScoreInRegulation homePart1   homePart2   homeScore   homeCurrent homeLegs    homeSets    liveIcon" minmax(19px, auto) " check       dropdown                 awayLogo             awayParticipant iconStr     iconTv      resultsTime stage       awayService rounds      awayScoreInRegulation awayPart1   awayPart2   awayScore   awayCurrent awayLegs    awaySets    liveIcon" minmax(19px, auto) " check       .                        .                    .               .           .           .           .           .           .           .                     .           .           .           .           .           .           .       " 5px / max-content var(--width-dropdown, 0) var(--width-logo, 0) 1fr max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content var(--width-live, 0);
+  }
+}
+/* LEFT MENU + CONTENT */
+.event.event--topScores .mma .event__match,
+.event.myfs .mma .event__match {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant rounds iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant rounds iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr 169px 28px 24px 24px 38px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event.event--topScores .mma .event__match,
+  .event.myfs .mma .event__match {
+    grid-template: "check       .           .                    .               .           .		      .            .     	         .       " 5px "check       dropdown    homeLogo             homeParticipant iconStr 	  iconTv      stage 	  rounds 	   		 liveIcon" minmax(19px, auto) "check       dropdown    awayLogo             awayParticipant iconStr 	  iconTv      stage 	  rounds 	   		 liveIcon" minmax(19px, auto) "check       .           .                    .               .		      .           .     	  .      	   		 .       " 5px / max-content max-content var(--width-logo, 0) 1fr max-content max-content max-content fit-content(118px) 46px;
+  }
+  .event.event--topScores .mma .event__match--scheduled,
+  .event.myfs .mma .event__match--scheduled {
+    grid-template-areas: "check .        .        .               .	     .      .     .         .       " "check dropdown homeLogo homeParticipant iconStr iconTv stage homeScore liveIcon" "check dropdown awayLogo awayParticipant iconStr iconTv stage awayScore liveIcon" "check .        .        .               .	     .      .     .         .       ";
+  }
+}
+.event.odds .mma .event__match--twoLine {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant rounds          odd1 odd2 liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant rounds          odd1 odd2 liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr minmax(0, auto) 59px 59px 31px;
+}
+.event.odds .mma .event__match--twoLineUS {
+  grid-template: " check       stageOrTime homeLogo             homeParticipant rounds homeSpread1 homeSpread2 homeMoneyline homeTotal1 homeTotal2 liveIcon" minmax(30px, auto) " check       stageOrTime awayLogo             awayParticipant rounds awaySpread1 awaySpread2 awayMoneyline awayTotal1 awayTotal2 liveIcon" minmax(30px, auto) / max-content 69px var(--width-logo, 0) 1fr 143px 59px 59px 59px 59px 59px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event.odds .mma .event__match {
+    grid-template: " check .                    .               .                 .                  .                     .                 .   odds        .       " 4px " check homeLogo             homeParticipant stage             rounds             homeScoreInRegulation homeScore         .   odds        liveIcon" minmax(19px, auto) " check awayLogo             awayParticipant stage             rounds             awayScoreInRegulation awayScore         .   odds        liveIcon" minmax(19px, auto) " check .                    .               .                 .                  .                     .                 .   odds        .       " 4px / 31px var(--width-logo, 0) 1fr fit-content(48px) fit-content(100px) max-content fit-content(90px) 8px max-content 31px;
+  }
+  .event.odds .mma .event__match--scheduled {
+    grid-template-columns: 31px var(--width-logo, 0) 1fr 34px fit-content(100px) max-content fit-content(40px) 8px max-content 31px;
+  }
+}
+.event .mma .event__match {
+  grid-template: " check       dropdown    stageOrTime homeLogo    homeParticipant rounds iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) " check       dropdown    stageOrTime awayLogo    awayParticipant rounds iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) / max-content max-content 69px max-content 1fr 169px 28px 24px 24px 38px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event .mma .event__match {
+    grid-template: " check       .                        .                    .               .           .           .            .           .                         .                     .           .           .           .       " 5px " check       dropdown                 homeLogo             homeParticipant iconStr     iconTv      stage        resultsTime rounds                    homeScoreInRegulation homePart1   homePart2   homeScore   liveIcon" minmax(19px, auto) " check       dropdown                 awayLogo             awayParticipant iconStr     iconTv      stage        resultsTime rounds                    awayScoreInRegulation awayPart1   awayPart2   awayScore   liveIcon" minmax(19px, auto) " check       .                        .                    .               .           .           .            .           .                         .                     .           .           .           .       " 5px / max-content var(--width-dropdown, 0) var(--width-logo, 0) auto max-content max-content min-content max-content minmax(auto, max-content) max-content max-content max-content max-content var(--width-live, 0);
+  }
+}
+/* LEFT MENU + CONTENT */
+.event.odds .motorsport-moto-racing .event__match--oneLine,
+.event.odds .motorsport-auto-racing .event__match--oneLine,
+.event.odds .motorsport-moto-racing--speedway .event__match--oneLine {
+  grid-template: " check       stageOrTime homeParticipant awayParticipant scores odds1 odds2" minmax(var(--height-oneline), auto) / max-content 69px 1fr 1fr 48px 59px 59px;
+}
+.event.odds .motorsport-moto-racing .event__match--noDuel,
+.event.odds .motorsport-auto-racing .event__match--noDuel,
+.event.odds .motorsport-moto-racing--speedway .event__match--noDuel {
+  grid-template: " check       rating participantName participantTeam odd1 odd2 odd3 odd4" minmax(var(--height-oneline), auto) / max-content 40px 1fr 1fr 59px 59px 59px 59px;
+}
+.event.odds .motorsport-moto-racing .event__match--twoLine,
+.event.odds .motorsport-auto-racing .event__match--twoLine,
+.event.odds .motorsport-moto-racing--speedway .event__match--twoLine,
+.event.odds .motorsport-moto-racing .event__match--twoLine.event__match--scheduled,
+.event.odds .motorsport-auto-racing .event__match--twoLine.event__match--scheduled,
+.event.odds .motorsport-moto-racing--speedway .event__match--twoLine.event__match--scheduled {
+  grid-template: " check       stageOrTime homeParticipant homeScore odd1 odd2" minmax(23px, auto) " check       stageOrTime awayParticipant awayScore odd1 odd2" minmax(23px, auto) / max-content 69px 1fr 34px 59px 59px;
+}
+.event.odds .motorsport-moto-racing .event__match--twoLineUS,
+.event.odds .motorsport-auto-racing .event__match--twoLineUS,
+.event.odds .motorsport-moto-racing--speedway .event__match--twoLineUS,
+.event.odds .motorsport-moto-racing .event__match--twoLineUS.event__match--scheduled,
+.event.odds .motorsport-auto-racing .event__match--twoLineUS.event__match--scheduled,
+.event.odds .motorsport-moto-racing--speedway .event__match--twoLineUS.event__match--scheduled {
+  grid-template: " check       stageOrTime homeParticipant homeScore homeSpread1 homeSpread2 homeMoneyline homeTotal1 homeTotal2" minmax(30px, auto) " check       stageOrTime awayParticipant awayScore awaySpread1 awaySpread2 awayMoneyline awayTotal1 awayTotal2" minmax(30px, auto) / max-content 69px 1fr 34px 59px 59px 59px 59px 59px;
+}
+@media only screen and (max-width: 799px) {
+  .event.odds .motorsport-moto-racing .event__match--noDuel,
+  .event.odds .motorsport-auto-racing .event__match--noDuel {
+    grid-template: "check .      .           	   .  " 8px "check rating participantName time" minmax(19px, auto) "check rating participantTeam .   " max-content "check . 	  .			   	  .	  " 8px ".     odds   odds        	  odds" max-content / 31px 34px 1fr 100px;
+  }
+  .event.odds .motorsport-moto-racing .event__match--twoLine,
+  .event.odds .motorsport-auto-racing .event__match--twoLine {
+    grid-template: "check .               .     .         .   odds 	   .       " 5px "check homeParticipant stage homeScore .   odds 	   liveIcon" minmax(19px, auto) "check awayParticipant stage awayScore .   odds 	   liveIcon" minmax(19px, auto) "check .               .     .         .   odds 	   .       " 5px / 31px 1fr 34px 26px 8px max-content 35px;
+  }
+  .event.odds .motorsport-moto-racing .event__match--twoLine.event__match--scheduled,
+  .event.odds .motorsport-auto-racing .event__match--twoLine.event__match--scheduled {
+    grid-template: ".     .               .     .         .   odds 	   .       " 5px "check homeParticipant stage homeScore .   odds 	   liveIcon" minmax(19px, auto) "check awayParticipant stage awayScore .   odds 	   liveIcon" minmax(19px, auto) ".     .               .     .         .   odds 	   .       " 5px / 31px 1fr 34px 40px 8px max-content 35px;
+  }
+}
+@media only screen and (max-width: 799px) {
+  .event.odds .motorsport-moto-racing--speedway .event__match__header--noDuel,
+  .event.odds .motorsport-moto-racing--speedway .event__match--noDuel {
+    grid-template: "check .      .           	  .  		 .				.		 " 8px "check rating participantName resultLaps resultPosition resultPit" minmax(19px, auto) "check . 	  .			   	  .	  		 .				.		 " 8px ".     odds   odds        	  odds		 odds			odds	 " max-content / 31px 34px 1fr 34px 34px 34px;
+  }
+}
+.event .motorsport-moto-racing .event__match--noDuel,
+.event .motorsport-auto-racing .event__match--noDuel,
+.event .motorsport-moto-racing--speedway .event__match--noDuel {
+  grid-template: " check       dropdown                 rating                 participantName participantTeam      time                 resultLaps  resultPosition resultPit   points" minmax(var(--height-oneline), auto) / max-content var(--width-dropdown, 0) var(--width-rating, 0) 1fr var(--width-team, 0) var(--width-time, 0) max-content max-content max-content var(--width-points, 0);
+}
+.event .motorsport-moto-racing .event__match--twoLine,
+.event .motorsport-auto-racing .event__match--twoLine,
+.event .motorsport-moto-racing--speedway .event__match--twoLine,
+.event .motorsport-moto-racing .event__match--twoLine.event__match--scheduled,
+.event .motorsport-auto-racing .event__match--twoLine.event__match--scheduled,
+.event .motorsport-moto-racing--speedway .event__match--twoLine.event__match--scheduled {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeScore iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayScore iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr 34px 28px 24px 24px 38px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event .motorsport-moto-racing .event__match,
+  .event .motorsport-auto-racing .event__match,
+  .event .motorsport-moto-racing--speedway .event__match {
+    grid-template: " check       .                        .      .               .          .              .        " 8px " check       dropdown                 rating participantName resultLaps resultPosition resultPit" minmax(19px, auto) " check       .                        .      .               .          .              .        " 8px / max-content var(--width-dropdown, 0) 50px 1fr 34px 34px 34px;
+  }
+  .event .motorsport-moto-racing .event__match--noDuel,
+  .event .motorsport-auto-racing .event__match--noDuel,
+  .event .motorsport-moto-racing--speedway .event__match--noDuel,
+  .event .motorsport-moto-racing .event__match__header--noDuel,
+  .event .motorsport-auto-racing .event__match__header--noDuel,
+  .event .motorsport-moto-racing--speedway .event__match__header--noDuel {
+    grid-template: " check       .                        .      .               .   " 8px " check       dropdown                 rating participantName time" minmax(19px, auto) " check       dropdown                 rating participantTeam .   " minmax(19px, auto) " check       .                        .      .               .   " 8px / max-content var(--width-dropdown, 0) 50px 1fr 100px;
+  }
+  .event .motorsport-moto-racing .event__match--twoLine,
+  .event .motorsport-auto-racing .event__match--twoLine,
+  .event .motorsport-moto-racing--speedway .event__match--twoLine,
+  .event .motorsport-moto-racing .event__match--twoLine.event__match--scheduled,
+  .event .motorsport-auto-racing .event__match--twoLine.event__match--scheduled,
+  .event .motorsport-moto-racing--speedway .event__match--twoLine.event__match--scheduled {
+    grid-template: " check       .                        .                    .               .           .           .           .           .       " 5px " check       dropdown                 .                    homeParticipant iconStr     stage       resultsTime homeScore   liveIcon" minmax(19px, auto) " check       dropdown                 .                    awayParticipant iconStr     stage       resultsTime awayScore   liveIcon" minmax(19px, auto) " check       .                        .                    .               .           .           .           .           .       " 5px / max-content var(--width-dropdown, 0) var(--width-logo, 0) 1fr max-content max-content max-content max-content 46px;
+  }
+  .event .motorsport-moto-racing .event__match--twoLine.event__match--scheduled,
+  .event .motorsport-auto-racing .event__match--twoLine.event__match--scheduled,
+  .event .motorsport-moto-racing--speedway .event__match--twoLine.event__match--scheduled {
+    grid-template-columns: max-content var(--width-dropdown, 0) var(--width-logo, 0) 1fr max-content max-content max-content max-content 46px;
+  }
+}
+/* LEFT MENU + CONTENT */
+.event.event--topScores .netball .event__match,
+.event.myfs .netball .event__match {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeService homeScore homePart1 homePart2 homePart3 homePart4 homePart5 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayService awayScore awayPart1 awayPart2 awayPart3 awayPart4 awayPart5 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr 19px 34px 34px 34px 34px 34px 34px 28px 24px 24px 38px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event.event--topScores .netball .event__match,
+  .event.myfs .netball .event__match {
+    grid-template: "check       .           .                    .               .           .           .           .           .           .                     .           .       " 5px "check       dropdown    homeLogo             homeParticipant score       iconStr     iconTv      resultsTime stage       homeScoreInRegulation homeScore   liveIcon" minmax(19px, auto) "check       dropdown    awayLogo             awayParticipant score       iconStr     iconTv      resultsTime stage       awayScoreInRegulation awayScore   liveIcon" minmax(19px, auto) "check       .           .                    .               .           .           .           .           .           .                     .           .       " 5px / max-content max-content var(--width-logo, 0) 1fr max-content max-content max-content max-content max-content max-content max-content 46px;
+  }
+}
+.event.odds .netball .event__match--twoLine {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeScore homePartScore odd1 odd2 liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayScore awayPartScore odd1 odd2 liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr 34px 34px 59px 59px 31px;
+}
+.event.odds .netball .event__match--twoLineUS {
+  grid-template: " check       stageOrTime homeLogo             homeParticipant homeScore homeSpread1 homeSpread2 homeMoneyline homeTotal1 homeTotal2 liveIcon" minmax(30px, auto) " check       stageOrTime awayLogo             awayParticipant awayScore awaySpread1 awaySpread2 awayMoneyline awayTotal1 awayTotal2 liveIcon" minmax(30px, auto) / max-content 69px var(--width-logo, 0) 1fr 49px 59px 59px 59px 59px 59px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event.odds .netball .event__match {
+    grid-template: " check .                    .               .                 .                  .                     .                 .   odds        .       " 4px " check homeLogo             homeParticipant stage             rounds             homeScoreInRegulation homeScore         .   odds        liveIcon" minmax(19px, auto) " check awayLogo             awayParticipant stage             rounds             awayScoreInRegulation awayScore         .   odds        liveIcon" minmax(19px, auto) " check .                    .               .                 .                  .                     .                 .   odds        .       " 4px / 31px var(--width-logo, 0) 1fr fit-content(48px) fit-content(100px) max-content fit-content(90px) 8px max-content 31px;
+  }
+  .event.odds .netball .event__match--scheduled {
+    grid-template-columns: 31px var(--width-logo, 0) 1fr 34px fit-content(100px) max-content fit-content(40px) 8px max-content 31px;
+  }
+}
+.event .netball .event__match {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeService             homeScore homePart1 homePart2 homePart3 homePart4 homePart5 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayService             awayScore awayPart1 awayPart2 awayPart3 awayPart4 awayPart5 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr var(--width-service, 0) 34px 34px 34px 34px 34px 34px 28px 24px 24px 38px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event .netball .event__match {
+    grid-template: " check       .                        .                    .               .           .           .           .           .           .           .                     .           .           .           .           .           .           .       " 5px " check       dropdown                 homeLogo             homeParticipant iconStr     iconTv      resultsTime stage       homeService rounds      homeScoreInRegulation homePart1   homePart2   homeScore   homeCurrent homeLegs    homeSets    liveIcon" minmax(19px, auto) " check       dropdown                 awayLogo             awayParticipant iconStr     iconTv      resultsTime stage       awayService rounds      awayScoreInRegulation awayPart1   awayPart2   awayScore   awayCurrent awayLegs    awaySets    liveIcon" minmax(19px, auto) " check       .                        .                    .               .           .           .           .           .           .           .                     .           .           .           .           .           .           .       " 5px / max-content var(--width-dropdown, 0) var(--width-logo, 0) 1fr max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content var(--width-live, 0);
+  }
+}
+/* LEFT MENU + CONTENT */
+@media only screen and (max-width: 799px) {
+  .event.event--topScores .pesapallo .event__match,
+  .event.myfs .pesapallo .event__match {
+    grid-template: " check 	     .           .        				.               .       	  .           .     	  .     	  .        	  .		  " 5px " check 	     dropdown    homeLogo 				homeParticipant iconStr 	  iconTv      homeService stage 	  homeScore   liveIcon" minmax(19px, auto) " check 	     dropdown    awayLogo 				awayParticipant iconStr 	  iconTv      awayService stage 	  awayScore   liveIcon" minmax(19px, auto) " check 	     .           .        				.               .       	  .           .     	  .     	  .           .		  " 5px " pitchers       pitchers    pitchers 				pitchers     	pitchers      pitchers    pitchers    pitchers    pitchers    pitchers" max-content / max-content max-content var(--width-logo, 0) 1fr max-content max-content max-content max-content max-content 46px;
+  }
+  .event.event--topScores .pesapallo .event__match--live,
+  .event.myfs .pesapallo .event__match--live,
+  .event.event--topScores .pesapallo .event__match--scheduled,
+  .event.myfs .pesapallo .event__match--scheduled {
+    grid-template-areas: "check    .         .        .               .        .        .        .           .         . " "check    dropdown  homeLogo homeParticipant iconStr  iconTv   stage    homeService homeScore liveIcon " "check    dropdown  awayLogo awayParticipant iconStr  iconTv   stage    awayService awayScore liveIcon " "check    .         .        .               .        .        .        .           .         . " "pitchers pitchers  pitchers pitchers        pitchers pitchers pitchers pitchers    pitchers  pitchers ";
+  }
+}
+.event.odds .pesapallo .event__match--twoLine {
+  grid-template: " check       stageOrTime homeLogo             homeParticipant homeScore homePartScore odd1 odd2 odd3            liveIcon" minmax(19px, auto) " check       stageOrTime awayLogo             awayParticipant awayScore awayPartScore odd1 odd2 odd3            liveIcon" minmax(19px, auto) / max-content 69px var(--width-logo, 0) 1fr 34px 34px 59px 59px minmax(0, auto) 31px;
+}
+.event.odds .pesapallo .event__match--twoLineUS {
+  grid-template: " check       stageOrTime homeLogo             homeParticipant homeScore homeSpread1 homeSpread2 homeMoneyline homeTotal1 homeTotal2 liveIcon" minmax(30px, auto) " check       stageOrTime awayLogo             awayParticipant awayScore awaySpread1 awaySpread2 awayMoneyline awayTotal1 awayTotal2 liveIcon" minmax(30px, auto) / max-content 69px var(--width-logo, 0) 1fr 49px 59px 59px 59px 59px 59px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event.odds .pesapallo .event__match {
+    grid-template: " check .                    .               .                 .                  .                     .                 .   odds        .       " 4px " check homeLogo             homeParticipant stage             rounds             homeScoreInRegulation homeScore         .   odds        liveIcon" minmax(19px, auto) " check awayLogo             awayParticipant stage             rounds             awayScoreInRegulation awayScore         .   odds        liveIcon" minmax(19px, auto) " check .                    .               .                 .                  .                     .                 .   odds        .       " 4px / 31px var(--width-logo, 0) 1fr fit-content(48px) fit-content(100px) max-content fit-content(90px) 8px max-content 31px;
+  }
+  .event.odds .pesapallo .event__match--scheduled {
+    grid-template-columns: 31px var(--width-logo, 0) 1fr 34px fit-content(100px) max-content fit-content(40px) 8px max-content 31px;
+  }
+}
+.event .pesapallo .event__match {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeService homeScore homeSpacer1 homePart1 homePart2 homePart3 homePart4 homePart5 homeSpacer2 homePart6 homePart7 homePart8 homePart9 homePart10 homeSpacer3 homePart11 homePart12 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayService awayScore awaySpacer1 awayPart1 awayPart2 awayPart3 awayPart4 awayPart5 awaySpacer2 awayPart6 awayPart7 awayPart8 awayPart9 awayPart10 awaySpacer3 awayPart11 awayPart12 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr 19px 15px 1px 15px 15px 15px 15px 20px 1px 15px 15px 15px 15px 20px 1px 15px 15px 28px 24px 24px 38px 31px;
+}
+.event .pesapallo .event__match__header--duel {
+  grid-template: " .           .    .   .    score .   part1 part2 part3 part4 part5 .   part6 part7 part8 part9 part10 .   part11 part12 .     ." 23px / max-content 69px 1fr 19px 19px 1px 15px 15px 15px 15px 20px 1px 15px 15px 15px 15px 20px 1px 15px 15px 114px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event .pesapallo .event__match {
+    grid-template: " check       .                        .                    .               .           .           .           .           .           .         .                     .           .           .           .           .           .           .                    .        " 5px " check       dropdown                 homeLogo             homeParticipant iconStr     iconTv      stage       resultsTime homeService rounds    homeScoreInRegulation homePart1   homePart2   homeScore   homeCurrent homeLegs    homeSets    liveIcon             .        " minmax(19px, auto) " check       dropdown                 awayLogo             awayParticipant iconStr     iconTv      stage       resultsTime awayService rounds    awayScoreInRegulation awayPart1   awayPart2   awayScore   awayCurrent awayLegs    awaySets    liveIcon             .        " minmax(19px, auto) " check       .                        .                    .               .           .           .           .           .           .         .                     .           .           .           .           .           .           .                    .        " 5px " extraInfo   extraInfo                extraInfo            extraInfo       extraInfo   extraInfo   extraInfo   extraInfo   extraInfo   extraInfo extraInfo             extraInfo   extraInfo   extraInfo   extraInfo   extraInfo   extraInfo   extraInfo            extraInfo" max-content " pitchers    pitchers                 pitchers             pitchers        pitchers    pitchers    pitchers    pitchers    pitchers    pitchers  pitchers              pitchers    pitchers    pitchers    pitchers    pitchers    pitchers    pitchers             pitchers " max-content / max-content var(--width-dropdown, 0) var(--width-logo, 0) 1fr max-content max-content auto max-content max-content auto max-content max-content max-content max-content max-content max-content max-content var(--width-live, 0) var(--width-cricket, 0);
+  }
+  .event .pesapallo .event__match .extraInfo {
+    grid-template: " .        ." 4px " sentence ." max-content / 1fr 5px;
+  }
+}
+/* LEFT MENU + CONTENT */
+.event.event--topScores .rugby-league .event__match,
+.event.myfs .rugby-league .event__match {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeService homeScore homePart1 homePart2 homePart3 homePart4 homePart5 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayService awayScore awayPart1 awayPart2 awayPart3 awayPart4 awayPart5 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr 19px 34px 34px 34px 34px 34px 34px 28px 24px 24px 38px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event.event--topScores .rugby-league .event__match,
+  .event.myfs .rugby-league .event__match {
+    grid-template: "check       .           .                    .               .           .           .           .           .           .                     .           .       " 5px "check       dropdown    homeLogo             homeParticipant score       iconStr     iconTv      resultsTime stage       homeScoreInRegulation homeScore   liveIcon" minmax(19px, auto) "check       dropdown    awayLogo             awayParticipant score       iconStr     iconTv      resultsTime stage       awayScoreInRegulation awayScore   liveIcon" minmax(19px, auto) "check       .           .                    .               .           .           .           .           .           .                     .           .       " 5px / max-content max-content var(--width-logo, 0) 1fr max-content max-content max-content max-content max-content max-content max-content 46px;
+  }
+}
+.event.odds .rugby-league .event__match--twoLine {
+  grid-template: " check       stageOrTime homeLogo             homeParticipant homeScore homePartScore odd1 odd2 odd3            liveIcon" minmax(19px, auto) " check       stageOrTime awayLogo             awayParticipant awayScore awayPartScore odd1 odd2 odd3            liveIcon" minmax(19px, auto) / max-content 69px var(--width-logo, 0) 1fr 34px 34px 59px 59px minmax(0, auto) 31px;
+}
+.event.odds .rugby-league .event__match--twoLineUS {
+  grid-template: " check       stageOrTime homeLogo             homeParticipant homeScore homeSpread1 homeSpread2 homeMoneyline homeTotal1 homeTotal2 liveIcon" minmax(30px, auto) " check       stageOrTime awayLogo             awayParticipant awayScore awaySpread1 awaySpread2 awayMoneyline awayTotal1 awayTotal2 liveIcon" minmax(30px, auto) / max-content 69px var(--width-logo, 0) 1fr 49px 59px 59px 59px 59px 59px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event.odds .rugby-league .event__match {
+    grid-template: " check .                    .               .                 .                  .                     .                 .   odds        .       " 4px " check homeLogo             homeParticipant stage             rounds             homeScoreInRegulation homeScore         .   odds        liveIcon" minmax(19px, auto) " check awayLogo             awayParticipant stage             rounds             awayScoreInRegulation awayScore         .   odds        liveIcon" minmax(19px, auto) " check .                    .               .                 .                  .                     .                 .   odds        .       " 4px / 31px var(--width-logo, 0) 1fr fit-content(48px) fit-content(100px) max-content fit-content(90px) 8px max-content 31px;
+  }
+  .event.odds .rugby-league .event__match--scheduled {
+    grid-template-columns: 31px var(--width-logo, 0) 1fr 34px fit-content(100px) max-content fit-content(40px) 8px max-content 31px;
+  }
+}
+.event .rugby-league .event__match {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeScore                 homePart1 homePart2 homePart3 homePart4 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayScore                 awayPart1 awayPart2 awayPart3 awayPart4 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr var(--width-result, 34px) 34px 34px 34px 34px 28px 24px 24px 38px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event .rugby-league .event__match {
+    grid-template: " check       .                        .                    .               .           .           .           .           .           .           .                     .           .           .           .           .           .           .       " 5px " check       dropdown                 homeLogo             homeParticipant iconStr     iconTv      resultsTime stage       homeService rounds      homeScoreInRegulation homePart1   homePart2   homeScore   homeCurrent homeLegs    homeSets    liveIcon" minmax(19px, auto) " check       dropdown                 awayLogo             awayParticipant iconStr     iconTv      resultsTime stage       awayService rounds      awayScoreInRegulation awayPart1   awayPart2   awayScore   awayCurrent awayLegs    awaySets    liveIcon" minmax(19px, auto) " check       .                        .                    .               .           .           .           .           .           .           .                     .           .           .           .           .           .           .       " 5px / max-content var(--width-dropdown, 0) var(--width-logo, 0) 1fr max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content var(--width-live, 0);
+  }
+}
+/* LEFT MENU + CONTENT */
+.event.event--topScores .rugby-union .event__match,
+.event.myfs .rugby-union .event__match {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeService homeScore homePart1 homePart2 homePart3 homePart4 homePart5 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayService awayScore awayPart1 awayPart2 awayPart3 awayPart4 awayPart5 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr 19px 34px 34px 34px 34px 34px 34px 28px 24px 24px 38px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event.event--topScores .rugby-union .event__match,
+  .event.myfs .rugby-union .event__match {
+    grid-template: "check       .           .                    .               .           .           .           .           .           .                     .           .       " 5px "check       dropdown    homeLogo             homeParticipant score       iconStr     iconTv      resultsTime stage       homeScoreInRegulation homeScore   liveIcon" minmax(19px, auto) "check       dropdown    awayLogo             awayParticipant score       iconStr     iconTv      resultsTime stage       awayScoreInRegulation awayScore   liveIcon" minmax(19px, auto) "check       .           .                    .               .           .           .           .           .           .                     .           .       " 5px / max-content max-content var(--width-logo, 0) 1fr max-content max-content max-content max-content max-content max-content max-content 46px;
+  }
+}
+.event.odds .rugby-union .event__match--twoLine {
+  grid-template: " check       stageOrTime homeLogo             homeParticipant homeScore homePartScore odd1 odd2 odd3            liveIcon" minmax(19px, auto) " check       stageOrTime awayLogo             awayParticipant awayScore awayPartScore odd1 odd2 odd3            liveIcon" minmax(19px, auto) / max-content 69px var(--width-logo, 0) 1fr 34px 34px 59px 59px minmax(0, auto) 31px;
+}
+.event.odds .rugby-union .event__match--twoLineUS {
+  grid-template: " check       stageOrTime homeLogo             homeParticipant homeScore homeSpread1 homeSpread2 homeMoneyline homeTotal1 homeTotal2 liveIcon" minmax(30px, auto) " check       stageOrTime awayLogo             awayParticipant awayScore awaySpread1 awaySpread2 awayMoneyline awayTotal1 awayTotal2 liveIcon" minmax(30px, auto) / max-content 69px var(--width-logo, 0) 1fr 49px 59px 59px 59px 59px 59px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event.odds .rugby-union .event__match {
+    grid-template: " check .                    .               .                 .                  .                     .                 .   odds        .       " 4px " check homeLogo             homeParticipant stage             rounds             homeScoreInRegulation homeScore         .   odds        liveIcon" minmax(19px, auto) " check awayLogo             awayParticipant stage             rounds             awayScoreInRegulation awayScore         .   odds        liveIcon" minmax(19px, auto) " check .                    .               .                 .                  .                     .                 .   odds        .       " 4px / 31px var(--width-logo, 0) 1fr fit-content(48px) fit-content(100px) max-content fit-content(90px) 8px max-content 31px;
+  }
+  .event.odds .rugby-union .event__match--scheduled {
+    grid-template-columns: 31px var(--width-logo, 0) 1fr 34px fit-content(100px) max-content fit-content(40px) 8px max-content 31px;
+  }
+}
+.event .rugby-union .event__match {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeScore                 homePart1 homePart2 homePart3 homePart4 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayScore                 awayPart1 awayPart2 awayPart3 awayPart4 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr var(--width-result, 34px) 34px 34px 34px 34px 28px 24px 24px 38px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event .rugby-union .event__match {
+    grid-template: " check       .                        .                    .               .           .           .           .           .           .           .                     .           .           .           .           .           .           .       " 5px " check       dropdown                 homeLogo             homeParticipant iconStr     iconTv      resultsTime stage       homeService rounds      homeScoreInRegulation homePart1   homePart2   homeScore   homeCurrent homeLegs    homeSets    liveIcon" minmax(19px, auto) " check       dropdown                 awayLogo             awayParticipant iconStr     iconTv      resultsTime stage       awayService rounds      awayScoreInRegulation awayPart1   awayPart2   awayScore   awayCurrent awayLegs    awaySets    liveIcon" minmax(19px, auto) " check       .                        .                    .               .           .           .           .           .           .           .                     .           .           .           .           .           .           .       " 5px / max-content var(--width-dropdown, 0) var(--width-logo, 0) 1fr max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content var(--width-live, 0);
+  }
+}
+/* LEFT MENU + CONTENT */
+.event.event--topScores .snooker .event__match,
+.event.myfs .snooker .event__match {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeScore frames iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayScore frames iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr 34px 42px 28px 24px 24px 38px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event.event--topScores .snooker .event__match,
+  .event.myfs .snooker .event__match {
+    grid-template: "check       .           .                    .               .           .           .           .           .           .                     .           .       " 5px "check       dropdown    homeLogo             homeParticipant score       iconStr     iconTv      resultsTime stage       homeScoreInRegulation homeScore   liveIcon" minmax(19px, auto) "check       dropdown    awayLogo             awayParticipant score       iconStr     iconTv      resultsTime stage       awayScoreInRegulation awayScore   liveIcon" minmax(19px, auto) "check       .           .                    .               .           .           .           .           .           .                     .           .       " 5px / max-content max-content var(--width-logo, 0) 1fr max-content max-content max-content max-content max-content max-content max-content 46px;
+  }
+}
+.event.odds .snooker .event__match--twoLine {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeScore homePartScore odd1 odd2 liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayScore awayPartScore odd1 odd2 liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr 34px 34px 59px 59px 31px;
+}
+.event.odds .snooker .event__match--twoLineUS {
+  grid-template: " check       stageOrTime homeLogo             homeParticipant homeScore homeSpread1 homeSpread2 homeMoneyline homeTotal1 homeTotal2 liveIcon" minmax(30px, auto) " check       stageOrTime awayLogo             awayParticipant awayScore awaySpread1 awaySpread2 awayMoneyline awayTotal1 awayTotal2 liveIcon" minmax(30px, auto) / max-content 69px var(--width-logo, 0) 1fr 49px 59px 59px 59px 59px 59px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event.odds .snooker .event__match {
+    grid-template: " check .                    .               .                 .                  .                     .                 .   odds        .       " 4px " check homeLogo             homeParticipant stage             rounds             homeScoreInRegulation homeScore         .   odds        liveIcon" minmax(19px, auto) " check awayLogo             awayParticipant stage             rounds             awayScoreInRegulation awayScore         .   odds        liveIcon" minmax(19px, auto) " check .                    .               .                 .                  .                     .                 .   odds        .       " 4px / 31px var(--width-logo, 0) 1fr fit-content(48px) fit-content(100px) max-content fit-content(90px) 8px max-content 31px;
+  }
+  .event.odds .snooker .event__match--scheduled {
+    grid-template-columns: 31px var(--width-logo, 0) 1fr 34px fit-content(100px) max-content fit-content(40px) 8px max-content 31px;
+  }
+}
+.event .snooker .event__match {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeScore frames iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayScore frames iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr 34px 42px 28px 24px 24px 38px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event .snooker .event__match {
+    grid-template: " check       .                        .                    .               .           .           .           .           .           .           .                     .           .           .           .           .           .           .       " 5px " check       dropdown                 homeLogo             homeParticipant iconStr     iconTv      resultsTime stage       homeService rounds      homeScoreInRegulation homePart1   homePart2   homeScore   homeCurrent homeLegs    homeSets    liveIcon" minmax(19px, auto) " check       dropdown                 awayLogo             awayParticipant iconStr     iconTv      resultsTime stage       awayService rounds      awayScoreInRegulation awayPart1   awayPart2   awayScore   awayCurrent awayLegs    awaySets    liveIcon" minmax(19px, auto) " check       .                        .                    .               .           .           .           .           .           .           .                     .           .           .           .           .           .           .       " 5px / max-content var(--width-dropdown, 0) var(--width-logo, 0) 1fr max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content var(--width-live, 0);
+  }
+}
+/* LEFT MENU + CONTENT */
+.event.event--topScores .soccer .event__match,
+.event.myfs .soccer .event__match {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeScore homePart1 homePart2 homePart3 homePart4 homePart5 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayScore awayPart1 awayPart2 awayPart3 awayPart4 awayPart5 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr 34px 34px 34px 34px 34px 34px 28px 24px 24px 38px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event.event--topScores .soccer .event__match,
+  .event.myfs .soccer .event__match {
+    grid-template: "check       .           .                    .               .           .           .           .           .           .                     .           .       " 5px "check       dropdown    homeLogo             homeParticipant score       iconStr     iconTv      resultsTime stage       homeScoreInRegulation homeScore   liveIcon" minmax(19px, auto) "check       dropdown    awayLogo             awayParticipant score       iconStr     iconTv      resultsTime stage       awayScoreInRegulation awayScore   liveIcon" minmax(19px, auto) "check       .           .                    .               .           .           .           .           .           .                     .           .       " 5px / max-content max-content var(--width-logo, 0) 1fr max-content max-content max-content max-content max-content max-content max-content 46px;
+  }
+}
+.event.odds .soccer .event__match--twoLine {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeScore homePartScore odd1 odd2 odd3            liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayScore awayPartScore odd1 odd2 odd3            liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr 34px 34px 59px 59px minmax(0, auto) 31px;
+}
+.event.odds .soccer .event__match--twoLineUS {
+  grid-template: " check       stageOrTime homeLogo             homeParticipant homeScore homeSpread1 homeSpread2 homeMoneyline homeTotal1 homeTotal2 liveIcon" minmax(30px, auto) " check       stageOrTime awayLogo             awayParticipant awayScore awaySpread1 awaySpread2 awayMoneyline awayTotal1 awayTotal2 liveIcon" minmax(30px, auto) / max-content 69px var(--width-logo, 0) 1fr 49px 59px 59px 59px 59px 59px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event.odds .soccer .event__match {
+    grid-template: " check .                    .               .                 .                  .                     .                 .   odds        .       " 4px " check homeLogo             homeParticipant stage             rounds             homeScoreInRegulation homeScore         .   odds        liveIcon" minmax(19px, auto) " check awayLogo             awayParticipant stage             rounds             awayScoreInRegulation awayScore         .   odds        liveIcon" minmax(19px, auto) " check .                    .               .                 .                  .                     .                 .   odds        .       " 4px / 31px var(--width-logo, 0) 1fr fit-content(48px) fit-content(100px) max-content fit-content(90px) 8px max-content 31px;
+  }
+  .event.odds .soccer .event__match--scheduled {
+    grid-template-columns: 31px var(--width-logo, 0) 1fr 34px fit-content(100px) max-content fit-content(40px) 8px max-content 31px;
+  }
+}
+.event .soccer .event__match--twoLine {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeScore homePart1 homePart2 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayScore awayPart1 awayPart2 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr 34px 34px 34px 28px 24px 24px 38px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event .soccer .event__match {
+    grid-template: " check       .                        .                    .               .           .           .           .           .           .           .                     .           .           .           .           .           .           .       " 5px " check       dropdown                 homeLogo             homeParticipant iconStr     iconTv      resultsTime stage       homeService rounds      homeScoreInRegulation homePart1   homePart2   homeScore   homeCurrent homeLegs    homeSets    liveIcon" minmax(19px, auto) " check       dropdown                 awayLogo             awayParticipant iconStr     iconTv      resultsTime stage       awayService rounds      awayScoreInRegulation awayPart1   awayPart2   awayScore   awayCurrent awayLegs    awaySets    liveIcon" minmax(19px, auto) " check       .                        .                    .               .           .           .           .           .           .           .                     .           .           .           .           .           .           .       " 5px / max-content var(--width-dropdown, 0) var(--width-logo, 0) 1fr max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content var(--width-live, 0);
+  }
+}
+/* LEFT MENU + CONTENT */
+.event.event--topScores .table-tennis .event__match,
+.event.myfs .table-tennis .event__match {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeService homeScore homePart1 homePart2 homePart3 homePart4 homePart5 homePart6 homePart7 iconStr  iconInf  iconTv   iconStd  liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayService awayScore awayPart1 awayPart2 awayPart3 awayPart4 awayPart5 awayPart6 awayPart7 iconStr  iconInf  iconTv   iconStd  liveIcon" minmax(23px, auto) " pitchers    pitchers                 pitchers    pitchers             pitchers        pitchers    pitchers  pitchers  pitchers  pitchers  pitchers  pitchers  pitchers  pitchers  pitchers pitchers pitchers pitchers pitchers" max-content / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr 19px 34px 24px 24px 24px 24px 24px 25px 25px 28px 24px 24px 38px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event.event--topScores .table-tennis .event__match,
+  .event.myfs .table-tennis .event__match {
+    grid-template: "check       .           .        .               .           .           .           .           .           .		      .           .       " 5px "check       dropdown    homeLogo homeParticipant iconStr     iconTv      stage       homeService homePart1   resultsTime homeScore   liveIcon" minmax(19px, auto) "check       dropdown    awayLogo awayParticipant iconStr     iconTv      stage       awayService awayPart1   resultsTime awayScore   liveIcon" minmax(19px, auto) "check       .           .        .               .           .           .           .           .           .		      .           .       " 5px / max-content max-content var(--width-logo, 0) 1fr max-content max-content max-content max-content max-content max-content max-content 46px;
+  }
+  .event.event--topScores .table-tennis .event__match--scheduled,
+  .event.myfs .table-tennis .event__match--scheduled {
+    grid-template: "check       .           .        .               .		      .           .           .           .           .       " 5px "check       dropdown    homeLogo homeParticipant iconStr 	  iconTv      stage       homeService homeScore   liveIcon" minmax(19px, auto) "check       dropdown    awayLogo awayParticipant iconStr 	  iconTv      stage       awayService awayScore   liveIcon" minmax(19px, auto) "check       .           .        .               .		      .           .           .           .           .       " 5px / max-content max-content var(--width-logo, 0) 1fr max-content max-content max-content max-content max-content 46px;
+  }
+}
+.event.odds .table-tennis .event__match--twoLine {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeScore homePartScore odd1 odd2 liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayScore awayPartScore odd1 odd2 liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr 34px 34px 59px 59px 31px;
+}
+.event.odds .table-tennis .event__match--twoLineUS {
+  grid-template: " check       stageOrTime homeLogo             homeParticipant homeScore homeSpread1 homeSpread2 homeMoneyline homeTotal1 homeTotal2 liveIcon" minmax(30px, auto) " check       stageOrTime awayLogo             awayParticipant awayScore awaySpread1 awaySpread2 awayMoneyline awayTotal1 awayTotal2 liveIcon" minmax(30px, auto) / max-content 69px var(--width-logo, 0) 1fr 49px 59px 59px 59px 59px 59px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event.odds .table-tennis .event__match {
+    grid-template: " check .                    .               .                 .                  .                     .                 .   odds        .       " 4px " check homeLogo             homeParticipant stage             rounds             homeScoreInRegulation homeScore         .   odds        liveIcon" minmax(19px, auto) " check awayLogo             awayParticipant stage             rounds             awayScoreInRegulation awayScore         .   odds        liveIcon" minmax(19px, auto) " check .                    .               .                 .                  .                     .                 .   odds        .       " 4px / 31px var(--width-logo, 0) 1fr fit-content(48px) fit-content(100px) max-content fit-content(90px) 8px max-content 31px;
+  }
+  .event.odds .table-tennis .event__match--scheduled {
+    grid-template-columns: 31px var(--width-logo, 0) 1fr 34px fit-content(100px) max-content fit-content(40px) 8px max-content 31px;
+  }
+}
+.event .table-tennis .event__match {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeService             homeScore homePart1 homePart2 homePart3 homePart4 homePart5 homePart6 homePart7 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayService             awayScore awayPart1 awayPart2 awayPart3 awayPart4 awayPart5 awayPart6 awayPart7 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr var(--width-service, 0) 34px 28px 28px 28px 28px 28px 28px 28px 28px 24px 24px 38px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event .table-tennis .event__match {
+    grid-template: "check       .                        .                    .               .           .           .           .           .           .                     .           .           .           .           .           .           .           .       " 5px "check       dropdown                 homeLogo             homeParticipant iconStr     iconTv      stage       homeService rounds      homeScoreInRegulation homePart1   homePart2   resultsTime homeScore   homeCurrent homeLegs    homeSets    liveIcon" minmax(19px, auto) "check       dropdown                 awayLogo             awayParticipant iconStr     iconTv      stage       awayService rounds      awayScoreInRegulation awayPart1   awayPart2   resultsTime awayScore   awayCurrent awayLegs    awaySets    liveIcon" minmax(19px, auto) "check       .                        .                    .               .           .           .           .           .           .                     .           .           .           .           .           .           .           .       " 5px / max-content var(--width-dropdown, 0) var(--width-logo, 0) 1fr max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content var(--width-live, 0);
+  }
+}
+/* LEFT MENU + CONTENT */
+.event.event--topScores .tennis .event__match,
+.event.myfs .tennis .event__match {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeService homeScore homePart1 homePart2 homePart3 homePart4 homePart5 homePart6 homePart7 iconStr  iconInf  iconTv   iconStd  liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayService awayScore awayPart1 awayPart2 awayPart3 awayPart4 awayPart5 awayPart6 awayPart7 iconStr  iconInf  iconTv   iconStd  liveIcon" minmax(23px, auto) " pitchers    pitchers                 pitchers    pitchers             pitchers        pitchers    pitchers  pitchers  pitchers  pitchers  pitchers  pitchers  pitchers  pitchers  pitchers pitchers pitchers pitchers pitchers" max-content / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr 19px 34px 24px 24px 24px 24px 24px 25px 25px 28px 24px 24px 38px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event.event--topScores .tennis .event__match,
+  .event.myfs .tennis .event__match {
+    grid-template: "check       .           .                    .               .		      .           .           .           .           .           .           .       " 5px "check       dropdown    homeLogo             homeParticipant iconStr 	  iconTv      stage       homeService homePart1   homePart2   homeScore   liveIcon" minmax(19px, auto) "check       dropdown    awayLogo             awayParticipant iconStr 	  iconTv      stage       awayService awayPart1   awayPart2   awayScore   liveIcon" minmax(19px, auto) "check       .           .                    .               .		      .           .           .           .           .           .           .       " 5px / max-content max-content var(--width-logo, 0) 1fr max-content max-content max-content max-content max-content max-content max-content 46px;
+  }
+}
+.event.odds .tennis .event__match--twoLine {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeScore homePartScore odd1 odd2 liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayScore awayPartScore odd1 odd2 liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr 34px 34px 59px 59px 31px;
+}
+.event.odds .tennis .event__match--twoLineUS {
+  grid-template: " check       stageOrTime homeLogo             homeParticipant homeScore homeSpread1 homeSpread2 homeMoneyline homeTotal1 homeTotal2 liveIcon" minmax(30px, auto) " check       stageOrTime awayLogo             awayParticipant awayScore awaySpread1 awaySpread2 awayMoneyline awayTotal1 awayTotal2 liveIcon" minmax(30px, auto) / max-content 69px var(--width-logo, 0) 1fr 49px 59px 59px 59px 59px 59px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event.odds .tennis .event__match {
+    grid-template: " check .                    .               .                 .                  .                     .                 .   odds        .       " 4px " check homeLogo             homeParticipant stage             rounds             homeScoreInRegulation homeScore         .   odds        liveIcon" minmax(19px, auto) " check awayLogo             awayParticipant stage             rounds             awayScoreInRegulation awayScore         .   odds        liveIcon" minmax(19px, auto) " check .                    .               .                 .                  .                     .                 .   odds        .       " 4px / 31px var(--width-logo, 0) 1fr fit-content(48px) fit-content(100px) max-content fit-content(90px) 8px max-content 31px;
+  }
+  .event.odds .tennis .event__match--scheduled {
+    grid-template-columns: 31px var(--width-logo, 0) 1fr 34px fit-content(100px) max-content fit-content(40px) 8px max-content 31px;
+  }
+}
+.event .tennis .event__match {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeService             homeScore homePart1 homePart2 homePart3 homePart4 homePart5 homePart6 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayService             awayScore awayPart1 awayPart2 awayPart3 awayPart4 awayPart5 awayPart6 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr var(--width-service, 0) 34px 28px 28px 28px 28px 28px 28px 28px 24px 24px 38px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event .tennis .event__match {
+    grid-template: " check       .                        .                    .               .           .           .           .           .           .         .                     .           .           .           .           .           .           .                    .        " 5px " check       dropdown                 homeLogo             homeParticipant iconStr     iconTv      stage       resultsTime homeService rounds    homeScoreInRegulation homePart1   homePart2   homeScore   homeCurrent homeLegs    homeSets    liveIcon             .        " minmax(19px, auto) " check       dropdown                 awayLogo             awayParticipant iconStr     iconTv      stage       resultsTime awayService rounds    awayScoreInRegulation awayPart1   awayPart2   awayScore   awayCurrent awayLegs    awaySets    liveIcon             .        " minmax(19px, auto) " check       .                        .                    .               .           .           .           .           .           .         .                     .           .           .           .           .           .           .                    .        " 5px " extraInfo   extraInfo                extraInfo            extraInfo       extraInfo   extraInfo   extraInfo   extraInfo   extraInfo   extraInfo extraInfo             extraInfo   extraInfo   extraInfo   extraInfo   extraInfo   extraInfo   extraInfo            extraInfo" max-content " pitchers    pitchers                 pitchers             pitchers        pitchers    pitchers    pitchers    pitchers    pitchers    pitchers  pitchers              pitchers    pitchers    pitchers    pitchers    pitchers    pitchers    pitchers             pitchers " max-content / max-content var(--width-dropdown, 0) var(--width-logo, 0) 1fr max-content max-content auto max-content max-content auto max-content max-content max-content max-content max-content max-content max-content var(--width-live, 0) var(--width-cricket, 0);
+  }
+  .event .tennis .event__match .extraInfo {
+    grid-template: " .        ." 4px " sentence ." max-content / 1fr 5px;
+  }
+}
+/* LEFT MENU + CONTENT */
+.event.event--topScores .volleyball .event__match,
+.event.myfs .volleyball .event__match {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeService homeScore homePart1 homePart2 homePart3 homePart4 homePart5 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayService awayScore awayPart1 awayPart2 awayPart3 awayPart4 awayPart5 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr 19px 34px 34px 34px 34px 34px 34px 28px 24px 24px 38px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event.event--topScores .volleyball .event__match,
+  .event.myfs .volleyball .event__match {
+    grid-template: "check       .           .        .               .           .           .           .           .           .		      .           .       " 5px "check       dropdown    homeLogo homeParticipant iconStr     iconTv      stage       homeService homePart1   resultsTime homeScore   liveIcon" minmax(19px, auto) "check       dropdown    awayLogo awayParticipant iconStr     iconTv      stage       awayService awayPart1   resultsTime awayScore   liveIcon" minmax(19px, auto) "check       .           .        .               .           .           .           .           .           .		      .           .       " 5px / max-content max-content var(--width-logo, 0) 1fr max-content max-content max-content max-content max-content max-content max-content 46px;
+  }
+  .event.event--topScores .volleyball .event__match--scheduled,
+  .event.myfs .volleyball .event__match--scheduled {
+    grid-template: "check       .           .        .               .		      .           .           .           .           .       " 5px "check       dropdown    homeLogo homeParticipant iconStr 	  iconTv      stage       homeService homeScore   liveIcon" minmax(19px, auto) "check       dropdown    awayLogo awayParticipant iconStr 	  iconTv      stage       awayService awayScore   liveIcon" minmax(19px, auto) "check       .           .        .               .		      .           .           .           .           .       " 5px / max-content max-content var(--width-logo, 0) 1fr max-content max-content max-content max-content max-content 46px;
+  }
+}
+.event.odds .volleyball .event__match--twoLine {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeScore homePartScore odd1 odd2 liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayScore awayPartScore odd1 odd2 liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr 34px 34px 59px 59px 31px;
+}
+.event.odds .volleyball .event__match--twoLineUS {
+  grid-template: " check       stageOrTime homeLogo             homeParticipant homeScore homeSpread1 homeSpread2 homeMoneyline homeTotal1 homeTotal2 liveIcon" minmax(30px, auto) " check       stageOrTime awayLogo             awayParticipant awayScore awaySpread1 awaySpread2 awayMoneyline awayTotal1 awayTotal2 liveIcon" minmax(30px, auto) / max-content 69px var(--width-logo, 0) 1fr 49px 59px 59px 59px 59px 59px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event.odds .volleyball .event__match {
+    grid-template: " check .                    .               .                 .                  .                     .                 .   odds        .       " 4px " check homeLogo             homeParticipant stage             rounds             homeScoreInRegulation homeScore         .   odds        liveIcon" minmax(19px, auto) " check awayLogo             awayParticipant stage             rounds             awayScoreInRegulation awayScore         .   odds        liveIcon" minmax(19px, auto) " check .                    .               .                 .                  .                     .                 .   odds        .       " 4px / 31px var(--width-logo, 0) 1fr fit-content(48px) fit-content(100px) max-content fit-content(90px) 8px max-content 31px;
+  }
+  .event.odds .volleyball .event__match--scheduled {
+    grid-template-columns: 31px var(--width-logo, 0) 1fr 34px fit-content(100px) max-content fit-content(40px) 8px max-content 31px;
+  }
+}
+.event .volleyball .event__match {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeService             homeScore homePart1 homePart2 homePart3 homePart4 homePart5 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayService             awayScore awayPart1 awayPart2 awayPart3 awayPart4 awayPart5 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr var(--width-service, 0) 34px 34px 34px 34px 34px 34px 28px 24px 24px 38px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event .volleyball .event__match {
+    grid-template: "check       .                        .                    .               .           .           .           .           .           .                     .           .           .           .           .           .           .           .       " 5px "check       dropdown                 homeLogo             homeParticipant iconStr     iconTv      stage       homeService rounds      homeScoreInRegulation homePart1   homePart2   resultsTime homeScore   homeCurrent homeLegs    homeSets    liveIcon" minmax(19px, auto) "check       dropdown                 awayLogo             awayParticipant iconStr     iconTv      stage       awayService rounds      awayScoreInRegulation awayPart1   awayPart2   resultsTime awayScore   awayCurrent awayLegs    awaySets    liveIcon" minmax(19px, auto) "check       .                        .                    .               .           .           .           .           .           .                     .           .           .           .           .           .           .           .       " 5px / max-content var(--width-dropdown, 0) var(--width-logo, 0) 1fr max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content var(--width-live, 0);
+  }
+}
+/* LEFT MENU + CONTENT */
+.event.event--topScores .water-polo .event__match,
+.event.myfs .water-polo .event__match {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeService homeScore homePart1 homePart2 homePart3 homePart4 homePart5 homePart6 homePart7 iconStr  iconInf  iconTv   iconStd  liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayService awayScore awayPart1 awayPart2 awayPart3 awayPart4 awayPart5 awayPart6 awayPart7 iconStr  iconInf  iconTv   iconStd  liveIcon" minmax(23px, auto) " pitchers    pitchers                 pitchers    pitchers             pitchers        pitchers    pitchers  pitchers  pitchers  pitchers  pitchers  pitchers  pitchers  pitchers  pitchers pitchers pitchers pitchers pitchers" max-content / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr 19px 34px 24px 24px 24px 24px 24px 25px 25px 28px 24px 24px 38px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event.event--topScores .water-polo .event__match,
+  .event.myfs .water-polo .event__match {
+    grid-template: "check       .           .                    .               .           .           .           .           .           .                     .           .       " 5px "check       dropdown    homeLogo             homeParticipant score       iconStr     iconTv      resultsTime stage       homeScoreInRegulation homeScore   liveIcon" minmax(19px, auto) "check       dropdown    awayLogo             awayParticipant score       iconStr     iconTv      resultsTime stage       awayScoreInRegulation awayScore   liveIcon" minmax(19px, auto) "check       .           .                    .               .           .           .           .           .           .                     .           .       " 5px / max-content max-content var(--width-logo, 0) 1fr max-content max-content max-content max-content max-content max-content max-content 46px;
+  }
+}
+.event.odds .water-polo .event__match--twoLine {
+  grid-template: " check       stageOrTime homeLogo             homeParticipant homeScore homePartScore odd1 odd2 odd3            liveIcon" minmax(19px, auto) " check       stageOrTime awayLogo             awayParticipant awayScore awayPartScore odd1 odd2 odd3            liveIcon" minmax(19px, auto) / max-content 69px var(--width-logo, 0) 1fr 34px 34px 59px 59px minmax(0, auto) 31px;
+}
+.event.odds .water-polo .event__match--twoLineUS {
+  grid-template: " check       stageOrTime homeLogo             homeParticipant homeScore homeSpread1 homeSpread2 homeMoneyline homeTotal1 homeTotal2 liveIcon" minmax(30px, auto) " check       stageOrTime awayLogo             awayParticipant awayScore awaySpread1 awaySpread2 awayMoneyline awayTotal1 awayTotal2 liveIcon" minmax(30px, auto) / max-content 69px var(--width-logo, 0) 1fr 49px 59px 59px 59px 59px 59px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event.odds .water-polo .event__match {
+    grid-template: " check .                    .               .                 .                  .                     .                 .   odds        .       " 4px " check homeLogo             homeParticipant stage             rounds             homeScoreInRegulation homeScore         .   odds        liveIcon" minmax(19px, auto) " check awayLogo             awayParticipant stage             rounds             awayScoreInRegulation awayScore         .   odds        liveIcon" minmax(19px, auto) " check .                    .               .                 .                  .                     .                 .   odds        .       " 4px / 31px var(--width-logo, 0) 1fr fit-content(48px) fit-content(100px) max-content fit-content(90px) 8px max-content 31px;
+  }
+  .event.odds .water-polo .event__match--scheduled {
+    grid-template-columns: 31px var(--width-logo, 0) 1fr 34px fit-content(100px) max-content fit-content(40px) 8px max-content 31px;
+  }
+}
+.event .water-polo .event__match {
+  grid-template: " check       dropdown                 stageOrTime homeLogo             homeParticipant homeService             homeScore homePart1 homePart2 homePart3 homePart4 homePart5 homePart6 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) " check       dropdown                 stageOrTime awayLogo             awayParticipant awayService             awayScore awayPart1 awayPart2 awayPart3 awayPart4 awayPart5 awayPart6 iconStr iconInf iconTv iconStd liveIcon" minmax(23px, auto) / max-content var(--width-dropdown, 0) 69px var(--width-logo, 0) 1fr var(--width-service, 0) 34px 28px 28px 28px 28px 28px 28px 28px 24px 24px 38px 31px;
+}
+@media only screen and (max-width: 799px) {
+  .event .water-polo .event__match {
+    grid-template: " check       .                        .                    .               .           .           .           .           .           .           .                     .           .           .           .           .           .           .       " 5px " check       dropdown                 homeLogo             homeParticipant iconStr     iconTv      resultsTime stage       homeService rounds      homeScoreInRegulation homePart1   homePart2   homeScore   homeCurrent homeLegs    homeSets    liveIcon" minmax(19px, auto) " check       dropdown                 awayLogo             awayParticipant iconStr     iconTv      resultsTime stage       awayService rounds      awayScoreInRegulation awayPart1   awayPart2   awayScore   awayCurrent awayLegs    awaySets    liveIcon" minmax(19px, auto) " check       .                        .                    .               .           .           .           .           .           .           .                     .           .           .           .           .           .           .       " 5px / max-content var(--width-dropdown, 0) var(--width-logo, 0) 1fr max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content max-content var(--width-live, 0);
+  }
+}
+/* LEFT MENU + CONTENT */
+.event.odds {
+  /* LEFT MENU + CONTENT */
+}
+.event.odds .winter-sports-cross-country .event__match--noDuel,
+.event.odds .winter-sports-biathlon .event__match--noDuel,
+.event.odds .winter-sports-alpine-skiing .event__match--noDuel,
+.event.odds .winter-sports-ski-jumping .event__match--noDuel {
+  grid-template: " check       rating participantName odd1 odd2 odd3 odd4" minmax(var(--height-oneline), auto) / max-content 40px 1fr 59px 59px 59px 59px;
+}
+@media only screen and (max-width: 799px) {
+  .event.odds .winter-sports-alpine-skiing .event__match,
+  .event.odds .winter-sports-cross-country .event__match {
+    grid-template: " check       .      .               .         .   " 8px " check       rating participantName pointsAll gap " minmax(19px, auto) " check       .      .               .         .   " 8px " .           odds   odds            odds      odds" max-content / max-content 34px 1fr 60px 70px;
+  }
+  .event.odds .winter-sports-biathlon .event__match {
+    grid-template: " check       .      .               .        .        " 8px " check       rating participantName shooting pointsAll" minmax(19px, auto) " check       .      .               .        .        " 8px " .           odds   odds            odds     odds     " max-content / max-content 34px 1fr 34px 70px;
+  }
+  .event.odds .winter-sports-ski-jumping .event__match {
+    grid-template: " check       .      .               .     .     .        " 8px " check       rating participantName jump1 jump2 pointsAll" minmax(19px, auto) " check       .      .               .     .     .        " 8px " .           odds   odds            odds  odds  odds     " max-content / max-content 34px 1fr 50px 50px 50px;
+  }
+}
+.event .winter-sports-alpine-skiing .event__match--noDuel,
+.event .winter-sports-cross-country .event__match--noDuel,
+.event .winter-sports-biathlon .event__match--noDuel,
+.event .winter-sports-ski-jumping .event__match--noDuel,
+.event .winter-sports-ski-jumping--team .event__match--noDuel {
+  grid-template: " check       dropdown                 rating                 participantName jump1                 points1                 jump2                 points2                 shooting                 pointsAll gap" minmax(var(--height-oneline), auto) / max-content var(--width-dropdown, 0) var(--width-rating, 0) 1fr var(--width-jump1, 0) var(--width-points1, 0) var(--width-jump2, 0) var(--width-points2, 0) var(--width-shooting, 0) 70px var(--width-gap, 0);
+}
+@media only screen and (max-width: 799px) {
+  .event .winter-sports-alpine-skiing .event__match--noDuel,
+  .event .winter-sports-cross-country .event__match--noDuel,
+  .event .winter-sports-biathlon .event__match--noDuel,
+  .event .winter-sports-ski-jumping .event__match--noDuel,
+  .event .winter-sports-ski-jumping--team .event__match--noDuel {
+    grid-template: " check       .                        .      .               .                        .                     .                     .                             .  " 8px " check       dropdown                 rating participantName shooting                 jump1                 jump2                 pointsAll                     gap" minmax(19px, auto) " check       .                        .      .               .                        .                     .                     .                             .  " 8px / max-content var(--width-dropdown, 0) 50px 1fr var(--width-shooting, 0) var(--width-jump1, 0) var(--width-jump2, 0) var(--width-points-winter, 0) var(--width-gap, 0);
+  }
+}
+

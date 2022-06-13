@@ -1,0 +1,625 @@
+/* LEFT MENU + CONTENT */
+.detailbody #detail,
+.detailbody #sportstats,
+.detailbody .inner,
+.detailbody #tournament-table.tournament-table-draw,
+.detailbody .tournament-table-draw #tournament-table-tabs-and-content,
+.detailbody .draw__cover,
+.detailbody .draw__container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+#tournament-table {
+  border-radius: 8px;
+  background-color: var(--color-combination-9);
+}
+.draw {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(202px, 1fr);
+  user-select: none;
+  color: var(--color-secondary-1);
+  margin-top: -28px;
+}
+body:not(.detailbody) .draw {
+  max-height: 70vh;
+}
+.detailbody:not(.detail-experimental) #tournament-table .draw {
+  max-height: 180px;
+}
+.draw__container {
+  display: grid;
+  grid-row-gap: 1px;
+  padding-bottom: 8px;
+}
+.draw__wrapper {
+  overflow-x: auto;
+  z-index: 0;
+  position: relative;
+}
+.detailbody .draw__wrapper {
+  flex: 1;
+}
+.draw__round {
+  display: grid;
+  grid-template-rows: 28px;
+  row-gap: 12px;
+  padding-bottom: 80px;
+  min-width: 202px;
+}
+.draw__round--first .draw__bracket--even {
+  bottom: 2px;
+}
+.draw__round--first .draw__bracket--odd {
+  top: 2px;
+}
+.draw__round--first .draw__bracket::after {
+  width: 8px;
+}
+.draw__round--last .draw__brackets {
+  align-content: space-around;
+}
+.draw__round--last .draw__bracket::after {
+  width: 8px;
+  left: -8px;
+  border-radius: 0;
+  border-right: none;
+}
+.draw__round--only .draw__bracket::before,
+.draw__round--only .draw__bracket::after {
+  content: none;
+}
+.draw__shadowHeader {
+  width: 100%;
+  height: 28px;
+  background-color: var(--color-support-1);
+  display: flex;
+  position: sticky;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  border-radius: 4px;
+}
+.shifter + .draw__wrapper .draw__shadowHeader {
+  border-radius: 0 0 4px 4px;
+}
+@media only screen and (max-width: 639px) {
+  .shifter + .draw__wrapper .draw__shadowHeader {
+    border-radius: 0;
+  }
+}
+.draw__clearHeader {
+  width: 100%;
+  height: 28px;
+  display: flex;
+  position: sticky;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  margin-top: -28px;
+}
+.draw__header {
+  grid-row: 1;
+  color: var(--color-support-4);
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 11px;
+  border-radius: 4px;
+}
+@media only screen and (max-width: 639px) {
+  .draw__header {
+    border-radius: 0;
+  }
+}
+.draw__header--final {
+  z-index: -10;
+  height: 28px;
+  background-color: var(--color-support-1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 12px 0;
+  position: relative;
+  font-weight: bold;
+  border-radius: 4px;
+}
+.draw__brackets {
+  display: grid;
+  grid-gap: 16px 0;
+  z-index: 1;
+  margin: 0 8px;
+}
+.draw__brackets--final {
+  z-index: var(--zIndex);
+}
+.draw__brackets--semiFinaleFirst {
+  grid-row-gap: 50px;
+}
+.draw__bracket {
+  display: grid;
+  align-items: center;
+  z-index: var(--zIndex);
+  position: relative;
+}
+.draw__bracket--even::after {
+  border-bottom: 1px solid;
+  bottom: 50%;
+  border-bottom-right-radius: 8px;
+}
+.draw__bracket--odd::after {
+  border-top: 1px solid;
+  top: 50%;
+  border-top-right-radius: 8px;
+}
+.draw__bracket::after {
+  content: "";
+  width: calc(100% + 16px);
+  height: 100%;
+  position: absolute;
+  right: -8px;
+  z-index: -1;
+  border-right: 1px solid;
+  border-color: var(--color-combination-8);
+}
+.bracket {
+  display: grid;
+  padding: 12px 8px;
+  border: 1px solid var(--color-combination-8);
+  border-radius: 8px;
+  background-color: var(--color-combination-9);
+  color: var(--color-combination-2);
+  cursor: pointer;
+  grid-template: " homeImage homeParticipant homeResult " 15px " .         .               .          " 4px " awayImage awayParticipant awayResult " 15px / max-content 1fr max-content;
+}
+.bracket--defaultHighlighted,
+.bracket--highlighted {
+  background-color: var(--color-highlight);
+}
+.bracket--eventless {
+  cursor: default;
+}
+.bracket--active {
+  background-color: #001e28;
+  border-color: #001e28;
+  color: var(--color-white);
+  border-radius: 8px 8px 0 0;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.25);
+}
+.bracket--active .bracket__image {
+  color: var(--color-white);
+}
+.bracket__participant {
+  align-self: center;
+  display: flex;
+  overflow: hidden;
+}
+.bracket__participant--home {
+  grid-area: homeParticipant;
+}
+.bracket__participant--away {
+  grid-area: awayParticipant;
+}
+.bracket__name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.bracket__name--advancing {
+  font-weight: bold;
+}
+.bracket__image {
+  align-self: center;
+  justify-self: center;
+  margin-right: 10px;
+  color: var(--color-combination-2);
+}
+.bracket__image--placeholder {
+  width: 16px;
+  height: 16px;
+}
+.bracket__image--home {
+  grid-area: homeImage;
+}
+.bracket__image--away {
+  grid-area: awayImage;
+}
+.bracket__result {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(24px, max-content);
+  justify-items: flex-end;
+  align-items: center;
+  justify-content: flex-end;
+  font-weight: bold;
+}
+.bracket__result--home {
+  grid-area: homeResult;
+}
+.bracket__result--away {
+  grid-area: awayResult;
+}
+.bracket__result--homeAway {
+  grid-area: homeResult / homeResult / awayResult;
+}
+.bracket__info {
+  margin-left: 4px;
+  color: var(--color-support-3);
+  font-weight: normal;
+  white-space: nowrap;
+}
+.bracket__series {
+  position: absolute;
+  top: calc(50% + 30px);
+  width: 100%;
+  box-sizing: border-box;
+  padding-bottom: 10px;
+}
+.bracket__series::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: calc(100% - 10px);
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 0 0 8px 8px;
+}
+.theme--dark .bracket__series::before {
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.5);
+}
+.series {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  align-items: center;
+  grid-template: ". time names . result ." 36px / 8px 44px 1fr 8px max-content 8px;
+  text-decoration: none;
+  color: var(--color-combination-2);
+  background-color: var(--color-combination-14);
+  cursor: pointer;
+}
+.series:not(:last-of-type) {
+  border-bottom: 1px solid var(--color-support-1);
+}
+.series:last-of-type {
+  border-radius: 0 0 8px 8px;
+}
+.series:hover .series__names {
+  text-decoration: underline;
+}
+.series__time {
+  grid-area: time;
+  color: var(--color-support-4);
+}
+.series__names {
+  grid-area: names;
+  position: relative;
+  margin-right: auto;
+  text-decoration: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+}
+.cycling.theme--dark .series__names,
+.mma.theme--dark .series__names,
+.theme--dark .series__names .rugby-union,
+.theme--dark .series__names .rugby-league,
+.theme--dark .series__names .motorsport,
+.theme--dark .series__names .motorsport-auto-racing,
+.theme--dark .series__names .motorsport-moto-racing,
+.theme--dark .series__names .basketball,
+.theme--dark .series__names .cricket {
+  color: #e6e6e6;
+}
+.series__namesDivider {
+  padding: 0 3px;
+}
+.series .result {
+  grid-area: result;
+  justify-self: flex-end;
+  font-weight: bold;
+}
+.series .result--empty {
+  margin-right: 10px;
+}
+@media only screen and (max-width: 479px) {
+  .draw {
+    grid-auto-columns: 100%;
+    overflow-x: visible;
+    transition: transform 350ms ease-out;
+    transform: translateX(calc(var(--i, 0) * -100%));
+    margin-top: initial;
+  }
+  .draw__container {
+    margin: initial;
+  }
+  .draw__wrapper {
+    overflow-x: hidden;
+    margin: initial;
+  }
+  .draw__shadowHeader,
+  .draw__clearHeader {
+    display: none;
+  }
+  .draw__header {
+    display: grid;
+    grid-template: "previous label next" auto / 50px 1fr 50px;
+    background-color: var(--color-support-1);
+    font-size: 12px;
+  }
+  .draw__header--final {
+    display: flex;
+  }
+  .draw__header .draw__label {
+    grid-area: label;
+    place-self: center;
+  }
+  .draw__round--first .draw__bracket::after {
+    width: 8px;
+  }
+  .draw__round--last .draw__bracket::after {
+    width: 16px;
+    left: -16px;
+  }
+  .draw__round--last .draw__bracket::before {
+    content: none;
+  }
+  .draw__round--last .bracket--even,
+  .draw__round--last .bracket--odd {
+    bottom: 0;
+    top: 0;
+  }
+  .draw__brackets {
+    grid-auto-rows: min-content;
+    align-content: flex-start;
+    margin: 0 16px;
+  }
+  .draw__round--last .draw__brackets {
+    align-content: flex-start;
+  }
+  .draw__brackets--semiFinaleFirst {
+    grid-row-gap: 16px;
+  }
+  .draw__bracket--even {
+    bottom: 2px;
+  }
+  .draw__bracket--even::before {
+    content: "";
+    background-color: var(--color-support-1);
+    position: absolute;
+    height: 1px;
+    width: 8px;
+    right: -16px;
+    left: auto;
+    top: -6px;
+  }
+  .draw__bracket--odd {
+    top: 2px;
+  }
+  .draw__bracket::after {
+    width: calc(100% + 24px);
+    right: -8px;
+  }
+  .draw__arrow {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .draw__arrow::after {
+    content: "";
+    transform: rotate(135deg);
+    border-style: solid;
+    width: 8px;
+    height: 8px;
+  }
+  .draw__arrow--previous {
+    grid-area: previous;
+  }
+  .draw__arrow--previous::after {
+    border-width: 0 2px 2px 0;
+  }
+  .draw__arrow--next {
+    grid-area: next;
+  }
+  .draw__arrow--next::after {
+    border-width: 2px 0 0 2px;
+  }
+  .shifter {
+    display: none;
+  }
+  body:not(.detailbody) .draw {
+    max-height: 70vh;
+  }
+  .detailbody:not(.detail-experimental) #tournament-table .draw {
+    max-height: 180px;
+  }
+}
+
+/* LEFT MENU + CONTENT */
+.drawSkeleton {
+  display: grid;
+  grid-auto-flow: row;
+  grid-auto-rows: auto;
+  margin: 0 8px;
+}
+.draw__wrapper .drawSkeleton {
+  margin-top: initial;
+}
+.drawSkeleton__shifter {
+  background-color: var(--color-skeleton-1);
+}
+.drawSkeleton__rounds {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(202px, 1fr);
+  overflow: hidden;
+}
+.drawSkeleton__round {
+  display: grid;
+  grid-gap: 12px;
+  grid-template-rows: 28px;
+}
+.drawSkeleton__header {
+  grid-row: 1;
+  background-color: var(--color-skeleton-2);
+}
+.drawSkeleton__brackets {
+  display: grid;
+  grid-gap: 16px;
+}
+.drawSkeleton__bracket {
+  display: grid;
+  grid-template: ". .               .               ." auto ". homeParticipant .               ." 13px ". .               .               ." 6px ". awayParticipant awayParticipant ." 13px ". .               .               ." auto / 8px 80px 20px 1fr;
+  border: 1px solid var(--color-skeleton-1);
+  margin: 0 8px;
+  height: 60px;
+  align-self: center;
+  position: relative;
+  border-radius: 8px;
+}
+.drawSkeleton__bracket::before,
+.drawSkeleton__bracket::after {
+  content: "";
+  background-color: var(--color-skeleton-1);
+  background-image: linear-gradient(to right, var(--color-skeleton-1) 0%, var(--color-skeleton-2) 20%, var(--color-skeleton-1) 40%, var(--color-skeleton-1) 100%);
+  background-repeat: repeat-y;
+  background-size: 800px 1px;
+  -webkit-animation-duration: 1.5s;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-name: placeholderShimmer;
+  -webkit-animation-timing-function: linear;
+}
+.drawSkeleton__bracket::before {
+  grid-area: homeParticipant;
+}
+.drawSkeleton__bracket::after {
+  grid-area: awayParticipant;
+}
+.drawSkeleton__round:first-of-type .drawSkeleton__bracket:nth-of-type(even) {
+  bottom: 2px;
+}
+.drawSkeleton__round:first-of-type .drawSkeleton__bracket:nth-of-type(odd) {
+  top: 2px;
+}
+@media only screen and (max-width: 479px) {
+  .drawSkeleton__rounds {
+    grid-auto-columns: 100%;
+  }
+  .drawSkeleton__rounds .drawSkeleton__round {
+    grid-auto-rows: min-content;
+  }
+  .drawSkeleton__rounds .drawSkeleton__round .drawSkeleton__bracket:nth-of-type(even) {
+    bottom: 2px;
+  }
+  .drawSkeleton__rounds .drawSkeleton__round .drawSkeleton__bracket:nth-of-type(odd) {
+    top: 2px;
+  }
+  .drawSkeleton__bracket {
+    margin: 0 16px;
+  }
+  .drawSkeleton__round .drawSkeleton__header {
+    margin-left: initial;
+  }
+  .drawSkeleton__shifter {
+    display: none;
+  }
+}
+@-webkit-keyframes placeholderShimmer {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+}
+
+/* LEFT MENU + CONTENT */
+.shifter {
+  display: none;
+  grid-template: " .           .   .    " 8px " previous    .   next " 28px " .           .   .    " 8px / max-content 1fr max-content;
+  background-color: var(--color-support-1);
+  padding: 0 16px;
+  border-radius: 4px 4px 0 0;
+}
+@media only screen and (max-width: 639px) {
+  .shifter {
+    border-radius: 0;
+  }
+}
+.draw__cover .shifter {
+  display: grid;
+}
+.playerStatsTableShifter .shifter {
+  grid-template: "previous . next" 30px / max-content 1fr max-content;
+  padding-top: 5px;
+}
+.playerStatsTableShifter .shifter .shifter__stage {
+  height: auto;
+  top: 0;
+}
+.shifter__stage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  user-select: none;
+  transition: background-color 250ms;
+  letter-spacing: 0.4px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--color-support-3);
+  border-radius: 8px;
+  background-color: var(--color-support-5);
+  font-size: 12px;
+}
+.shifter__stage--previous::before,
+.shifter__stage--next::after {
+  content: var(--arrow, url("data:image/svg+xml, <svg height=\"14\" viewBox=\"0 0 15 15\" width=\"14\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"m3.5.685 6.318 6.315-6.318 6.316.685.684 7-7-7.001-7-.684.684z\" fill=\"%230f2d37\"/></svg>"));
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 12px;
+  height: 14px;
+  padding-left: 5px;
+}
+.theme--dark .shifter__stage:not(.shifter__stage--disabled) {
+  --arrow: url("data:image/svg+xml, <svg height=\"14\" viewBox=\"0 0 15 15\" width=\"14\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"m3.5.685 6.318 6.315-6.318 6.316.685.684 7-7-7.001-7-.684.684z\" fill=\"%23eeeeee\"/></svg>");
+}
+.shifter__stage--disabled {
+  --arrow: url("data:image/svg+xml, <svg height=\"14\" viewBox=\"0 0 15 15\" width=\"14\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"m3.5.685 6.318 6.315-6.318 6.316.685.684 7-7-7.001-7-.684.684z\" fill=\"%23999\"/></svg>");
+}
+.shifter__stage--previous {
+  grid-area: previous;
+  padding: 0 10px 0 10px;
+}
+.shifter__stage--previous::before {
+  transform: rotate(180deg);
+}
+.shifter__stage--next {
+  grid-area: next;
+  padding: 0 10px 0 10px;
+}
+.shifter__stage:not(.shifter__stage--disabled) {
+  cursor: pointer;
+  color: var(--color-combination-4);
+}
+.shifter__stage:not(.shifter__stage--disabled):hover {
+  background-color: var(--color-combination-12);
+}
+@media only screen and (max-width: 479px) {
+  .draw__cover .shifter {
+    display: none;
+  }
+}
+

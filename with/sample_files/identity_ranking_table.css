@@ -1,0 +1,184 @@
+/* LEFT MENU + CONTENT */
+.rankingFilter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  background-color: var(--color-support-1);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.rankingInputs {
+  display: flex;
+  align-items: center;
+}
+.rankingInputs__input {
+  position: relative;
+  width: 208px;
+  height: 28px;
+  font-family: "LivesportFinderLatin", Arial, sans-serif;
+  letter-spacing: 0.4px;
+  color: var(--color-support-3);
+  background-color: var(--color-support-5);
+  border: unset;
+  outline: unset;
+  border-radius: 8px;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+}
+.rankingInputs__input--text {
+  padding: 0 10px 0 34px;
+  margin-right: 8px;
+  font-size: 13px;
+  background: url(/res/_fs/build/search.85f3415.svg) no-repeat 10px/14px 14px, var(--color-support-5);
+  box-sizing: border-box;
+}
+.rankingInputs__input--text::-webkit-input-placeholder {
+  color: var(--color-support-3);
+}
+.rankingInputs__input--text::before {
+  position: absolute;
+}
+.rankingInputs__input--select {
+  font-size: 11px;
+  text-transform: uppercase;
+}
+.rankingInputs__input .dropDown {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+.rankingInputs__input .dropDown__selectedValue {
+  width: 100%;
+  height: 100%;
+  padding: 0 8px;
+  color: var(--color-support-3);
+  box-sizing: border-box;
+}
+.rankingInputs__input .dropDown__option span,
+.rankingInputs__input .dropDown__selectedValue span {
+  font-size: 11px;
+}
+.rankingInputs__input .dropDown__text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.rankingInputs__input .dropDown__list {
+  top: 30px;
+  max-height: 280px;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  z-index: var(--zIndex-dropDown);
+}
+.rankingInputs__input .dropDown__option {
+  justify-content: flex-start;
+  width: 100%;
+  height: 25px;
+  padding: 0 8px;
+  border-bottom: none;
+  white-space: nowrap;
+}
+.rankingInputs__input .dropDown__option > div {
+  padding-right: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.rankingInputs__input .dropDown__option--selected {
+  display: none;
+}
+.rankingInputs > input:not(:last-of-type),
+.rankingInputs > div:not(:last-of-type) {
+  margin-right: 8px;
+}
+.rankingSwitcher {
+  display: flex;
+  align-items: center;
+}
+.rankingSwitcher__text {
+  margin-right: 8px;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0.4px;
+  color: var(--color-secondary-dark);
+}
+@media only screen and (max-width: 886px) {
+  .motorsport .rankingFilter {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 52px;
+    flex-direction: column;
+    align-items: unset;
+    border-radius: 0;
+    box-sizing: border-box;
+    z-index: 2;
+  }
+  .motorsport .rankingInputs {
+    flex: 1;
+    flex-direction: column;
+    align-items: unset;
+  }
+  .motorsport .rankingInputs__input {
+    width: 100%;
+    height: 32px;
+    margin-bottom: 6px;
+  }
+  .motorsport .rankingInputs__input--select {
+    margin-bottom: 0;
+  }
+  .motorsport .rankingInputs__input .dropDown__list {
+    top: 32px;
+  }
+  .motorsport .rankingInputs__input .dropDown__option {
+    height: 32px;
+  }
+  .motorsport .rankingInputs > div:not(:last-of-type) {
+    margin-right: 0;
+    margin-bottom: 6px;
+  }
+  .motorsport .rankingSwitcher {
+    justify-content: flex-end;
+    margin-top: 6px;
+  }
+}
+@media only screen and (max-width: 799px) {
+  .rankingFilter {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 52px;
+    flex-direction: column;
+    align-items: unset;
+    border-radius: 0;
+    box-sizing: border-box;
+    z-index: 2;
+  }
+  .rankingInputs {
+    flex: 1;
+    flex-direction: column;
+    align-items: unset;
+  }
+  .rankingInputs__input {
+    width: 100%;
+    height: 32px;
+    margin-bottom: 6px;
+  }
+  .rankingInputs__input--select {
+    margin-bottom: 0;
+  }
+  .rankingInputs__input .dropDown__list {
+    top: 32px;
+  }
+  .rankingInputs__input .dropDown__option {
+    height: 32px;
+  }
+  .rankingInputs > div:not(:last-of-type) {
+    margin-right: 0;
+    margin-bottom: 6px;
+  }
+  .rankingSwitcher {
+    justify-content: flex-end;
+    margin-top: 6px;
+  }
+}
+

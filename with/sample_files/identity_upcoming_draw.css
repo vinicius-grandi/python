@@ -1,0 +1,30 @@
+/* LEFT MENU + CONTENT */
+.upcomingDraw {
+  padding: 16px 20px 24px;
+  color: var(--color-support-4);
+  font-weight: bold;
+}
+.upcomingDraw__row {
+  display: flex;
+  align-items: center;
+}
+.upcomingDraw__icon {
+  order: 1;
+  margin-left: 8px;
+  display: flex;
+  align-items: center;
+}
+.upcomingDraw__throphy {
+  width: 12px;
+  height: 13px;
+}
+.upcomingDraw__name {
+  width: min-content;
+  white-space: nowrap;
+}
+@media screen and (max-width: 639px) {
+  .upcomingDraw {
+    padding: 12px 12px 24px;
+  }
+}
+

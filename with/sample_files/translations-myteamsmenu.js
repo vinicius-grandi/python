@@ -1,0 +1,1 @@
+window.leftMenuEnvironment = { trans: {"TRANS_MY_TEAMS_ADD_TEAM":"Adicionar equipe","TRANS_MY_TEAMS_LABEL":"Minhas Equipes","TRANS_MY_TEAMS_REMOVE":"Remover das Minhas Equipes!"} }

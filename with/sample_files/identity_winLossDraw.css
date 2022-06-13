@@ -1,0 +1,65 @@
+.wld {
+  display: flex;
+  flex-flow: column nowrap;
+  cursor: pointer;
+  justify-self: center;
+  align-items: center;
+  align-self: center;
+  color: #ffffff;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  border-radius: 4px;
+  overflow: hidden;
+  text-align: center;
+  line-height: 20px;
+  position: relative;
+}
+.wld--w,
+.wld--wo,
+.wld--ww,
+.wld--dw,
+.wld--wl {
+  background-color: #14dc4b;
+}
+.wld--l,
+.wld--lo,
+.wld--ll,
+.wld--dl,
+.wld--lw {
+  background-color: #dc0000;
+}
+.wld--d,
+.wld--do,
+.wld--dw,
+.wld--dl {
+  background-color: #ffcd00;
+}
+.wld--tbd {
+  background-color: #c8cdcd;
+}
+.wld--wo::before,
+.wld--lo::before,
+.wld--dw::before,
+.wld--wl::before,
+.wld--lw::before,
+.wld--dl::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-right: 12px solid #ffcd00;
+  position: absolute;
+  top: 8px;
+  right: 0;
+}
+.wld--dw::before,
+.wld--lw::before {
+  border-right: 10px solid #14dc4b;
+}
+.wld--dl::before,
+.wld--wl::before {
+  border-right: 10px solid #dc0000;
+}
+

@@ -1,0 +1,759 @@
+#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-banner-sdk {
+  min-height: 400px;
+  bottom: 0 !important;
+  display: flex;
+  align-items: center;
+  background-color: var(--color-onetrust-wrapper);
+  box-shadow: none;
+  border-top: 1px solid var(--color-onetrust-border-1);
+  box-sizing: border-box;
+}
+#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-banner-sdk h2,
+#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-banner-sdk h3 {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 5px;
+  line-height: normal;
+}
+#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-banner-sdk p {
+  font-size: 10px;
+  line-height: normal;
+}
+#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-banner-sdk h2,
+#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-banner-sdk h3,
+#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-banner-sdk p {
+  color: var(--color-onetrust-text-3);
+  border-color: var(--color-onetrust-border-1);
+}
+#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-banner-sdk a {
+  color: var(--color-onetrust-text-2);
+  outline: none;
+}
+#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-banner-sdk button {
+  font-size: 12px;
+  margin: 5px 0;
+}
+#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-banner-sdk button#onetrust-accept-btn-handler {
+  padding: 12px 10px;
+}
+#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-banner-sdk button#onetrust-pc-btn-handler:not(.cookie-setting-link),
+#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-banner-sdk button#onetrust-reject-all-handler,
+#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-banner-sdk button#onetrust-accept-btn-handler {
+  background-color: var(--color-onetrust-button);
+  border-color: var(--color-onetrust-button);
+  border-radius: 8px;
+  color: #ffffff;
+  opacity: 1;
+}
+#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-banner-sdk button.cookie-setting-link {
+  color: var(--color-onetrust-text-2);
+  padding: 10px 12px;
+  text-decoration: underline;
+  border-color: initial;
+  background-color: initial;
+  margin: initial;
+  opacity: 1;
+}
+#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-banner-sdk button.cookie-setting-link:hover {
+  text-decoration: none;
+}
+#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-banner-sdk #onetrust-close-btn-container {
+  top: 0;
+  margin: auto;
+  transform: translate(0, 0);
+}
+#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-banner-sdk #onetrust-close-btn-container button {
+  right: 0;
+  top: 0;
+}
+#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-banner-sdk #onetrust-button-group {
+  display: flex;
+  flex-flow: column nowrap;
+  box-sizing: border-box;
+  flex: 0 0 200px;
+}
+#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-banner-sdk #onetrust-button-group-parent {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-banner-sdk:focus,
+#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-banner-sdk button:focus {
+  outline: none;
+}
+#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-banner-sdk.otFlat:not(.ot-iab-2) #onetrust-accept-btn-handler {
+  order: 1;
+}
+#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-banner-sdk.otFlat:not(.ot-iab-2) #onetrust-reject-all-handler {
+  order: 2;
+}
+#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-banner-sdk.otFlat:not(.ot-iab-2) #onetrust-pc-btn-handler {
+  order: 3;
+}
+@media only screen and (max-width: 425px) {
+  #onetrust-consent-sdk#onetrust-consent-sdk #onetrust-banner-sdk div#onetrust-policy {
+    margin: 13px 0 0;
+  }
+  #onetrust-consent-sdk#onetrust-consent-sdk #onetrust-banner-sdk p.ot-dpd-desc {
+    margin-bottom: initial;
+  }
+}
+@media only screen and (min-width: 425px) {
+  #onetrust-consent-sdk#onetrust-consent-sdk #onetrust-banner-sdk {
+    min-height: 300px;
+  }
+}
+@media only screen and (min-width: 550px) {
+  #onetrust-consent-sdk#onetrust-consent-sdk #onetrust-banner-sdk {
+    flex: 1;
+    width: 100vw;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #onetrust-consent-sdk#onetrust-consent-sdk #onetrust-banner-sdk h2,
+  #onetrust-consent-sdk#onetrust-consent-sdk #onetrust-banner-sdk h3 {
+    font-size: 15px;
+  }
+  #onetrust-consent-sdk#onetrust-consent-sdk #onetrust-banner-sdk p {
+    font-size: 12px;
+  }
+  #onetrust-consent-sdk#onetrust-consent-sdk #onetrust-banner-sdk div#onetrust-button-group {
+    margin-right: initial;
+    float: right;
+  }
+  #onetrust-consent-sdk#onetrust-consent-sdk #onetrust-banner-sdk .ot-sdk-row {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+  #onetrust-consent-sdk#onetrust-consent-sdk #onetrust-banner-sdk #onetrust-group-container {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+  }
+  #onetrust-consent-sdk#onetrust-consent-sdk #onetrust-banner-sdk #onetrust-button-group-parent {
+    position: static;
+    transform: none;
+    min-width: 200px;
+    margin: auto 40px auto 20px;
+    width: auto;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  #onetrust-consent-sdk#onetrust-consent-sdk #onetrust-banner-sdk {
+    min-height: 25vh;
+  }
+}
+@media only screen and (min-width: 425px) and (max-width: 550px) {
+  #onetrust-consent-sdk#onetrust-consent-sdk #onetrust-banner-sdk #onetrust-policy {
+    margin-left: 0 !important;
+  }
+}
+.onetrust-vendors-list-handler {
+  color: var(--color-onetrust-text-1) !important;
+}
+#onetrust-pc-sdk .ot-pc-footer .ot-pc-footer-logo {
+  background-color: var(--color-onetrust-background-1);
+}
+#onetrust-pc-sdk .ot-pc-logo.ot-pc-logo {
+  width: 40px;
+  margin: 5px;
+}
+#onetrust-pc-sdk .pc-logo-container {
+  margin-top: 0 !important;
+}
+#onetrust-consent-sdk .pc-header {
+  padding: 10px !important;
+}
+#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-pc-sdk {
+  border-color: var(--color-onetrust-border-3);
+  background-color: var(--color-onetrust-background-1);
+}
+#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-pc-sdk * {
+  outline: none;
+}
+#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-pc-sdk *:not(button) {
+  border-color: var(--color-onetrust-border-3);
+  color: var(--color-onetrust-text-1);
+}
+#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-pc-sdk .ot-grps-cntr {
+  overflow-y: hidden;
+}
+#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-pc-sdk .ot-title-cntr {
+  width: calc(100% - 65px) !important;
+}
+#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-pc-sdk #ot-fltr-cnt,
+#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-pc-sdk #ot-anchor {
+  background-color: var(--color-onetrust-background-1);
+}
+#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-pc-sdk h2 {
+  color: var(--color-onetrust-text-1);
+  font-size: 17px;
+}
+#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-pc-sdk h2#ot-pc-title,
+#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-pc-sdk h2#pc-title {
+  width: auto !important;
+  max-width: max-content;
+  margin-top: 0;
+}
+#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-pc-sdk h2#ot-pc-title::after,
+#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-pc-sdk h2#pc-title::after {
+  background-color: var(--color-onetrust-background-1);
+}
+#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-pc-sdk h3 {
+  color: var(--color-onetrust-text-1);
+  font-size: 12px;
+}
+#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-pc-sdk h3#pc-privacy-header {
+  max-width: initial;
+}
+#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-pc-sdk h3.pc-back-button-text {
+  font-size: 15px;
+}
+#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-pc-sdk .description-container h3 {
+  background-color: var(--color-onetrust-background-4);
+  border-top: 1px solid var(--color-onetrust-border-3);
+  border-bottom: 1px solid var(--color-onetrust-border-3);
+  display: flex;
+  width: 100%;
+  padding: 6px;
+  font-size: 12px;
+}
+#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-pc-sdk h4,
+#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-pc-sdk h6 {
+  color: var(--color-onetrust-text-1);
+}
+#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-pc-sdk a {
+  font-size: 12px;
+}
+#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-pc-sdk a.privacy-notice-link:hover {
+  color: var(--color-onetrust-text-1);
+}
+#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-pc-sdk a[role=button] {
+  text-decoration: underline;
+  opacity: 1;
+}
+#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-pc-sdk a[role=button]:hover {
+  text-decoration: none;
+}
+#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-pc-sdk p {
+  font-size: 12px;
+  color: var(--color-onetrust-text-1);
+}
+#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-pc-sdk button {
+  font-size: 12px;
+  font-weight: 700;
+}
+#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-pc-sdk button.ot-leg-int-enabled {
+  color: var(--color-onetrust-text-2);
+  background-color: var(--color-onetrust-background-1);
+  border-color: var(--color-onetrust-border-4);
+  border-radius: 8px;
+}
+#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-pc-sdk button#accept-recommended-btn-handler,
+#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-pc-sdk button.ot-pc-refuse-all-handler,
+#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-pc-sdk button.save-preference-btn-handler {
+  background-color: var(--color-onetrust-button);
+  border-color: var(--color-onetrust-button);
+  color: #ffffff;
+  border-radius: 8px;
+  opacity: 1;
+}
+#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-pc-sdk span.consent-hdr {
+  color: var(--color-onetrust-text-2);
+}
+#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-pc-sdk input[type=text] {
+  background-color: var(--color-onetrust-background-2);
+  border-color: var(--color-onetrust-border-4);
+  color: var(--color-onetrust-text-1);
+}
+.theme--dark #onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-pc-sdk svg {
+  filter: grayscale(1) brightness(4.5);
+}
+.theme--dark #onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-pc-sdk button.ot-obj-leg-btn-handler svg {
+  filter: none;
+}
+#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-pc-sdk #ot-search-cntr,
+#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-pc-sdk #ot-sel-blk {
+  background-color: var(--color-onetrust-background-1);
+}
+#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-pc-sdk .ot-active-leg-btn span {
+  color: #2d2d2d;
+}
+#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-pc-sdk .ot-acc-txt {
+  background-color: var(--color-onetrust-background-1);
+}
+#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-pc-sdk div.pc-header {
+  display: flex;
+  align-items: center;
+}
+#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-pc-sdk div.description-container {
+  display: flex;
+  flex-direction: column;
+}
+#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-pc-sdk div.checkbox {
+  background-color: var(--color-onetrust-background-1);
+}
+#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-pc-sdk div.category-menu-switch-handler {
+  background-color: var(--color-onetrust-background-3);
+  border-color: var(--color-onetrust-border-2);
+}
+#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-pc-sdk div.category-menu-switch-handler.group {
+  border-left: none;
+}
+#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-pc-sdk div.category-menu-switch-handler.active-group,
+#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-pc-sdk div.category-menu-switch-handler.ot-active-menu {
+  background-color: var(--color-onetrust-background-1);
+}
+#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-pc-sdk div.vendor-options {
+  background-color: var(--color-onetrust-background-4);
+}
+#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-pc-sdk div#search-container {
+  background-color: var(--color-onetrust-background-1);
+}
+#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-pc-sdk div#ot-options {
+  background-color: var(--color-onetrust-background-1);
+}
+#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-pc-sdk div#ot-options span {
+  color: var(--color-onetrust-text-1);
+}
+#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-pc-sdk div#ot-options button {
+  box-shadow: none;
+}
+#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk#onetrust-consent-sdk #onetrust-pc-sdk.ot-ftr-stacked .ot-btn-subcntr button {
+  margin-right: 16px;
+}
+#filter-apply-handler,
+#filter-cancel-handler {
+  background-color: var(--color-onetrust-button) !important;
+  border-color: var(--color-onetrust-button) !important;
+  border-radius: 8px !important;
+  color: #ffffff !important;
+}
+#ot-sdk-btn-floating.ot-floating-button {
+  position: absolute !important;
+  bottom: 10px !important;
+  margin-bottom: 0;
+  left: 8px !important;
+  animation: unset !important;
+  opacity: 1 !important;
+  z-index: 8 !important;
+  transform: scale(0.7);
+}
+#ot-sdk-btn-floating.ot-floating-button::before,
+#ot-sdk-btn-floating.ot-floating-button::after {
+  content: none !important;
+}
+#onetrust-consent-sdk {
+  position: relative;
+}
+#onetrust-consent-sdk #ot-sdk-btn-floating {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+}
+#onetrust-consent-sdk #ot-sdk-btn-floating .ot-floating-button__front,
+#onetrust-consent-sdk #ot-sdk-btn-floating .ot-floating-button__back {
+  background: transparent no-repeat center center;
+  box-shadow: none;
+  border-radius: 8px;
+  transition: none;
+}
+@media only screen and (min-width: 1048px) {
+  #onetrust-consent-sdk #ot-sdk-btn-floating .ot-floating-button__front,
+  #onetrust-consent-sdk #ot-sdk-btn-floating .ot-floating-button__back {
+    background-color: var(--color-onetrust-background-1);
+    box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.05);
+  }
+}
+@media only screen and (min-width: 1187px) {
+  .isWide #onetrust-consent-sdk #ot-sdk-btn-floating .ot-floating-button__front,
+  .isWide #onetrust-consent-sdk #ot-sdk-btn-floating .ot-floating-button__back {
+    background-color: var(--color-onetrust-background-1);
+    box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.05);
+  }
+}
+#onetrust-consent-sdk #ot-sdk-btn-floating .ot-floating-button__front svg,
+#onetrust-consent-sdk #ot-sdk-btn-floating .ot-floating-button__back svg {
+  display: none;
+}
+#onetrust-consent-sdk #ot-sdk-btn-floating .ot-floating-button__front button,
+#onetrust-consent-sdk #ot-sdk-btn-floating .ot-floating-button__back button {
+  outline: none;
+}
+#onetrust-consent-sdk #ot-sdk-btn-floating .ot-floating-button__front.custom-persistent-icon,
+#onetrust-consent-sdk #ot-sdk-btn-floating .ot-floating-button__back.custom-persistent-icon {
+  border-radius: 8px;
+}
+#onetrust-consent-sdk #ot-sdk-btn-floating .ot-floating-button__front {
+  background-image: url("data:image/svg+xml, <svg width=%2720%27 height=%2720%27 viewBox=%270 0 20 20%27 xmlns=%27http://www.w3.org/2000/svg%27><path d=%27m16.65 0 2.47 2.47V12.7L11.818 20H7.802L.5 12.7V2.47L2.97 0h13.68zm-.567 1.367H3.537l-1.67 1.67v9.095l6.5 6.502h2.885l6.5-6.502.001-9.095-1.67-1.67zM14.944 4.89l.967.966-7.664 7.668-4.513-4.516.965-.965 3.548 3.55 6.697-6.703z%27 fill=%27%23999999%27 fill-rule=%27evenodd%27/></svg>");
+}
+#onetrust-consent-sdk #ot-sdk-btn-floating .ot-floating-button__back {
+  background-image: url("data:image/svg+xml, <svg xmlns=%27http://www.w3.org/2000/svg%27 width=%2720%27 height=%2720%27 viewBox=%270 0 20 20%27><path d=%27M18.107 1 10 9.107 1.893 1 1 1.891 9.108 10 1 18.109l.893.891L10 10.892 18.107 19l.893-.891L10.892 10 19 1.891z%27 fill=%27%23999999%27 fill-rule=%27evenodd%27/></svg>");
+}
+#onetrust-consent-sdk #onetrust-pc-sdk .ot-leg-btn-container .ot-active-leg-btn {
+  background-color: var(--color-onetrust-button) !important;
+  border-color: var(--color-onetrust-button) !important;
+  border-radius: 8px;
+  color: #ffffff !important;
+}
+#onetrust-consent-sdk #onetrust-pc-sdk .ot-leg-btn-container .ot-active-leg-btn > svg path {
+  fill: #ffffff !important;
+}
+#onetrust-consent-sdk #onetrust-pc-sdk .ot-leg-btn-container .ot-active-leg-btn span {
+  color: #ffffff !important;
+}
+.ot-remove-objection-handler {
+  color: var(--color-onetrust-button) !important;
+}
+.customOneTrustShield {
+  background: var(--color-onetrust-shield);
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  opacity: 1 !important;
+  margin: -12px -5px 0 0;
+  cursor: pointer;
+  transform: scale(0.7);
+}
+body:not(.detailbody) #ot-sdk-btn-floating.ot-floating-button {
+  animation: unset !important;
+  transition: none !important;
+  opacity: 1 !important;
+}
+@media only screen and (min-width: 1048px) {
+  body:not(.isWide):not(.detailbody) #ot-sdk-btn-floating.ot-floating-button {
+    left: calc(100% - 112px) !important;
+    bottom: 8px !important;
+    position: fixed !important;
+  }
+  body:not(.isWide):not(.detailbody) #ot-sdk-btn-floating.ot-floating-button .ot-floating-button__front,
+  body:not(.isWide):not(.detailbody) #ot-sdk-btn-floating.ot-floating-button .ot-floating-button__back {
+    background-color: var(--color-onetrust-background-1);
+  }
+}
+@media only screen and (min-width: 1164px) {
+  body:not(.isWide):not(.detailbody) #ot-sdk-btn-floating.ot-floating-button {
+    bottom: 1.5% !important;
+    left: 1% !important;
+    transform: scale(1);
+    border: solid 1px var(--color-support-1);
+    background-color: var(--color-onetrust-background-1);
+  }
+}
+@media only screen and (min-width: 1187px) {
+  body.isWide:not(.detailbody) #ot-sdk-btn-floating.ot-floating-button {
+    left: calc(100% - 112px) !important;
+    bottom: 8px !important;
+    border: solid 1px var(--color-support-1);
+    position: fixed !important;
+  }
+  body.isWide:not(.detailbody) #ot-sdk-btn-floating.ot-floating-button .ot-floating-button__front,
+  body.isWide:not(.detailbody) #ot-sdk-btn-floating.ot-floating-button .ot-floating-button__back {
+    background-color: var(--color-onetrust-background-1);
+  }
+}
+@media only screen and (min-width: 1276px) {
+  body.isWide:not(.detailbody) #ot-sdk-btn-floating.ot-floating-button {
+    bottom: 1.5% !important;
+    left: 1% !important;
+    transform: scale(1);
+  }
+}
+#onetrust-pc-sdk [class*="pc-logo"][role="img"] {
+  background-image: url(/res/_fs/build/symbol_only_dark.c8f36d6.svg) !important;
+  width: 40px !important;
+  height: 40px !important;
+  margin: 5px;
+}
+.theme--dark #onetrust-pc-sdk [class*="pc-logo"][role="img"] {
+  background-image: url(/res/_fs/build/symbol_only.85ddaed.svg) !important;
+}
+._scoreboard #onetrust-pc-sdk [class*="pc-logo"][role="img"] {
+  background-image: url(/res/_fs/build/touch-icon-180x180.6bc7f80.png) !important;
+}
+._in #onetrust-pc-sdk [class*="pc-logo"][role="img"] {
+  background-image: url(/res/_fs/build/favicon-32x32.7873e28.png) !important;
+}
+._ss #onetrust-pc-sdk [class*="pc-logo"][role="img"] {
+  background-image: url(/res/_fs/build/soccerstand_symbol.2805e4d.svg) !important;
+}
+.pid_100 #onetrust-pc-sdk [class*="pc-logo"][role="img"] {
+  background-image: url(/res/_fs/build/symbol_only_s24_soccer.93cf51f.svg) !important;
+}
+.pid_107 #onetrust-pc-sdk [class*="pc-logo"][role="img"] {
+  background-image: url(/res/_fs/build/symbol_only_s24_tennis.f31267b.svg) !important;
+}
+.pid_110 #onetrust-pc-sdk [class*="pc-logo"][role="img"] {
+  background-image: url(/res/_fs/build/symbol_only_s24_basketball.f60f3bc.svg) !important;
+}
+.pid_109 #onetrust-pc-sdk [class*="pc-logo"][role="img"] {
+  background-image: url(/res/_fs/build/symbol_only_s24_icehockey.0a98932.svg) !important;
+}
+.pid_108 #onetrust-pc-sdk [class*="pc-logo"][role="img"] {
+  background-image: url(/res/_fs/build/symbol_only_s24_cricket.8f1b630.svg) !important;
+}
+.pid_111 #onetrust-pc-sdk [class*="pc-logo"][role="img"] {
+  background-image: url(/res/_fs/build/symbol_only_s24_baseball.0678219.svg) !important;
+}
+.pid_112 #onetrust-pc-sdk [class*="pc-logo"][role="img"] {
+  background-image: url(/res/_fs/build/symbol_only_s24_golf.1ddca9f.svg) !important;
+}
+.pid_113 #onetrust-pc-sdk [class*="pc-logo"][role="img"] {
+  background-image: url(/res/_fs/build/symbol_only_s24_motorsport.49ce10e.svg) !important;
+}
+.pid_114 #onetrust-pc-sdk [class*="pc-logo"][role="img"] {
+  background-image: url(/res/_fs/build/symbol_only_s24_volleyball.74fec46.svg) !important;
+}
+.pid_117 #onetrust-pc-sdk [class*="pc-logo"][role="img"] {
+  background-image: url(/res/_fs/build/symbol_only_s24_handball.3c0e7e8.svg) !important;
+}
+.pid_118 #onetrust-pc-sdk [class*="pc-logo"][role="img"] {
+  background-image: url(/res/_fs/build/symbol_only_s24_darts.1e45a2b.svg) !important;
+}
+.pid_115 #onetrust-pc-sdk [class*="pc-logo"][role="img"] {
+  background-image: url(/res/_fs/build/symbol_only_s24_horseracing.b10002c.svg) !important;
+}
+.pid_401.detailbody #ot-sdk-btn-floating {
+  display: none;
+}
+/*
+// IN
+
+.pid_50,
+.pid_51,
+.pid_52,
+.pid_53,
+.pid_54,
+.pid_55,
+.pid_56,
+.pid_57,
+.pid_58,
+.pid_59,
+.pid_60,
+.pid_61,
+.pid_62,
+.pid_63,
+.pid_64,
+.pid_66,
+.pid_68,
+.pid_69,
+.pid_70,
+.pid_71,
+.pid_72,
+.pid_73,
+.pid_75,
+.pid_76,
+.pid_77,
+.pid_78,
+.pid_79,
+.pid_80,
+.pid_81,
+.pid_82 {
+	#onetrust-pc-sdk [class*="pc-logo"][role="img"] {
+		background-image: url("../../../../_in/image/logo/svg/dark/livescore_in.svg") !important;
+	}
+
+	&.theme--dark #onetrust-pc-sdk [class*="pc-logo"][role="img"] {
+		background-image: url("../../../../_in/image/logo/svg/light/livescore_in.svg") !important;
+	}
+}
+
+// SS
+
+.pid_450,
+.pid_451,
+.pid_452,
+.pid_453,
+.pid_454,
+.pid_455,
+.pid_456 {
+	#onetrust-pc-sdk [class*="pc-logo"][role="img"] {
+		background-image: url("../../../../_ss/image/logo/svg/dark/soccerstand_com.svg") !important;
+	}
+
+	&.theme--dark #onetrust-pc-sdk [class*="pc-logo"][role="img"] {
+		background-image: url("../../../../_ss/image/logo/svg/light/soccerstand_com.svg") !important;
+	}
+}
+
+.pid_403 #onetrust-pc-sdk [class*="pc-logo"][role="img"] {
+	background-image: url("../../../../_ss/image/logo/svg/dark/liveticker_com.svg") !important;
+}
+
+.pid_403.theme--dark #onetrust-pc-sdk [class*="pc-logo"][role="img"] {
+	background-image: url("../../../../_ss/image/logo/svg/light/liveticker_com.svg") !important;
+}
+
+.pid_405 #onetrust-pc-sdk [class*="pc-logo"][role="img"] {
+	background-image: url("../../../../_ss/image/logo/svg/dark/wynikinazywo_pl.svg") !important;
+}
+
+.pid_405.theme--dark #onetrust-pc-sdk [class*="pc-logo"][role="img"] {
+	background-image: url("../../../../_ss/image/logo/svg/light/wynikinazywo_pl.svg") !important;
+}
+
+// SB
+
+._scoreboard #onetrust-pc-sdk [class*="pc-logo"][role="img"] {
+	background-image: url("../../../../_scoreboard/image/logo/svg/light/livesport_com.svg") !important;
+}
+*/
+
+/* LEFT MENU + CONTENT */
+.customCookie {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--zIndex-onetrust);
+  background-color: var(--color-onetrust-wrapper);
+  color: var(--color-onetrust-text-3);
+  border-top: 1px solid var(--color-onetrust-border-1);
+  padding: 20px 40px;
+}
+.customCookie--hidden {
+  display: none;
+}
+.customCookie__content {
+  display: grid;
+  grid-template: " text        buttons   " auto / 1fr 200px;
+}
+.customCookie__text {
+  grid-area: text;
+  display: flex;
+  align-items: center;
+  padding: 0 20px 0 0;
+}
+.customCookie__buttons {
+  grid-area: buttons;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+.customCookie__button {
+  text-align: center;
+  height: 35px;
+  width: 200px;
+  color: #ffffff;
+}
+.customCookie__button:hover {
+  cursor: pointer;
+}
+.customCookie__button--accept {
+  background-color: var(--color-onetrust-button);
+  border-radius: 2px;
+  border: none;
+}
+.customCookie__button--policy {
+  color: var(--color-onetrust-text-1);
+  text-decoration: underline;
+  font-weight: bold;
+  line-height: 35px;
+  white-space: nowrap;
+}
+@media only screen and (max-width: 639px) {
+  .customCookie {
+    padding: 20px 15px;
+  }
+  .customCookie__content {
+    display: grid;
+    grid-template: " text    " auto " buttons " auto / 1fr;
+  }
+  .customCookie__text {
+    padding: 0 0 20px 0;
+  }
+}
+
+/* LEFT MENU + CONTENT */
+.otPlaceholder {
+  display: flex;
+  align-items: flex-start;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 400px;
+  padding-top: 20px;
+  box-sizing: border-box;
+  background: var(--color-onetrust-background-1) url(/res/_fs/build/otBg.1096be3.png);
+  border-top: 1px solid var(--color-onetrust-border-1);
+  z-index: var(--zIndex-onetrust);
+}
+.theme--dark .otPlaceholder {
+  background: var(--color-onetrust-background-1) url(/res/_fs/build/otBg_dark.7fcbf95.png);
+}
+@media only screen and (min-width: 425px) {
+  .otPlaceholder {
+    height: 300px;
+  }
+}
+@media only screen and (min-width: 999px) {
+  .otPlaceholder {
+    height: 25vh;
+    align-items: center;
+    padding-top: 0;
+  }
+}
+.otPlaceholder--hidden {
+  display: none;
+}
+.skOT {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 15px;
+  box-sizing: border-box;
+  width: 100%;
+}
+.skOT__co {
+  display: flex;
+  flex-flow: column nowrap;
+  flex: 1;
+}
+.skOT__co > div {
+  border-radius: 3px;
+  background-color: var(--color-skeleton-1);
+  background-image: linear-gradient(90deg, var(--color-skeleton-1) 0, var(--color-skeleton-2) 20%, var(--color-skeleton-1) 40%, var(--color-skeleton-1));
+  background-repeat: no-repeat;
+  background-size: 800px 104px;
+  -webkit-animation-duration: 1.5s;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-name: placeholderShimmer;
+  -webkit-animation-timing-function: linear;
+}
+.skOT__co > div:last-child {
+  width: 50%;
+}
+.skOT__co:last-child {
+  margin-right: 0;
+}
+.skOT__ti {
+  height: 24px;
+  margin: 2px 4px 8px 4px;
+}
+.skOT__te {
+  height: 14px;
+  margin: 2px 4px;
+}
+@media only screen and (min-width: 1024px) {
+  .skOT {
+    flex-flow: row nowrap;
+    padding: 30px;
+    width: 86%;
+  }
+  .skOT__co {
+    margin-right: 30px;
+  }
+}
+/* for short sports and myTeams  <--- */
+@-webkit-keyframes placeholderShimmer {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+}
+

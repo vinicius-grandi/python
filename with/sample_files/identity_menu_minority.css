@@ -1,0 +1,146 @@
+/* LEFT MENU + CONTENT */
+.menuMinority {
+  font-weight: bold;
+  text-transform: uppercase;
+  user-select: none;
+  box-sizing: border-box;
+}
+.menuMinority__title {
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  color: #c8cdcd;
+  grid-template: " . .      .      .      . " 8px " . text   .      arrow  . " 20px " . .      .      .      . " 16px " . border border border . " 4px / 14px max-content 8px 12px 14px;
+}
+.fs_news .menuMinority__title {
+  color: var(--color-support-4);
+  grid-template: " . .      .      .      . " 20px " . text   .      arrow  . " 20px " . .      .      .      . " 16px " . border border border . " 4px / 14px max-content 8px 12px 14px;
+}
+@media only screen and (max-width: 639px) {
+  .fs_news .menuMinority__title {
+    grid-template: " .      .      .      .      .      " 16px " .      .      arrow  .      .      " 20px " .      .      .      .      .      " 8px " .      text   text   text   .      " 12px " .      .      .      .      .      " 8px " border border border border border " 4px / 4px minmax(16px, 1fr) 20px minmax(16px, 1fr) 4px;
+  }
+}
+.fs_news .menuMinority__title:hover {
+  color: var(--color-combination-2);
+}
+.menuMinority__title:hover,
+.menuMinority__title--open {
+  color: var(--color-white);
+}
+.menuMinority__title--active {
+  color: var(--color-white);
+}
+.menuMinority__title--active::after {
+  content: "";
+  grid-area: border;
+  background-color: var(--color-primary);
+  height: 100%;
+  width: 100%;
+  border-radius: 1.5px 1.5px 0 0;
+}
+.menuMinority__arrow {
+  width: 12px;
+  height: 8px;
+  grid-area: arrow;
+  place-self: center;
+}
+.menuMinority__title--open .menuMinority__arrow {
+  transform: rotate(180deg);
+}
+.menuMinority__text {
+  grid-area: text;
+  -webkit-text-size-adjust: none;
+}
+.menuMinority__text::before {
+  content: attr(data-text-long);
+}
+.menuMinority__content {
+  display: none;
+  position: absolute;
+  top: calc(100% - 12px);
+  right: 0;
+  z-index: var(--zIndex-menuMinority);
+  background-color: var(--color-support-5);
+  box-shadow: 0 2px 25px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 12px;
+  column-count: 3;
+  column-gap: 12px;
+}
+.menuMinority__sportCount {
+  grid-area: count;
+  padding: 2px;
+  background-color: var(--color-support-1);
+  border-radius: 4px;
+  place-self: center;
+  font-size: 10px;
+}
+.menuMinority__item {
+  display: grid;
+  align-items: center;
+  break-inside: avoid;
+  width: max-content;
+  color: var(--color-combination-5);
+  border-radius: 8px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  grid-template: " . .      .      .      .      .      . " 8px " . icon   .      text   .      count  . " 20px " . .      .      .      .      .      . " 8px / 14px 20px 8px max-content 4px max-content 14px;
+}
+.menuMinority__item[data-sport-count]::after {
+  content: attr(data-sport-count);
+  grid-area: count;
+  padding: 2px;
+  background-color: rgba(var(--color-support-2-rgb), 0.4);
+  border-radius: 4px;
+  place-self: center;
+  font-size: 10px;
+  line-height: 12px;
+  min-width: 16px;
+  box-sizing: border-box;
+  text-align: center;
+  font-weight: bold;
+}
+.menuMinority__item:hover {
+  color: var(--color-combination-4);
+  background-color: rgba(var(--color-support-2-rgb), 0.2);
+}
+.menuMinority__item:hover::after {
+  background-color: var(--color-combination-4);
+  color: var(--color-support-1);
+}
+.menuMinority__item--hidden {
+  display: none;
+}
+.menuMinority__icon {
+  grid-area: icon;
+  width: 100%;
+  height: 100%;
+}
+@media only screen and (max-width: 639px) {
+  .menuMinority__title {
+    font-size: 10px;
+    grid-template: " .      .      .      .      .      " 8px " .      .      arrow  .      .      " 20px " .      .      .      .      .      " 8px " .      text   text   text   .      " 16px " .      .      .      .      .      " 8px " border border border border border " 4px / 4px minmax(16px, 1fr) 20px minmax(16px, 1fr) 4px;
+  }
+  .menuMinority__item {
+    width: auto;
+    grid-template-columns: 16px 20px 12px max-content 1fr max-content 18px;
+    border-radius: initial;
+  }
+  .menuMinority__content {
+    column-count: 1;
+    width: 100%;
+    box-sizing: border-box;
+    top: initial;
+    border-radius: initial;
+    padding: 16px 0 0;
+  }
+  .menuMinority__text::before {
+    content: attr(data-text-short);
+  }
+  .menuMinority__arrow {
+    width: 20px;
+    height: 12px;
+  }
+}
+

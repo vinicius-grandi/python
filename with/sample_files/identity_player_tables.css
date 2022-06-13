@@ -1,0 +1,2146 @@
+/* LEFT MENU + CONTENT */
+.tennisTable {
+  flex-direction: column;
+  overflow-x: auto;
+}
+.playerTable__season {
+  grid-area: season;
+}
+.playerTable__rank {
+  grid-area: rank;
+  font-weight: bold;
+}
+.playerTable__titles {
+  grid-area: titles;
+}
+.playerTable__all-matches {
+  grid-area: matches;
+}
+.playerTable__hard {
+  grid-area: hard;
+}
+.playerTable__clay {
+  grid-area: clay;
+}
+.playerTable__grass {
+  grid-area: grass;
+}
+.playerTable__season,
+.playerTable__rank,
+.playerTable__titles,
+.playerTable__all-matches,
+.playerTable__hard,
+.playerTable__clay,
+.playerTable__grass {
+  text-align: center;
+  color: var(--color-secondary-2);
+}
+.playerTable__tournament,
+.playerTable__surface,
+.playerTable__prize-money,
+.playerTable__year {
+  padding: 0 12px;
+  box-sizing: border-box;
+}
+.playerTable__prize-money {
+  word-break: break-word;
+}
+.playerTable__tournament {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+.playerTable__tournament .flag {
+  display: inline-block;
+  flex: 0 0 18px;
+  width: 18px;
+  height: 12px;
+  margin-right: 8px;
+}
+.playerTable__tournament a {
+  word-break: break-word;
+}
+.playerTable__surface {
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--color-support-4);
+}
+@media only screen and (max-width: 799px) {
+  .playerTable__season {
+    position: sticky;
+    position: -webkit-sticky;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+    width: 100%;
+    background-color: var(--color-support-5);
+    box-shadow: 3px 0 4px 0 rgba(0, 0, 0, 0.08);
+    z-index: var(--zIndex-dropDown);
+  }
+  .profileTable__row--main .playerTable__season {
+    background-color: var(--color-support-1);
+  }
+}
+
+/* LEFT MENU + CONTENT */
+.career-table-new {
+  position: relative;
+  z-index: 0;
+  background-color: var(--color-combination-9);
+  padding: 0 12px 20px;
+  border-radius: 0 0 8px 8px;
+  flex-wrap: wrap;
+  overflow-x: auto;
+}
+@media only screen and (max-width: 639px) {
+  .career-table-new {
+    padding: 0 0 20px;
+    border-radius: 0;
+  }
+}
+
+/* LEFT MENU + CONTENT */
+body.loading #live-table {
+  position: relative;
+}
+#preload {
+  display: none;
+}
+.loadingAnimation {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 140px;
+  height: 105px;
+  border: 1px solid var(--color-combination-7);
+  position: sticky;
+  position: -webkit-sticky;
+  top: 100px;
+  margin: 100px auto;
+  text-align: center;
+  background-color: var(--color-combination-9);
+  line-height: 46px;
+  border-radius: 8px;
+  text-transform: uppercase;
+}
+.loadingAnimation__text {
+  padding: 52px 0 0 0;
+  font-size: 11px;
+  color: var(--color-support-4);
+}
+.loading .loadingAnimation {
+  display: flex;
+}
+.loadingAnimation::after {
+  content: "";
+  display: flex;
+  position: absolute;
+  top: calc(50% - 26px);
+  left: calc(50% - 18px);
+  border: 4px solid var(--color-combination-8);
+  border-top: 4px solid var(--color-combination-4);
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  animation: spin 1.8s ease-in-out infinite;
+}
+.loadingOverlay {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background: rgba(var(--color-support-1-rgb), 0.75);
+  z-index: var(--zIndex-loading);
+  border-radius: 8px;
+}
+.loading .loadingOverlay {
+  display: flex;
+}
+.ranking_page .loadingOverlay {
+  background: transparent;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.profileTable a {
+  display: initial;
+  align-items: center;
+  color: var(--color-combination-2);
+}
+.profileTable a:hover {
+  text-decoration: underline;
+}
+.profileTable__row {
+  display: grid;
+  width: 100%;
+  min-height: 36px;
+  align-items: center;
+  box-sizing: border-box;
+}
+.profileTable__row--wrapper {
+  display: flex;
+  width: 100%;
+}
+.profileTable__row--main {
+  background-color: var(--color-support-1) !important;
+  color: var(--color-support-4);
+  border-radius: 0 0 4px 4px;
+  border-bottom: none;
+  min-height: 28px;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: bold;
+}
+.profileTable__row--main.profileTable__row--mainTournament {
+  border-radius: 0;
+}
+.profileTable__row--main + .profileTable__row--year {
+  margin-top: 1px;
+  border-radius: 0 0 4px 4px;
+}
+.profileTable__row--career {
+  grid-template: " season     team                    competition             statistics ." minmax(28px, auto) / 90px minmax(120px, 400px) minmax(120px, 400px) 200px 18px;
+}
+.profileTable__row--career:last-of-type {
+  border-radius: 8px;
+  background-color: var(--color-support-1);
+}
+@media only screen and (max-width: 639px) {
+  .profileTable__row--career:last-of-type {
+    border-radius: 0;
+  }
+}
+.profileTable__row--content {
+  border-bottom: solid 1px var(--color-support-1);
+}
+.profileTable__row--content:nth-last-child(2) {
+  border-bottom: none;
+}
+.profileTable__row--transfer {
+  grid-template: " season teamFrom type teamTo " minmax(28px, auto) / 90px 1fr 1fr 1fr;
+}
+.profileTable__row--injury {
+  grid-template: " dateFrom   dateTo      type" minmax(28px, auto) / 90px 1fr 2fr;
+}
+.profileTable__row--bilance {
+  border-bottom: 1px solid var(--color-support-1);
+  grid-template: " season rank titles matches hard  clay grass" minmax(28px, auto) / 90px 1fr 1fr 120px 100px 1fr 1fr;
+}
+.profileTable__row--bilance:last-of-type {
+  border-bottom: unset;
+}
+.profileTable__row--year {
+  margin-top: 24px;
+  border-radius: 4px;
+}
+.profileTable__row--tournament {
+  border-radius: 8px;
+  grid-template: " tournament surface prize" minmax(28px, auto) / 1fr 170px 190px;
+}
+.profileTable__row--tournament:not(.profileTable__row--main) {
+  min-height: 48px;
+}
+.profileTable__row--even {
+  background-color: rgba(var(--color-support-1-rgb), 0.4);
+}
+.theme--dark .profileTable__row--even {
+  background-color: rgba(var(--color-support-1-rgb), 0.05);
+}
+.profileTable__row--transfer,
+.profileTable__row--injury {
+  min-height: 48px;
+}
+.profileTable__row--transfer:nth-child(odd),
+.profileTable__row--injury:nth-child(odd) {
+  background-color: rgba(var(--color-support-1-rgb), 0.4);
+  border-radius: 8px;
+}
+.theme--dark .profileTable__row--transfer:nth-child(odd),
+.theme--dark .profileTable__row--injury:nth-child(odd) {
+  background-color: rgba(var(--color-support-1-rgb), 0.5);
+}
+.profileTable__row--transferHead,
+.profileTable__row--injuryHead,
+.profileTable__row--transferMain,
+.profileTable__row--injuryMain {
+  min-height: 27px;
+  border-radius: 4px !important;
+}
+@media only screen and (max-width: 639px) {
+  .profileTable__row--transferHead,
+  .profileTable__row--injuryHead,
+  .profileTable__row--transferMain,
+  .profileTable__row--injuryMain {
+    border-radius: 0 !important;
+  }
+}
+.profileTable__row--padding {
+  padding-left: 12px;
+  box-sizing: border-box;
+}
+.profileTable__row--open {
+  display: flex;
+}
+.profileTable__row--hide {
+  display: none !important;
+}
+.profileTable__row--last {
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+.profileTable__row--last a {
+  color: var(--color-secondary-3-active);
+  text-decoration: underline;
+  cursor: pointer;
+}
+.profileTable__row--last a:hover {
+  text-decoration: none;
+}
+.profileTable__row--last.profileTable__row--lastTournament {
+  width: calc(100% + 24px);
+  margin: 0 -12px;
+  border-top: solid 1px var(--color-support-1);
+}
+.profileTable__row--lastTransfer {
+  align-items: center;
+  width: calc(100% + 24px);
+  height: 40px;
+  margin-left: -12px;
+  margin-top: 10px;
+  border-top: solid 1px var(--color-support-1);
+}
+.profileTable__row--transferDesktop {
+  display: flex;
+}
+.profileTable__row--transferMobile {
+  flex-direction: column;
+  width: 100%;
+  border-bottom: solid 1px var(--color-border-3);
+}
+.profileTable__row--total {
+  font-weight: bold;
+}
+.profileTable__row--total .soccerTable__date {
+  font-size: 11px;
+  text-transform: uppercase;
+}
+.profileTable__row--transferText {
+  padding: 0 10px;
+  text-align: center;
+  box-sizing: border-box;
+}
+.profileTable__row--hockey,
+.profileTable__row--soccer,
+.profileTable__row--archive {
+  display: flex;
+}
+.profileTable__row--hover {
+  cursor: pointer;
+}
+@media (hover: hover) {
+  .profileTable__row--hover:hover {
+    background-color: rgba(var(--color-support-2-rgb), 0.2);
+  }
+}
+@media only screen and (max-width: 799px) {
+  .profileTable__row--main {
+    background-color: var(--color-support-1);
+    border-radius: 0;
+  }
+  .profileTable__row--main + .profileTable__row--year {
+    border-radius: 0;
+  }
+  .profileTable__row--career {
+    grid-template: "season     team                    statistics" auto / 70px minmax(120px, 1fr) 128px;
+  }
+  .profileTable__row--transfer {
+    grid-template: " teamFrom      type          teamTo       " auto " typeContainer typeContainer typeContainer" auto / 1fr 25px 1fr;
+    min-height: 50px;
+    padding: 0 12px;
+    box-sizing: border-box;
+  }
+  .profileTable__row--transferHead {
+    display: none;
+  }
+  .profileTable__row--year {
+    border-radius: 0;
+  }
+  .profileTable__row--bilance {
+    width: max-content;
+    border-bottom: 1px solid var(--color-support-1);
+    grid-template: " season rank  titles matches hard  clay  grass" minmax(36px, auto) / 90px 100px 80px 120px 100px 100px 100px;
+  }
+  .profileTable__row--tournament {
+    padding: 4px 0;
+    border-radius: 0;
+    box-sizing: border-box;
+    grid-template: " tournament surface prize" minmax(28px, auto) / 130px 1fr 120px;
+  }
+  .profileTable__row--transferMain {
+    display: none;
+  }
+  .profileTable__row--openSet .playerTable__teamMobile {
+    display: none;
+  }
+  .profileTable__row--last {
+    height: 46px;
+  }
+}
+@media only screen and (max-width: 639px) {
+  .profileTable__row--transfer {
+    padding: 0 12px;
+    margin: 0 12px;
+  }
+  .profileTable__row--transfer,
+  .profileTable__row--injury {
+    margin: 0;
+  }
+  .profileTable__row--transfer:nth-child(odd),
+  .profileTable__row--injury:nth-child(odd) {
+    border-radius: 0;
+  }
+  .profileTable__row--lastTransfer {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+.profileTable__rowLink {
+  display: flex;
+  align-items: center;
+}
+.playerTransfers,
+.playerInjuryHistory {
+  background: var(--color-combination-9);
+  border-radius: 8px;
+  margin-top: 12px;
+  padding: 12px;
+}
+@media only screen and (max-width: 639px) {
+  .playerTransfers,
+  .playerInjuryHistory {
+    padding: 12px 0;
+    border-radius: 0;
+  }
+}
+.playerTransfers .soccerTable__team--from .soccerTable__team--name {
+  font-weight: normal;
+}
+@media only screen and (max-width: 639px) {
+  .playerTransfers {
+    padding: 12px 0;
+  }
+}
+
+/* LEFT MENU + CONTENT */
+.soccerTable__season,
+.soccerTable__date {
+  grid-area: season;
+  padding-left: 12px;
+  color: var(--color-support-4);
+}
+.soccerTable__team {
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  word-break: break-word;
+}
+.career-table-new .soccerTable__team,
+.transfer-table .soccerTable__team {
+  display: flex;
+}
+.soccerTable__team--logo {
+  flex: 0 0 20px;
+  height: 20px;
+  width: 20px;
+  margin-right: 8px;
+  background: no-repeat center / 20px;
+  color: var(--color-combination-2);
+}
+.soccerTable__team--flag {
+  flex: 0 0 18px;
+  height: 12px;
+  margin-right: 8px;
+  background: no-repeat center / 18px 12px;
+}
+.soccerTable__team--name {
+  padding: 4px 0;
+  font-weight: bold;
+}
+.soccerTable__team--nameNormal {
+  font-weight: inherit;
+}
+.soccerTable__team--career {
+  grid-area: team;
+}
+.soccerTable__team--from {
+  grid-area: teamFrom;
+}
+.soccerTable__team--to {
+  grid-area: teamTo;
+}
+.soccerTable__team--team {
+  font-weight: normal;
+}
+.soccerTable__team a:hover {
+  text-decoration: underline;
+}
+.soccerTable__teamHref {
+  color: var(--color-combination-1);
+}
+@media (hover: hover) {
+  .soccerTable__teamHref:hover {
+    text-decoration: underline;
+  }
+}
+.soccerTable__goals {
+  font-weight: bold;
+}
+.soccerTable__icons {
+  grid-area: statistics;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.soccerTable__icon {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.soccerTable__icon--career {
+  width: 50px;
+}
+.soccerTable__icon--grey {
+  color: var(--color-support-4);
+}
+.soccerTable__icon--assistOld {
+  display: none;
+}
+.soccerTable__iconImage {
+  width: 14px;
+  height: 14px;
+}
+.soccerTable__iconImage--redCard {
+  color: var(--color-red);
+}
+.soccerTable__iconImage--yellowCard {
+  color: var(--color-yellow);
+}
+.soccerTable__iconImage--injury {
+  color: var(--color-red);
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+.soccerTable__iconImage--arrow {
+  color: var(--color-green);
+  margin-right: 8px;
+  transform: rotate(90deg);
+}
+.soccerTable__iconImage--lineup {
+  width: 18px;
+}
+.profileTable__row--click .soccerTable__iconImage {
+  display: none;
+}
+.soccerTable__iconImage--assist,
+.soccerTable__iconImage--soccer,
+.soccerTable__iconImage--lineup {
+  color: var(--color-combination-2);
+}
+.soccerTable__country,
+.soccerTable__nationality {
+  grid-area: competition;
+  display: flex;
+  padding-left: 10px;
+  align-items: center;
+}
+.soccerTable__country--name,
+.soccerTable__nationality--name {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.soccerTable__country--name a,
+.soccerTable__nationality--name a {
+  display: initial;
+}
+.soccerTable__transferType {
+  grid-area: type;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: flex;
+  flex-flow: row nowrap;
+}
+.soccerTable__transferContainer {
+  display: none;
+}
+.soccerTable__transferIcon {
+  flex: 0 0 14px;
+  height: 14px;
+  margin-right: 8px;
+}
+.soccerTable__transferIcon--in {
+  color: #3fbd40;
+  transform: rotate(-90deg);
+}
+.soccerTable__transferIcon--out {
+  color: #d42e2f;
+  transform: rotate(90deg);
+}
+.soccerTable__transferContainer--type,
+.soccerTable__transferTypeText {
+  color: var(--color-support-4);
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: bold;
+}
+.soccerTable__injuryFrom {
+  grid-area: dateFrom;
+  padding-left: 10px;
+}
+.soccerTable__injuryTo {
+  grid-area: dateTo;
+  padding-left: 10px;
+}
+.soccerTable__injuryType {
+  grid-area: type;
+  padding-left: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: flex;
+  flex-flow: row nowrap;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 11px;
+  color: var(--color-support-4);
+}
+.soccerTable__showMoreIcon {
+  display: none;
+}
+.soccerTable a:hover {
+  text-decoration: underline;
+}
+@media only screen and (max-width: 799px) {
+  #league-table .soccerTable__nationality {
+    display: none;
+  }
+  #nacional-cup-table .soccerTable__team,
+  #international-cups-table .soccerTable__team,
+  #national-team-table .soccerTable__team {
+    display: none;
+  }
+  #nacional-cup-table .soccerTable__nationality,
+  #international-cups-table .soccerTable__nationality,
+  #national-team-table .soccerTable__nationality {
+    grid-area: team;
+  }
+  .profileTable__row--click .soccerTable__iconImage {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 16px;
+  }
+  .soccerTable__season--transfer {
+    display: none;
+  }
+  .soccerTable__team--from,
+  .soccerTable__team--to {
+    padding: 0;
+    margin-bottom: 2px;
+  }
+  .soccerTable__icons {
+    justify-content: flex-end;
+    margin-right: 2px;
+  }
+  .soccerTable__icons--career {
+    margin-right: 0;
+  }
+  .soccerTable__iconImage--yellow-card {
+    background-position: 0 0;
+  }
+  .soccerTable__iconImage--red-card {
+    background-position: 0 -16px;
+  }
+  .soccerTable__transferTypeText {
+    display: none;
+  }
+  .soccerTable__transferContainer {
+    grid-area: typeContainer;
+    display: flex;
+    align-items: center;
+    align-self: flex-start;
+    margin-bottom: 2px;
+    white-space: nowrap;
+  }
+  .soccerTable__transferContainer--type {
+    margin-right: 4px;
+  }
+  .soccerTable__transferContainer--season {
+    color: var(--color-support-3);
+  }
+  .soccerTable__injuryType {
+    margin-right: 12px;
+    overflow: auto;
+  }
+  .soccerTable__showMoreIcon {
+    display: flex;
+    margin-left: 4px;
+    transform: rotate(-90deg);
+    color: var(--color-combination-1);
+  }
+  .profileTable__row--lastTransfer .soccerTable__showMoreIcon {
+    flex: 0 0 12px;
+    width: 12px;
+    height: 12px;
+  }
+}
+
+/* LEFT MENU + CONTENT */
+.hockeyTable--goalkeeper::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-support-1);
+}
+.hockeyTable__row {
+  grid-template: "date   team    competition     statistics" 36px / 70px 1fr 1fr 200px;
+  box-sizing: border-box;
+}
+.hockeyTable__row--main {
+  display: grid;
+  background-color: var(--color-support-1);
+  border-radius: 0 0 4px 4px;
+  grid-template-rows: 27px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--color-support-4);
+  font-size: 11px;
+}
+.hockeyTable__row--hide {
+  display: none;
+}
+.hockeyTable__row--open {
+  display: grid;
+}
+.hockeyTable__row--openMain:not(:first-of-type) {
+  border-top: solid 1px var(--color-support-1);
+}
+.hockeyTable__row--openMain .hockeyTable__date {
+  font-size: 13px;
+}
+.hockeyTable__row--openSet .hockeyTable__competition,
+.hockeyTable__row--openSet .hockeyTable__statistics {
+  border-top: solid 1px var(--color-support-1);
+}
+.hockeyTable__row--openBorder .hockeyTable__date,
+.hockeyTable__row--openBorder .hockeyTable__team {
+  border-top: solid 1px var(--color-support-1);
+}
+.hockeyTable__row--playerStatistics {
+  display: grid;
+  background-color: var(--color-support-1);
+  border-radius: 8px;
+  grid-template-rows: 36px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--color-combination-2);
+  font-size: 13px;
+}
+.hockeyTable__row--playerStatistics .hockeyTable__date {
+  margin-right: 10px;
+}
+.hockeyTable__date,
+.hockeyTable__team {
+  display: flex;
+  align-items: center;
+}
+.hockeyTable__date {
+  grid-area: date;
+  justify-content: center;
+  height: 100%;
+  color: var(--color-support-4);
+  font-size: 11px;
+}
+.hockeyTable__team {
+  grid-area: team;
+  margin-left: 12px;
+}
+.hockeyTable__row--openSet .hockeyTable__team {
+  margin-left: 0;
+}
+.hockeyTable__team--logo {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  background: no-repeat center / 16px 16px;
+}
+.hockeyTable__team--name {
+  margin-left: 8px;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.hockeyTable__team--name a {
+  color: var(--color-combination-2);
+  font-weight: bold;
+}
+.hockeyTable__team--name a:hover {
+  text-decoration: underline;
+}
+.hockeyTable__team .hockeyTable__competition--arrow {
+  display: none;
+}
+.hockeyTable__competition {
+  grid-area: competition;
+}
+.hockeyTable__competition--click {
+  cursor: pointer;
+}
+.hockeyTable__competition--border {
+  color: var(--color-support-4);
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+.hockeyTable__competition--name a {
+  color: var(--color-combination-2);
+}
+.hockeyTable__competition--name a:hover {
+  text-decoration: underline;
+}
+.hockeyTable__team:not(.hockeyTable__competition--hide),
+.hockeyTable__competition:not(.hockeyTable__competition--hide) {
+  grid-template: "competition_info   arrow" 100% / auto 20px;
+}
+.hockeyTable__team,
+.hockeyTable__competition {
+  display: grid;
+  grid-template: "competition_info" 100% / auto;
+  align-items: center;
+  padding-left: 12px;
+  height: 100%;
+}
+.hockeyTable__team--border,
+.hockeyTable__competition--border {
+  border-left: solid 1px var(--color-support-1);
+}
+.hockeyTable__team--container,
+.hockeyTable__competition--container {
+  display: grid;
+  grid-template: "flag   competition_name" 100% / 18px auto;
+  grid-area: competition_info;
+  align-items: center;
+}
+.hockeyTable__team--flag,
+.hockeyTable__competition--flag {
+  grid-area: flag;
+}
+.hockeyTable__team--name,
+.hockeyTable__competition--name {
+  grid-area: competition_name;
+  margin-left: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.hockeyTable__team--arrow,
+.hockeyTable__competition--arrow {
+  grid-area: arrow;
+}
+.hockeyTable__statistics {
+  grid-area: statistics;
+  display: grid;
+  grid-template: "matches    goals   assists     points" 100% / 50px 50px 50px 50px;
+}
+.hockeyTable__statistics--header .hockeyTable__statistics--icons {
+  color: var(--color-support-4);
+}
+.hockeyTable__statistics--matches,
+.hockeyTable__statistics--goals,
+.hockeyTable__statistics--assists,
+.hockeyTable__statistics--points {
+  color: var(--color-combination-2);
+}
+.hockeyTable__statistics--icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hockeyTable__statistics--matches {
+  grid-area: matches;
+}
+.hockeyTable__statistics--goals {
+  grid-area: goals;
+}
+.hockeyTable__statistics--assists {
+  grid-area: assists;
+}
+.hockeyTable__statistics--points {
+  grid-area: points;
+  font-weight: bold;
+  color: var(--color-secondary-2);
+}
+.hockeyTable__statistics--grey {
+  color: var(--color-support-4);
+  font-weight: normal;
+}
+.hockeyTable__showArrow {
+  justify-self: flex-end;
+  flex: 0 0 20px;
+  min-height: 28px;
+  background: url(/res/_fs/build/arrow_down.14c59e2.svg) no-repeat center / 12px 8px;
+}
+.hockeyTable__showArrow--up {
+  background: url(/res/_fs/build/arrow_up.c07c38a.svg) no-repeat center / 12px 8px;
+}
+@media only screen and (max-width: 799px) {
+  #national-team-table .hockeyTable__row,
+  #international-cups-table .hockeyTable__row {
+    grid-template: "date   competition     statistics" 36px / 70px 1fr 128px;
+  }
+  #national-team-table .hockeyTable__row .hockeyTable__competition,
+  #international-cups-table .hockeyTable__row .hockeyTable__competition {
+    display: grid;
+  }
+  #national-team-table .hockeyTable__row .hockeyTable__team,
+  #international-cups-table .hockeyTable__row .hockeyTable__team {
+    display: none;
+  }
+  #nacional-cup-table .hockeyTable__row,
+  #league-table .hockeyTable__row {
+    grid-template: "date   team    statistics" 36px / 70px 1fr 128px;
+  }
+  #nacional-cup-table .hockeyTable__row .hockeyTable__competition,
+  #league-table .hockeyTable__row .hockeyTable__competition {
+    display: none;
+  }
+  #nacional-cup-table .hockeyTable__row--openSet,
+  #league-table .hockeyTable__row--openSet {
+    grid-template: "date   competition     statistics" 36px / 70px 1fr 128px;
+  }
+  #nacional-cup-table .hockeyTable__row--openSet .hockeyTable__team,
+  #league-table .hockeyTable__row--openSet .hockeyTable__team {
+    display: none;
+  }
+  #nacional-cup-table .hockeyTable__row--openSet .hockeyTable__competition,
+  #league-table .hockeyTable__row--openSet .hockeyTable__competition {
+    display: grid;
+    grid-template: "competition_info" 100% / auto;
+  }
+  #nacional-cup-table .hockeyTable__row--openSet .hockeyTable__competition--arrow,
+  #league-table .hockeyTable__row--openSet .hockeyTable__competition--arrow {
+    display: none;
+  }
+  .hockeyTable__team {
+    margin-left: 0;
+  }
+  .hockeyTable__team .hockeyTable__competition--arrow {
+    display: flex;
+  }
+  .hockeyTable__statistics {
+    grid-template: "matches    goals   assists     points" 100% / 32px 32px 32px 32px;
+  }
+  .hockeyTable__showArrow {
+    background: url(/res/_fs/build/arrow_down.14c59e2.svg) no-repeat center / 8px 6px;
+  }
+  .hockeyTable__showArrow--up {
+    background: url(/res/_fs/build/arrow_up.c07c38a.svg) no-repeat center / 8px 6px;
+  }
+}
+@media only screen and (max-width: 639px) {
+  #nacional-cup-table .hockeyTable__row,
+  #national-team-table .hockeyTable__row,
+  #international-cups-table .hockeyTable__row,
+  #league-table .hockeyTable__row {
+    border-radius: 0;
+  }
+}
+
+/* LEFT MENU + CONTENT */
+.playerProfile__table {
+  display: none;
+}
+.playerProfile__table--active {
+  display: flex;
+}
+.playerProfile__row {
+  display: grid;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid var(--color-support-1);
+}
+.playerProfile__row--main {
+  background-color: var(--color-support-1);
+  border-radius: 0 0 4px 4px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--color-support-4);
+  font-size: 11px;
+}
+@media only screen and (max-width: 639px) {
+  .playerProfile__row--main {
+    border-radius: 0;
+  }
+}
+.playerProfile__row--hide {
+  display: none;
+}
+.playerProfile__row--career {
+  grid-template: " season team competition statistics" minmax(36px, auto) / 80px 1fr 1fr auto;
+}
+.playerProfile__row--setOpen .playerProfile__date,
+.playerProfile__row--setOpen .playerProfile__team {
+  height: 100%;
+}
+.playerProfile__row--setOpen .playerProfile__nationality {
+  border-left: 1px solid var(--color-support-1);
+  cursor: auto;
+  color: var(--color-support-4);
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 11px;
+}
+.playerProfile__row--setOpen:not(.playerProfile__row--openBorder) {
+  border-bottom: unset;
+}
+.playerProfile__row--setOpen:not(.playerProfile__row--openBorder) .playerProfile__nationality,
+.playerProfile__row--setOpen:not(.playerProfile__row--openBorder) .playerProfile__icons {
+  height: 100%;
+  border-bottom: 1px solid var(--color-support-1);
+}
+.playerProfile__row--openBorder .playerProfile__date,
+.playerProfile__row--openBorder .playerProfile__team {
+  height: 100%;
+  border-bottom: solid 1px var(--color-support-1);
+}
+.playerProfile__date,
+.playerProfile__season {
+  grid-area: season;
+  text-align: center;
+  color: var(--color-support-4);
+}
+.playerProfile__team {
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.playerProfile__logo {
+  flex: 0 0 16px;
+  height: 16px;
+  margin-right: 8px;
+  background: no-repeat center / 16px;
+}
+.playerProfile__teamName {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-weight: bold;
+}
+.playerProfile__teamName--mobile {
+  display: none;
+}
+.playerProfile__nationality {
+  grid-area: competition;
+  display: grid;
+  align-items: center;
+  height: 100%;
+  padding-left: 10px;
+  grid-template: " flag nationality arrow" auto / 26px 1fr minmax(0, 12px);
+}
+.playerProfile__row--main .playerProfile__nationality {
+  grid-template: unset;
+}
+.playerProfile__nationality.playerProfile__row--click {
+  cursor: pointer;
+}
+.playerProfile__nationality--name {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.playerProfile__nationalityName {
+  margin-right: 6px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.playerProfile__nationalityName a {
+  color: var(--color-combination-2);
+}
+.playerProfile__arrow {
+  display: flex;
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+  color: var(--color-support-3);
+}
+.playerProfile__row--open .playerProfile__arrow {
+  transform: rotate(-180deg);
+}
+.playerProfile__arrow--bilance {
+  margin-left: 4px;
+  color: var(--color-secondary-2);
+  transform: rotate(-90deg);
+}
+.playerProfile__team .playerProfile__arrow {
+  display: none;
+}
+.playerProfile__icons {
+  grid-area: statistics;
+  display: flex;
+  align-items: center;
+}
+.playerProfile__icons--header .playerProfile__icon {
+  color: var(--color-support-4);
+}
+.playerProfile__icon {
+  display: flex;
+  justify-content: center;
+  width: 44px;
+  color: var(--color-combination-2);
+}
+.playerProfile__icon--points {
+  font-weight: bold;
+  color: var(--color-secondary-2);
+}
+.playerProfile__icon--grey {
+  color: var(--color-support-4);
+}
+@media only screen and (max-width: 799px) {
+  .playerProfile__table {
+    flex-wrap: wrap;
+  }
+  .playerProfile__row--career {
+    padding-left: 8px;
+    grid-template: " season team .   statistics" minmax(36px, auto) / 70px 70px 1fr 258px;
+  }
+  .playerProfile__row--setOpen {
+    grid-template: " competition .   statistics" minmax(36px, auto) / 140px 1fr auto;
+  }
+  .playerProfile__row--setOpen .playerProfile__team {
+    display: none;
+  }
+  .playerProfile__row--setOpen .playerProfile__nationality {
+    position: sticky;
+    position: -webkit-sticky;
+    left: 8px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    padding-left: unset;
+    background-color: var(--color-combination-9);
+    border-left: unset;
+    box-shadow: 3px 0 4px 0 rgba(var(--color-secondary-1-rgb), 0.08);
+  }
+  .playerProfile__row--setOpen .playerProfile__nationality .flag {
+    display: none;
+  }
+  .playerProfile__row--setOpen:not(.playerProfile__row--openBorder) {
+    border-bottom: 1px solid var(--color-support-1);
+  }
+  .playerProfile__row--setOpen:not(.playerProfile__row--openBorder) .playerProfile__nationality,
+  .playerProfile__row--setOpen:not(.playerProfile__row--openBorder) .playerProfile__icons {
+    border-bottom: unset;
+  }
+  .playerProfile__row--main .playerProfile__date,
+  .playerProfile__row--main .playerProfile__team {
+    background-color: var(--color-support-1);
+  }
+  .playerProfile__row--last {
+    font-weight: bold;
+    grid-template: " season season .   statistics" minmax(36px, auto) / 70px 70px 1fr auto;
+  }
+  .playerProfile__row--last .playerProfile__date {
+    box-shadow: 3px 0 4px 0 rgba(var(--color-secondary-1-rgb), 0.08);
+  }
+  .playerProfile__date {
+    position: sticky;
+    position: -webkit-sticky;
+    height: 100%;
+    left: 8px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    background-color: var(--color-combination-9);
+  }
+  .playerProfile__team {
+    position: sticky;
+    position: -webkit-sticky;
+    left: 78px;
+    display: grid;
+    height: 100%;
+    padding: 0 8px 0 0;
+    background-color: var(--color-combination-9);
+    box-shadow: 3px 0 4px 0 rgba(var(--color-secondary-1-rgb), 0.08);
+    grid-template-columns: 24px 1fr 7px;
+  }
+  .playerProfile__team .playerProfile__arrow {
+    display: flex;
+  }
+  .playerProfile__logo {
+    margin-right: 4px;
+  }
+  .playerProfile__teamName {
+    display: none;
+  }
+  .playerProfile__teamName--mobile {
+    display: flex;
+  }
+  .playerProfile__nationality {
+    display: none;
+  }
+  .playerProfile__icon {
+    width: 40px;
+  }
+  .playerProfile__icon--wide {
+    width: 58px;
+  }
+}
+@media only screen and (max-width: 408px) {
+  .playerProfile__row--career {
+    width: unset;
+  }
+}
+
+/* LEFT MENU + CONTENT */
+.lm__table {
+  display: flex;
+  flex-wrap: wrap;
+  overflow-x: auto;
+}
+.lm__rowIcons {
+  display: flex;
+  margin-right: 44px;
+}
+.lm__rowIcon {
+  width: 32px;
+}
+.lm__rowIcon--shirt {
+  color: var(--color-secondary-2);
+}
+.lm__rowIcon--yellowCard {
+  color: var(--color-yellow);
+}
+.lm__rowIcon--redCard {
+  color: var(--color-red);
+}
+.lm__rowIcon--assist {
+  width: 32px !important;
+  height: 14px !important;
+}
+.lm__headLayout {
+  position: sticky;
+  position: -webkit-sticky;
+  left: 0;
+  grid-area: headLayout;
+  height: 100%;
+  background-color: var(--color-support-1);
+  box-shadow: 3px 0 4px 0 rgba(var(--color-secondary-1-rgb), 0.08);
+}
+.lm__headCell {
+  grid-area: winIcon;
+  width: 27px;
+}
+.lm__date {
+  grid-area: date;
+  text-align: center;
+  color: var(--color-support-4);
+}
+.lm__competition {
+  grid-area: competition;
+  display: flex;
+  align-items: center;
+  padding-left: 8px;
+  font-weight: bold;
+}
+.lm__competitionLink {
+  text-decoration: none;
+  color: var(--color-combination-2);
+}
+@media (hover: hover) {
+  .lm__competitionLink:hover {
+    text-decoration: underline;
+  }
+}
+.lm__flag {
+  position: relative;
+  display: inline-block;
+  width: 18px;
+  height: 12px;
+  margin-right: 8px;
+}
+.lm__flag::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.lm__teams {
+  grid-area: teams;
+  display: grid;
+  grid-template: " teamHome" auto " teamAway" auto / 1fr;
+  height: 100%;
+}
+.lm__team {
+  display: flex;
+  align-items: center;
+  margin: 0 8px;
+  line-height: 19px;
+  align-self: stretch;
+  hyphens: auto;
+  word-break: break-word;
+}
+.lm__team--bold {
+  font-weight: bold;
+}
+.lm__team--home {
+  grid-area: teamHome;
+}
+.lm__team--away {
+  grid-area: teamAway;
+}
+.lm__team__logo {
+  flex: 0 0 16px;
+  height: 16px;
+  margin-right: 8px;
+}
+.lm__team__name {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 150px;
+}
+.lm__result {
+  grid-area: results;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  font-weight: bold;
+  text-align: center;
+}
+.soccer .lm__result {
+  box-sizing: border-box;
+  padding: 3px 0;
+}
+.lm__resultCont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lm__resultPrev {
+  font-weight: normal;
+}
+.lm__resultEndDelimiter {
+  margin: 0 4px;
+}
+.lm__iconsHeader {
+  grid-area: icons;
+  display: flex;
+  align-items: center;
+  color: var(--color-support-4);
+}
+.lm__icons {
+  grid-area: icons;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  z-index: 0;
+}
+.lm__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 100%;
+  font-weight: bold;
+}
+.lm__icon--grey {
+  font-weight: normal;
+  color: var(--color-support-4);
+}
+.lm__icon--minutes-played {
+  z-index: 3;
+}
+.lm__icon--minutes-played .lm__iconValue {
+  display: none;
+}
+.lm__icon--goal .lm__iconValue,
+.lm__icon--assist .lm__iconValue {
+  display: none;
+}
+.lm__icon--assist .lm__iconValue {
+  justify-content: center;
+  align-items: center;
+  width: 12px;
+  height: 12px;
+  background-color: var(--color-support-4);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.lm__icon--goal {
+  z-index: 2;
+}
+.lm__icon--goal .lm__iconValue {
+  justify-content: center;
+  align-items: center;
+  width: 12px;
+  height: 12px;
+  background-color: var(--color-support-4);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.lm__icon .lm__iconSVG {
+  display: none;
+}
+.lm__icon--red-card-highlighted,
+.lm__icon--yellow-card-highlighted,
+.lm__icon--goal-highlighted,
+.lm__icon--assist-highlighted {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  margin: 6px;
+}
+.lm__icon--red-card-highlighted {
+  color: var(--color-red);
+  background-color: var(--color-live);
+}
+.lm__icon--yellow-card-highlighted {
+  background-color: var(--color-favorite);
+}
+.theme--dark .lm__icon--yellow-card-highlighted {
+  color: var(--color-yellow);
+}
+.lm__icon--goal-highlighted,
+.lm__icon--assist-highlighted {
+  background-color: var(--color-highlight);
+}
+.theme--dark .lm__icon--goal-highlighted,
+.theme--dark .lm__icon--assist-highlighted {
+  background-color: var(--color-secondary-3);
+}
+.theme--dark .lm__icon--yellow-card-highlighted,
+.theme--dark .lm__icon--red-card-highlighted {
+  background-color: transparent;
+}
+.lm__icon--yellow-card .lm__iconValue {
+  display: none;
+}
+.lm__iconText--minutes-played {
+  font-weight: normal;
+}
+.lm__absence {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 11px;
+  color: var(--color-support-4);
+  hyphens: auto;
+  word-break: break-word;
+}
+.lm__absenceIcon {
+  margin-right: 6px;
+  color: var(--color-red);
+  --color-symbol-warning-1: var(--color-red);
+  --color-symbol-warning-2: var(--color-white);
+}
+.lm__stat {
+  width: 38px;
+  text-align: center;
+}
+.lm__stat--bold {
+  font-weight: bold;
+}
+.lm__stat--grey {
+  color: var(--color-support-4);
+}
+.lm__stat--wide {
+  width: 48px;
+}
+.lm__stat--highlighted {
+  color: var(--color-combination-1);
+}
+.lm__stat--highlighted:nth-of-type(2) {
+  font-weight: bold;
+}
+.lm__winIcon {
+  grid-area: winIcon;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin: auto 4px;
+  text-align: center;
+  line-height: 20px;
+  color: var(--color-white);
+  border-radius: 4px;
+  cursor: pointer;
+  overflow: hidden;
+}
+.lm__winIcon--w {
+  background-color: var(--color-green);
+}
+.lm__winIcon--l {
+  background-color: var(--color-red);
+}
+.lm__winIcon--d {
+  background-color: var(--color-yellow);
+}
+.lm__winIcon--dw::before,
+.lm__winIcon--dl::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-right: 12px solid var(--color-yellow);
+  position: absolute;
+  top: 8px;
+  right: 0;
+}
+.lm__winIcon--dw {
+  background-color: var(--color-green);
+}
+.lm__winIcon--dl {
+  background-color: var(--color-red);
+}
+@media only screen and (max-width: 799px) {
+  .lm__competition {
+    display: none;
+  }
+  .lm__flag {
+    grid-area: flag;
+  }
+  .lm__league {
+    grid-area: league;
+    align-self: flex-end;
+    margin-bottom: 2px;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-right: auto;
+  }
+  .lm__league:hover {
+    text-decoration: none;
+  }
+  .lm__nationality {
+    grid-area: nationality;
+    align-self: flex-start;
+    margin-top: 2px;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    opacity: 0.6;
+  }
+  .lm__date {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: var(--color-support-3);
+  }
+  .lm__teams {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .lm__team {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    line-height: unset;
+  }
+  .lm__result {
+    z-index: 1;
+  }
+  .lm__resultCont {
+    flex-direction: column;
+  }
+  .lm__resultCont div {
+    margin: 3px 0;
+  }
+  .lm__resultPrev {
+    display: none;
+  }
+  .lm__resultEndDelimiter {
+    display: none;
+  }
+  .lm__icon {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin: 0 -6px 0 0;
+    font-size: 11px;
+    font-weight: bold;
+    background-color: var(--color-support-5);
+    border: 1px solid var(--color-support-2);
+    border-radius: 8px;
+  }
+  .lm__icon--minutes-played {
+    z-index: 5;
+  }
+  .lm__icon--goal {
+    z-index: 4;
+  }
+  .lm__icon--goal .lm__iconValue {
+    display: flex;
+  }
+  .lm__icon--assist {
+    z-index: 3;
+  }
+  .lm__icon--assist .lm__iconValue {
+    display: flex;
+  }
+  .lm__icon--yellow-card {
+    z-index: 2;
+  }
+  .lm__icon--red-card {
+    z-index: 1;
+  }
+  .lm__icon--grey {
+    display: none;
+  }
+  .lm__icon--minutes-played,
+  .lm__icon--goal,
+  .lm__icon--yellow-card,
+  .lm__icon--red-card {
+    margin-right: -6px;
+  }
+  .lm__icon--minutes-played .lm__iconSVG,
+  .lm__icon--goal .lm__iconSVG,
+  .lm__icon--assist .lm__iconSVG,
+  .lm__icon--yellow-card .lm__iconSVG,
+  .lm__icon--red-card .lm__iconSVG {
+    display: flex;
+  }
+  .lm__icon--minutes-played .lm__iconSVG--yellow,
+  .lm__icon--goal .lm__iconSVG--yellow,
+  .lm__icon--assist .lm__iconSVG--yellow,
+  .lm__icon--yellow-card .lm__iconSVG--yellow,
+  .lm__icon--red-card .lm__iconSVG--yellow {
+    color: var(--color-yellow);
+  }
+  .lm__icon--minutes-played .lm__iconSVG--red,
+  .lm__icon--goal .lm__iconSVG--red,
+  .lm__icon--assist .lm__iconSVG--red,
+  .lm__icon--yellow-card .lm__iconSVG--red,
+  .lm__icon--red-card .lm__iconSVG--red {
+    color: var(--color-red);
+  }
+  .lm__icon--minutes-played .lm__iconSVG--assist,
+  .lm__icon--goal .lm__iconSVG--assist,
+  .lm__icon--assist .lm__iconSVG--assist,
+  .lm__icon--yellow-card .lm__iconSVG--assist,
+  .lm__icon--red-card .lm__iconSVG--assist {
+    width: 14px !important;
+    height: 14px !important;
+  }
+  .lm__icon--goal-highlighted {
+    background-color: var(--color-support-5);
+  }
+  .theme--dark .lm__icon--goal-highlighted,
+  .theme--dark .lm__icon--assist-highlighted {
+    background-color: var(--color-support-5);
+  }
+  .lm__icon--yellow-card-highlighted,
+  .lm__icon--red-card-highlighted {
+    background-color: var(--color-support-5);
+  }
+  .theme--dark .lm__icon--yellow-card-highlighted,
+  .theme--dark .lm__icon--red-card-highlighted {
+    background-color: var(--color-support-5);
+  }
+  .lm__icon .lm__iconValue {
+    font-size: 8px;
+    color: var(--color-white);
+  }
+  .theme--dark .lm__icon .lm__iconValue {
+    color: #000000;
+  }
+  .lm__iconText--goal,
+  .lm__iconText--assist,
+  .lm__iconText--yellow-card,
+  .lm__iconText--yellow-red-card,
+  .lm__iconText--red-card {
+    display: none;
+  }
+  .lm__iconValue {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+  }
+  .lm__absence {
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--color-support-4);
+  }
+  .lm__absence svg {
+    display: none;
+  }
+  .lm__stat--wide {
+    width: 58px;
+  }
+}
+
+/* LEFT MENU + CONTENT */
+.lm__row {
+  min-height: 46px;
+  display: grid;
+  align-items: center;
+  border-bottom: solid 1px var(--color-support-1);
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.lm__row--infoHeader {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  min-height: 28px;
+  background-color: var(--color-support-1);
+  border-radius: 4px;
+  box-sizing: border-box;
+  cursor: unset;
+}
+.lm__row--heading {
+  display: none;
+  cursor: unset;
+}
+.soccer .lm__row {
+  width: 100%;
+  grid-template: " date competition teams results .     icons winIcon " auto " date competition teams results .     icons winIcon " auto / 80px 80px 1fr 40px 50px 160px 44px;
+}
+.basketball .lm__row {
+  width: 100%;
+  grid-template: " date competition teams results .    icons winIcon " auto " date competition teams results .    icons winIcon " auto / 80px 80px 1fr 40px 10px 236px 28px;
+}
+.basketball .lm__row--heading {
+  display: none;
+}
+@media (hover: hover) {
+  .lm__row:hover:not(.lm__row--infoHeader) {
+    background-color: rgba(var(--color-support-2-rgb), 0.2);
+  }
+}
+@media only screen and (max-width: 799px) {
+  .lm__row {
+    min-height: 48px;
+  }
+  .lm__row--infoHeader {
+    display: grid;
+    border-radius: 0;
+    grid-template: " headLayout .   icons winIcon" auto " headLayout .   icons winIcon" auto / 175px 1fr 226px 28px;
+  }
+  .soccer .lm__row {
+    grid-template: " teams icons          date results winIcon" auto " teams icons          date results winIcon" auto / minmax(110px, 1fr) auto minmax(50px, max-content) 38px 28px;
+  }
+  .soccer .lm__row--heading {
+    display: grid;
+    position: sticky;
+    position: -webkit-sticky;
+    left: 0;
+    padding: 0 8px;
+    background-color: var(--color-support-1);
+    grid-template: " flag league" minmax(24px, auto) " flag nationality" minmax(24px, auto) / 26px 1fr;
+  }
+  .soccer .lm__row--infoHeader {
+    display: none;
+  }
+  .soccer .lm__icons {
+    padding-right: 14px;
+  }
+  .basketball .lm__row {
+    grid-template: " date teams results .   icons winIcon" auto " date teams results .   icons winIcon" auto / 65px 70px 40px 1fr 226px 28px;
+  }
+  .basketball .lm__row--heading {
+    display: none;
+  }
+  .basketball .lm__date {
+    position: sticky;
+    position: -webkit-sticky;
+    left: 0;
+    height: 100%;
+    background-color: var(--color-combination-9);
+    z-index: 1;
+  }
+  .basketball .lm__teams {
+    position: sticky;
+    position: -webkit-sticky;
+    left: 65px;
+    height: 100%;
+    background-color: var(--color-combination-9);
+    z-index: 1;
+  }
+  .basketball .lm__result {
+    position: sticky;
+    position: -webkit-sticky;
+    left: 135px;
+    background-color: var(--color-combination-9);
+    box-shadow: 3px 0 4px 0 rgba(var(--color-secondary-1-rgb), 0.08);
+  }
+}
+@media only screen and (max-width: 424px) {
+  .basketball .lm__row {
+    width: unset;
+  }
+  .basketball .lm__row--infoHeader {
+    width: unset;
+  }
+}
+
+/* LEFT MENU + CONTENT */
+.skelLM {
+  margin-bottom: 10px;
+}
+.soccer .skelLM {
+  --width-icon: 28px;
+  --width-teams: 1fr;
+  --width-result: 135px;
+}
+.basketball .skelLM {
+  --width-icon: 34px;
+  --width-result: 124px;
+  --width-minutes-icon: 58px;
+  --width-points-icon: 38px;
+}
+.skelLM__tab {
+  border-bottom: 4px solid var(--color-tab, var(--color-sport-secondary-body));
+}
+.skelLM__tabEar {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  height: 28px;
+  padding: 0 10px;
+  margin-right: auto;
+  font-weight: bold;
+  color: var(--color-white);
+  background-color: var(--color-tab, var(--color-sport-secondary-body));
+}
+.skelLM__head {
+  display: grid;
+  width: 100%;
+  background-color: var(--color-support-1);
+  border-radius: 4px;
+  grid-template: " .   icon6                        icon5                       icon4                icon3                icon2                icon1                form" 29px / 1fr var(--width-minutes-icon, 0) var(--width-points-icon, 0) var(--width-icon, 0) var(--width-icon, 0) var(--width-icon, 0) var(--width-icon, 0) 28px;
+}
+.skelLM__row {
+  display: grid;
+  height: 45px;
+  border-bottom: 1px solid var(--color-support-1);
+  grid-template: " date country teams                    result                   icon6                        icon5                       icon4                icon3                icon2                icon1                form" auto / 88px 68px var(--width-teams, auto) var(--width-result, 1fr) var(--width-minutes-icon, 0) var(--width-points-icon, 0) var(--width-icon, 0) var(--width-icon, 0) var(--width-icon, 0) var(--width-icon, 0) 28px;
+}
+.skelLM__showMore {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 28px;
+  border-bottom: 1px solid var(--color-border-4);
+}
+.skelLM__showMoreEl {
+  position: relative;
+  width: 100px;
+  height: 11px;
+}
+.skelLM__showMoreEl::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 11px;
+  background: linear-gradient(to right, var(--color-skeleton-2) 0%, var(--color-skeleton-1) 50%, var(--color-skeleton-2));
+  background-position: -100px 0;
+  animation: lastMatchesPlaceholder 3000ms infinite forwards linear;
+}
+.skelLM__item {
+  position: relative;
+  height: 11px;
+  margin: auto 0;
+  overflow: hidden;
+}
+.skelLM__item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 30px;
+  background: linear-gradient(to right, var(--color-skeleton-2) 0%, var(--color-skeleton-1) 50%, var(--color-skeleton-2));
+  background-position: -300px 0;
+  animation: lastMatchesItemPlaceholder 3000ms infinite forwards linear;
+}
+.skelLM__item--date {
+  grid-area: date;
+  width: 40px;
+  margin: auto 0 auto 20px;
+}
+.skelLM__item--country {
+  grid-area: country;
+  width: 44px;
+}
+.skelLM__item--teams {
+  display: grid;
+  grid-area: teams;
+  grid-template: " homeTeam" auto " awayTeam" auto / 1fr;
+}
+.skelLM__item--team {
+  width: 100px;
+  margin: auto 0 auto 12px;
+}
+.skelLM__item--home {
+  grid-area: homeTeam;
+  width: 80px;
+}
+.skelLM__item--away {
+  grid-area: awayTeam;
+}
+.basketball .skelLM__item--away {
+  width: 70px;
+}
+.skelLM__item--results {
+  grid-area: result;
+  display: grid;
+  margin: 0 auto 0 80px;
+  grid-template: " result1" auto " result2" auto / 30px;
+}
+.skelLM__item--result {
+  width: 20px;
+}
+.soccer .skelLM__item--result {
+  width: 30px;
+  transform: rotate(90deg);
+}
+.soccer .skelLM__item--resultHome {
+  display: none;
+}
+.soccer .skelLM__item--resultAway {
+  display: none;
+}
+.skelLM__item--form {
+  grid-area: form;
+  width: 16px;
+}
+.skelLM__icon {
+  position: relative;
+  width: 16px;
+  height: 11px;
+  margin: auto;
+  overflow: hidden;
+}
+.skelLM__icon--icon1 {
+  grid-area: icon1;
+}
+.skelLM__icon--icon2 {
+  grid-area: icon2;
+}
+.skelLM__icon--icon3 {
+  grid-area: icon3;
+}
+.skelLM__icon--icon4 {
+  grid-area: icon4;
+}
+.skelLM__icon--icon5 {
+  grid-area: icon5;
+}
+.soccer .skelLM__icon--icon5 {
+  display: none;
+}
+.skelLM__icon--icon6 {
+  grid-area: icon6;
+  width: 30px;
+}
+.soccer .skelLM__icon--icon6 {
+  display: none;
+}
+.skelLM__icon::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 24px;
+  background: linear-gradient(to right, var(--color-skeleton-2) 0%, var(--color-skeleton-1) 50%, var(--color-skeleton-2));
+  background-position: -100px 0;
+  animation: lastMatchesPlaceholder 3000ms infinite forwards linear;
+}
+.skelLM__head .skelLM__icon::after {
+  animation: unset;
+}
+.skelLM__iconForm {
+  height: 16px;
+}
+.skelLM__iconForm::after {
+  height: 20px;
+}
+.skelLM__iconHead {
+  width: 16px;
+  height: 16px;
+  margin: auto;
+  background-color: var(--color-skeleton-1);
+}
+@media only screen and (max-width: 799px) {
+  .basketball .skelLM {
+    --width-result: auto;
+  }
+  .skelLM__tabEar {
+    height: 36px;
+  }
+  .skelLM__head {
+    overflow: hidden;
+    grid-template: " .     .   icon6                        icon5                       icon4                icon3                icon2                icon1                form" 29px / 122px 1fr var(--width-minutes-icon, 0) var(--width-points-icon, 0) var(--width-icon, 0) var(--width-icon, 0) var(--width-icon, 0) var(--width-icon, 0) 28px;
+  }
+  .soccer .skelLM__head {
+    display: none;
+  }
+  .skelLM__mobHead {
+    display: grid;
+    background-color: var(--color-support-1);
+    border-bottom: 1px solid var(--color-support-1);
+    grid-template: "flag competition" 24px "flag country	 " 24px / 34px 1fr;
+  }
+  .basketball .skelLM__mobHead {
+    display: none;
+  }
+  .skelLM__mobFlag {
+    grid-area: flag;
+    width: 21px;
+    height: 14px;
+    margin: auto;
+    background-color: var(--color-skeleton-2);
+  }
+  .skelLM__mobCompetition {
+    grid-area: competition;
+    align-self: flex-end;
+    width: 110px;
+    margin-bottom: 2px;
+  }
+  .skelLM__mobCountry {
+    grid-area: country;
+    width: 60px;
+    margin-top: 2px;
+  }
+  .skelLM__mobCompetition,
+  .skelLM__mobCountry {
+    height: 11px;
+    background-color: var(--color-skeleton-2);
+  }
+  .skelLM__row {
+    height: 48px;
+    overflow: hidden;
+    grid-template: " date teams                    result                   icon6                        icon5                       icon4                icon3                icon2                icon1                form" auto / 58px var(--width-teams, 69px) var(--width-result, 1fr) var(--width-minutes-icon, 0) var(--width-points-icon, 0) var(--width-icon, 0) var(--width-icon, 0) var(--width-icon, 0) var(--width-icon, 0) 28px;
+  }
+  .soccer .skelLM__row {
+    grid-template: " teams icon2       icon1 	    date result form" 24px " teams icon2       icon1 	    date result form" 24px / 1fr max-content max-content 50px 28px 28px;
+  }
+  .soccer .skelLM__icon:not(.skelLM__iconForm) {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+  }
+  .soccer .skelLM__icon--icon2 {
+    margin-right: -6px;
+  }
+  .soccer .skelLM__icon--icon3,
+  .soccer .skelLM__icon--icon4,
+  .soccer .skelLM__icon--icon5,
+  .soccer .skelLM__icon--icon6 {
+    display: none;
+  }
+  .skelLM__item--date {
+    width: 30px;
+  }
+  .skelLM__item--country {
+    display: none;
+  }
+  .soccer .skelLM__item--teams {
+    grid-template: " homeTeam" auto " awayTeam" auto / 1fr;
+  }
+  .skelLM__item--team {
+    width: 40px;
+    margin: auto 0 auto 12px;
+  }
+  .soccer .skelLM__item--home {
+    width: 120px;
+    margin: auto 0 2px 12px;
+  }
+  .soccer .skelLM__item--away {
+    width: 80px;
+    margin: 2px auto 0 12px;
+  }
+  .basketball .skelLM__item--away {
+    width: 40px;
+  }
+  .skelLM__item--results {
+    margin: 0;
+  }
+  .skelLM__item--result {
+    grid-area: result;
+    margin: auto auto auto 14px;
+  }
+  .soccer .skelLM__item--result {
+    width: 11px;
+    height: 30px;
+    margin: auto;
+  }
+  .skelLM__item--resultHome {
+    grid-area: result1;
+  }
+  .skelLM__item--resultAway {
+    grid-area: result2;
+  }
+  .skelLM__showMore {
+    height: 36px;
+  }
+}
+@keyframes lastMatchesPlaceholder {
+  0% {
+    background-position: -100px 0;
+  }
+  100% {
+    background-position: 100px 0;
+  }
+}
+@keyframes lastMatchesItemPlaceholder {
+  0% {
+    background-position: -300px 0;
+  }
+  100% {
+    background-position: 300px 0;
+  }
+}
+

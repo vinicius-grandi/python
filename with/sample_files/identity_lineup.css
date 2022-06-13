@@ -1,0 +1,170 @@
+/* LEFT MENU + CONTENT */
+.lineup {
+  padding: 0 12px;
+  width: 100%;
+}
+.lineup--wrapper {
+  border-radius: 8px;
+  background-color: var(--color-combination-9);
+  padding: 16px 0;
+  margin: 12px 0;
+}
+.lineup--soccer {
+  --gridTemplateAreas-lineup: " jersey player age matchesPlayed goal yellowCard redCard . ";
+  --gridTemplateColumns-lineup: minmax(60px, 78px) minmax(140px, 1fr) 48px repeat(4, minmax(40px, 48px)) minmax(4px, 16px);
+}
+.lineup--hockey {
+  --gridTemplateAreas-lineup: " jersey player age matchesPlayed goalsOrSavesPercentage assistsOrGoalsAgainstAverage pointsOrShoutouts . ";
+  --gridTemplateColumns-lineup: minmax(60px, 78px) minmax(140px, 1fr) 48px repeat(4, minmax(40px, 48px)) minmax(4px, 16px);
+}
+.lineup--basketball {
+  --gridTemplateAreas-lineup: " jersey player age . ";
+  --gridTemplateColumns-lineup: minmax(60px, 78px) minmax(140px, 1fr) 48px minmax(4px, 16px);
+}
+.lineup__header {
+  display: grid;
+  grid-template-areas: var(--gridTemplateAreas-lineup);
+  grid-template-rows: 28px;
+  grid-template-columns: var(--gridTemplateColumns-lineup);
+  border-radius: 4px;
+  font-weight: bold;
+  letter-spacing: 0.4px;
+  color: var(--color-support-4);
+  background-color: var(--color-support-1);
+  text-transform: uppercase;
+  font-size: 11px;
+}
+.lineup__header svg {
+  width: 14px;
+  height: 14px;
+}
+.lineup__title {
+  display: flex;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--color-combination-2);
+  margin: 16px 0 12px;
+}
+.lineup__row {
+  display: grid;
+  border-radius: 8px;
+  grid-template-areas: var(--gridTemplateAreas-lineup);
+  grid-template-rows: 48px;
+  grid-template-columns: var(--gridTemplateColumns-lineup);
+  color: var(--color-combination-2);
+  font-size: 13px;
+}
+.lineup__row:nth-child(even) {
+  background-color: rgba(var(--color-support-1-rgb),.4);
+}
+.lineup__cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.lineup__cell--jersey {
+  grid-area: jersey;
+  font-weight: bold;
+}
+.lineup__cell--player,
+.lineup__cell--playerHeader {
+  grid-area: player;
+  justify-content: start;
+}
+.lineup__cell--player {
+  display: grid;
+  align-items: center;
+  grid-template: " flag .    nameAndAbsence" auto / 18px 10px 1fr;
+}
+.lineup__cell--flag {
+  grid-area: flag;
+  height: 12px;
+}
+.lineup__cell--nameAndAbsence {
+  grid-area: nameAndAbsence;
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.lineup__cell--name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: bold;
+}
+.lineup__cell--name.lineup__cell--name {
+  color: var(--color-combination-2);
+  display: block;
+}
+.lineup__cell--name:hover {
+  text-decoration: underline;
+}
+.lineup__cell--absence {
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+  color: var(--color-red);
+}
+.lineup__cell--age {
+  grid-area: age;
+  color: var(--color-support-4);
+}
+.lineup__cell--matchesPlayed {
+  grid-area: matchesPlayed;
+}
+.lineup__cell--goal {
+  grid-area: goal;
+}
+.lineup__cell--yellowCard {
+  grid-area: yellowCard;
+}
+.lineup__cell--yellowCard svg {
+  color: var(--color-yellow);
+}
+.lineup__cell--redCard {
+  grid-area: redCard;
+}
+.lineup__cell--redCard svg {
+  color: var(--color-red);
+}
+.lineup__cell--savesPercentage,
+.lineup__cell--goals {
+  grid-area: goalsOrSavesPercentage;
+}
+.lineup__cell--goalsAgainstAverage,
+.lineup__cell--assists {
+  grid-area: assistsOrGoalsAgainstAverage;
+}
+.lineup__cell--shutouts,
+.lineup__cell--points {
+  grid-area: pointsOrShoutouts;
+}
+.lineup__cell--gray {
+  color: var(--color-support-4);
+}
+@media only screen and (max-width: 479px) {
+  .lineup {
+    padding: 0;
+  }
+  .lineup--soccer {
+    --gridTemplateColumns-lineup: minmax(32px, 48px) minmax(140px, 1fr) 32px repeat(4, minmax(24px, 32px)) 4px;
+  }
+  .lineup--hockey {
+    --gridTemplateColumns-lineup: minmax(32px, 48px) minmax(140px, 1fr) repeat(5, minmax(24px, 32px)) 4px;
+  }
+  .lineup--hockey .lineup__rows--goalkeepers {
+    --gridTemplateColumns-lineup: minmax(32px, 48px) minmax(140px, 1fr) repeat(2, minmax(24px, 32px)) repeat(2, minmax(32px, 40px)) minmax(24px, 32px) 4px;
+  }
+  .lineup--basketball {
+    --gridTemplateColumns-lineup: 48px minmax(140px, 1fr) 48px 4px;
+  }
+  .lineup__header,
+  .lineup__row {
+    border-radius: initial;
+  }
+  .lineup__title {
+    margin-left: 12px;
+  }
+}
+

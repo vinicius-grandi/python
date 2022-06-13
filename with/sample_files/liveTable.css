@@ -1,0 +1,713 @@
+.leaderboard___JaZ5tCx {
+  width: 11px;
+  height: 10px;
+}
+.star___L0ky4FE {
+  width: 18px;
+  height: 18px;
+}
+.starActive___xq0fDWM {
+  width: 16px;
+  height: 15px;
+  fill: #f2b142;
+  stroke: #f2b142;
+}
+.identity .starActive___xq0fDWM {
+  width: 18px;
+  height: 18px;
+}
+.tennis___P1z6aCi {
+  color: #bf9a17;
+  width: 14px;
+  height: 14px;
+}
+.table-tennis___eMOVBIi {
+  color: #c84b3b;
+  width: 14px;
+  height: 14px;
+}
+.badminton___lIiU3DP {
+  color: #35aa7b;
+  width: 12px;
+  height: 14px;
+}
+.volleyball___klK9pLj {
+  color: #e6a260;
+  width: 14px;
+  height: 14px;
+}
+.beach-volleyball___vXTNPis {
+  color: #c9a56e;
+  width: 14px;
+  height: 14px;
+}
+.darts___CcCuza8 {
+  color: var(--color-darts-serve);
+  width: 19px;
+  height: 16px;
+}
+.american-football___pG9A4rk {
+  color: var(--color-AmericanFootballServis);
+  width: 14px;
+  height: 14px;
+}
+.baseball___GcuMTa4 {
+  color: #ab8c61;
+  width: 16px;
+  height: 14px;
+}
+.baseball-bat___HUDOorT {
+  color: #ab8c61;
+  width: 16px;
+  height: 16px;
+}
+.pesapallo___iVRPKlc {
+  color: #abc434;
+  width: 14px;
+  height: 14px;
+}
+.pesapallo-bat___l_vFOp2 {
+  color: #abc434;
+  width: 16px;
+  height: 16px;
+}
+.cricket___xxigFOm {
+  color: var(--color-cricketServis);
+  width: 16px;
+  height: 14px;
+}
+.cricket-bat___tOWnxh7 {
+  color: var(--color-cricketServis);
+  width: 16px;
+  height: 16px;
+}
+.stars___CCj7zKg {
+  fill: #f2b142;
+  stroke: #f2b142;
+}
+.winner___UDG6Wur {
+  width: 11px;
+  height: 11px;
+  color: #8f8f8f;
+}
+.winner___UDG6Wur:hover {
+  opacity: 0.6;
+}
+.winner___UDG6Wur.desc___etxxa7j {
+  transform: rotate(180deg);
+}
+.info___Djjsjl1 {
+  width: 13px;
+  height: 13px;
+}
+.tv___MwFnvK0 {
+  width: 13px;
+  height: 11px;
+  color: #8f8f8f;
+}
+.draw___hZvIzma {
+  width: 17px;
+  height: 20px;
+  color: #808080;
+}
+.shirt___QkxEQzp {
+  width: 15px;
+  height: 12px;
+  color: #8f8f8f;
+}
+.calendar___dh_6KUl {
+  width: 17px;
+  height: 17px;
+}
+.headphones___aMejNg4 {
+  width: 12px;
+  height: 12px;
+}
+.pause___mL5E7tS {
+  width: 13px;
+  height: 13px;
+}
+.stream___gb_4Lb7 {
+  width: 16px;
+  height: 13px;
+}
+.stream-locked___fv5L6SL {
+  width: 18px;
+  height: 13px;
+}
+.arrowUp___Ukqvs9w {
+  width: 8px;
+  height: 10px;
+  color: #3fbd40;
+}
+.arrowDown___ThxW3dw {
+  width: 8px;
+  height: 10px;
+  color: #d42e2f;
+  transform: rotate(180deg);
+}
+.sortArrowUp___LlFPNKQ {
+  width: 8px;
+  height: 4px;
+}
+.sortArrowDown___SuFs_tC {
+  width: 8px;
+  height: 4px;
+  transform: rotate(180deg);
+}
+.preview___ohmZpCI {
+  width: 44px;
+  height: 14px;
+  --color-fill: none;
+  --color-stroke: var(--color-icon-1);
+  color: var(--color-previewIcon-text);
+  font-size: 8px;
+  letter-spacing: 0.12ex;
+  cursor: pointer;
+  user-select: none;
+}
+.preview___ohmZpCI:hover {
+  color: #ffffff;
+  --color-fill: #498ffd;
+  --color-stroke: #498ffd;
+}
+.bet___lRqF1vy {
+  width: 26px;
+  height: 14px;
+  --color-fill: none;
+  --color-stroke: var(--color-betIcon-stroke);
+  color: var(--color-betIcon-text);
+  cursor: pointer;
+  user-select: none;
+  font-size: 8px;
+  letter-spacing: 0.2ex;
+}
+.bet___lRqF1vy:hover {
+  --color-fill: #bc161c;
+  --color-stroke: #bc161c;
+  color: #ffffff;
+}
+.liveBet___quSnUF6 {
+  width: 26px;
+  height: 14px;
+  --color-fill: #bc161c;
+  --color-stroke: #bc161c;
+  color: #ffffff;
+  cursor: pointer;
+  user-select: none;
+  font-size: 8px;
+  letter-spacing: 0.2ex;
+}
+.betMobile___IU6LXhB {
+  height: 26px;
+}
+.liveActiveBet___j6PA5fg {
+  cursor: pointer;
+  display: flex;
+}
+.footballGoal___kNLdtq6 {
+  width: 16px;
+  height: 16px;
+  color: var(--color-footballGoal);
+}
+.footballOwnGoal___zFmL5n_ {
+  width: 16px;
+  height: 16px;
+  color: var(--color-penalty);
+}
+.footballPenalty___GIbNVmJ {
+  width: 16px;
+  height: 16px;
+  color: var(--color-footballGoal);
+}
+.penaltyMissed___AvrUtkx {
+  width: 16px;
+  height: 16px;
+  color: var(--color-penalty);
+}
+.card___QleHwtg {
+  width: 8px;
+  height: 12px;
+  margin: 2px 4px;
+  color: var(--color-redCard);
+}
+.yellowCard___MG4g4DC {
+  width: 8px;
+  height: 12px;
+  margin: 2px 4px;
+  color: #f9c91e;
+}
+.redYellowCard___HseXqpz {
+  width: 8px;
+  height: 12px;
+  margin: 2px 4px;
+}
+.oddsUp___tNnAyBs {
+  width: 13px;
+  height: 16px;
+  object-fit: contain;
+  color: #3fbd40;
+  transform: rotate(90, 2.5, 5);
+}
+.oddsDown___vAcKKqq {
+  width: 13px;
+  height: 16px;
+  object-fit: contain;
+  color: #d42e2f;
+}
+.var___IXSHxwU {
+  width: 20px;
+  height: 16px;
+  color: var(--color-floorballGoal);
+}
+.varLive___Xikms5k {
+  color: var(--color-var-live);
+  width: 20px;
+  height: 16px;
+}
+.whistle___T0AzYir {
+  width: 16px;
+  height: 16px;
+  color: var(--color-floorballGoal);
+}
+.hockeyGoal___oJJmi_6 {
+  width: 16px;
+  height: 12.68px;
+  color: var(--color-floorballGoal);
+}
+.hockeyMinorPenalty___QazMOjb,
+.hockeyMajorPenalty___AdtEViu,
+.hockeyPersonalFoul___oFSEB9a,
+.hockeyGameMisconduct____gQ2at9 {
+  width: 14px;
+  height: 14px;
+}
+.hockeyMinorPenalty___QazMOjb,
+.hockeyMajorPenalty___AdtEViu,
+.hockeyPersonalFoul___oFSEB9a {
+  fill: #f2ca4b;
+}
+.floorballBall___bPehzc9 {
+  width: 18px;
+  height: 18px;
+  color: var(--color-floorballGoal);
+}
+.floorballOwnGoal___rbHnwVN {
+  width: 18px;
+  height: 18px;
+  color: var(--color-penalty);
+}
+.video___eBgfMpW {
+  width: 16px;
+  height: 16px;
+  color: #8f8f8f;
+}
+.video___eBgfMpW:hover {
+  opacity: 0.6;
+}
+.assist___N7mEgCH {
+  width: 18px;
+  height: 18px;
+  color: var(--color-assist-background);
+}
+.hockeyAssist___pwYA51d {
+  width: 16px;
+  height: 16px;
+  color: var(--color-assist-background);
+}
+.jersey___JCQxln8 {
+  width: 16px;
+  height: 16px;
+}
+.theme--dark .jerseyBlack___qlruPsP {
+  filter: brightness(1.8);
+}
+.filter___lxdb2Gc {
+  width: 12px;
+  height: 10px;
+}
+.americanFootballBall___VWH4f0U {
+  width: 16px;
+  height: 16px;
+  color: var(--color-americanFootballBall);
+}
+.teamLogoPlaceholder___TrZGIQq {
+  color: #bfbfbf;
+  width: 16px;
+  height: 16px;
+}
+.emptyTeamLogo___QpHmHF8 {
+  width: 16px;
+  height: 16px;
+  color: var(--color-text-2);
+}
+.liveStreamLogo___EjTGTAs {
+  height: 14px;
+  width: 38px;
+}
+.rugbyBall___mdqj8IN {
+  color: var(--color-americanFootballBall);
+  width: 16px;
+  height: 16px;
+}
+.searchIcon___zqr8En4 {
+  width: 18px;
+  height: 18px;
+}
+.behind___FMUefYI {
+  color: var(--color-behind);
+  width: 16px;
+  height: 16px;
+}
+.handballBall___RgZLhcO {
+  color: var(--color-handballBall);
+  width: 16px;
+  height: 16px;
+}
+.smallArrow___Q93ZFER {
+  width: 10px;
+  height: 7px;
+}
+.injury___i5_wtMW {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  color: #c13f3e;
+}
+.suspended___Y4UH01H {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+}
+.bell___TYxSTRB {
+  width: 11px;
+  height: 13px;
+}
+.sound___loa894f {
+  width: 18px;
+  height: 14px;
+}
+.check___DtpvKGa {
+  width: 9px;
+  height: 7px;
+}
+.settings___Pobl_UK {
+  width: 12px;
+  height: 12px;
+}
+.settingsToggle___uPCrNbA {
+  width: 12px;
+  height: 11px;
+}
+.skipFavorites___PxjDv4d {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+}
+.lineup___ZEumfth {
+  width: 14.9px;
+  height: 13.6px;
+}
+.time___BLqxq8t {
+  width: 15px;
+  height: 13px;
+}
+.sadness___Yh6Bb2L {
+  width: 14px;
+  height: 14px;
+}
+.substitution___GRhBMSl {
+  width: 12px;
+  height: 12.3px;
+}
+.corner___H9Vz4jy {
+  width: 11.6px;
+  height: 12px;
+}
+.funFact___g2OEIdK {
+  width: 14px;
+  height: 14px;
+}
+.commentatory___L_3ZpNB {
+  width: 14px;
+  height: 12.8px;
+}
+.exclamation___BAoet5d {
+  width: 3.1px;
+  height: 12px;
+}
+.announcement___SphRpYg {
+  width: 12.9px;
+  height: 13.5px;
+}
+.transfer___Xb1Nw7A {
+  width: 12px;
+}
+
+.action___QaEy2z7 {
+  flex: 0 0 14px;
+  width: 14px;
+  height: 14px;
+}
+.star___UJhiS4E {
+  width: 18px;
+  height: 18px;
+}
+.stars___ZHB_cOH {
+  fill: #f2b142;
+  stroke: #f2b142;
+}
+.starActive___Y6TARy0 {
+  width: 16px;
+  height: 15px;
+  fill: #f2b142;
+  stroke: #f2b142;
+}
+.headphones___tnBSwb7 {
+  width: 14px;
+  height: 14px;
+}
+.info___gHs3ZYH {
+  width: 14px;
+  height: 14px;
+}
+.lineup___zNNsktR {
+  width: 14px;
+  height: 14px;
+}
+.winner___XJJDpxo {
+  width: 14px;
+  height: 14px;
+}
+.card___l6qxVPI {
+  width: 9px;
+  height: 14px;
+}
+.redCard___Re9RTjx {
+  color: var(--color-red);
+}
+.yellowCard___RqhDukP {
+  color: var(--color-yellow);
+}
+.stream___sHoVyUp {
+  width: 14px;
+  height: 14px;
+}
+.stream-locked___RYnwUWJ {
+  width: 14px;
+  height: 14px;
+}
+.tv___ukeGfBZ {
+  width: 14px;
+  height: 14px;
+}
+.preview___SrkX4u5 {
+  width: 44px;
+  height: 14px;
+  font-size: 8px;
+  letter-spacing: 0.12ex;
+  cursor: pointer;
+  user-select: none;
+}
+.bet___KwRAj9V {
+  width: 22px;
+  height: 18px;
+  font-size: 10px;
+  --color-fill: none;
+  border: solid 1px var(--color-support-2);
+  border-radius: 4px;
+  user-select: none;
+  cursor: pointer;
+}
+@media (hover: hover) {
+  .bet___KwRAj9V:hover {
+    --color-fill: var(--color-primary);
+    --color-stroke: var(--color-primary);
+    color: #ffffff;
+    background-color: var(--color-primary);
+    border: solid 1px var(--color-primary);
+  }
+}
+.liveBet___R2j8uyD {
+  --color-fill: var(--color-primary);
+  --color-stroke: var(--color-primary);
+  color: #ffffff;
+  background-color: var(--color-primary);
+  border: solid 1px var(--color-primary);
+}
+.betMobile___LQp2ah4 {
+  width: 24px;
+  height: 18px;
+  margin: auto 4px auto auto;
+  font-size: 12px;
+  letter-spacing: 0.2ex;
+  --color-fill: none;
+  border: solid 1px var(--color-support-2);
+  border-radius: 4px;
+}
+@media (hover: hover) {
+  .betMobile___LQp2ah4:hover {
+    --color-fill: var(--color-primary);
+    --color-stroke: var(--color-primary);
+    color: #ffffff;
+    background-color: var(--color-primary);
+    border: solid 1px var(--color-primary);
+  }
+}
+.liveBetMobile___TpbTYEP {
+  --color-fill: var(--color-primary);
+  --color-stroke: var(--color-primary);
+  color: #ffffff;
+  background-color: var(--color-primary);
+  border: solid 1px var(--color-primary);
+}
+.odds___noth0t0 {
+  width: 20px;
+  height: 20px;
+}
+.sound___b0AN98o {
+  width: 16px;
+  height: 16px;
+  color: var(--color-support-4);
+}
+.serve___Mlq0BgM {
+  width: 14px;
+  height: 14px;
+  color: var(--color-secondary-2);
+}
+
+/* LEFT MENU + CONTENT */
+.container___Sev_6JY {
+  display: grid;
+  grid-template: " heading .    image " max-content " .       .    image " 10px " text    .    image " max-content " .       .    image " 10px " button  .    image " auto / 1fr 20px 190px;
+  padding: 30px 20px;
+  background-color: var(--color-background-8);
+}
+.heading___MMw3Nwd {
+  grid-area: heading;
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--color-text-4);
+}
+.text___QIV3uv8 {
+  grid-area: text;
+  font-size: 14px;
+  color: var(--color-text-1);
+}
+.button___Q8X7wTE {
+  grid-area: button;
+  width: max-content;
+  height: fit-content;
+  padding: 12px 20px;
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--color-white);
+  text-decoration: none;
+  background-color: #000000;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.image___eeDsrcu {
+  align-self: flex-end;
+  justify-self: flex-end;
+  grid-area: image;
+  width: 190px;
+  height: 190px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 190px;
+  border-radius: 50%;
+}
+._fs .image___eeDsrcu,
+._ass .image___eeDsrcu {
+  background-image: url(/res/_fs/build/mygames_onboard_fs.db2dd6f.png);
+}
+._ss .image___eeDsrcu {
+  background-image: url(/res/_fs/build/mygames_onboard_ss.2cf43a1.png);
+}
+._scoreboard .image___eeDsrcu {
+  background-image: url(/res/_fs/build/mygames_onboard_sb.227289a.png);
+}
+._in .image___eeDsrcu {
+  background-image: url(/res/_fs/build/mygames_onboard_livescore.33d5eda.png);
+}
+.pid_403 .image___eeDsrcu {
+  background-image: url(/res/_fs/build/mygames_onboard_liveticker.e256246.png);
+}
+.pid_405 .image___eeDsrcu {
+  background-image: url(/res/_fs/build/mygames_onboard_wyniki.c1fd623.png);
+}
+@media only screen and (max-width: 639px) {
+  body.responsive .container___Sev_6JY {
+    grid-template: " heading heading heading " max-content " .       .       .       " 14px " text    .       image   " max-content " .       .       image   " 14px " button  .       image   " auto / 1fr 20px 140px;
+  }
+  body.responsive .heading___MMw3Nwd {
+    font-size: 20px;
+  }
+  body.responsive .image___eeDsrcu {
+    width: 140px;
+    height: 140px;
+    background-size: 140px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  body.responsive .container___Sev_6JY {
+    grid-template: " heading heading heading " auto " .       .       .       " 14px " text    .       image   " auto " .       .       image   " 14px " button  .       image   " max-content / 1fr 20px 100px;
+  }
+  body.responsive .image___eeDsrcu {
+    width: 100px;
+    height: 100px;
+    background-size: 100px;
+  }
+}
+
+/* LEFT MENU + CONTENT */
+.recomSkelCont___RccCBcN {
+  padding: 16px 12px;
+  margin-bottom: 10px;
+  background-color: var(--color-background-1);
+  box-sizing: border-box;
+}
+.recomSkelHead___AKnIzfv {
+  width: 160px;
+  height: 11px;
+  margin: 0 0 16px 12px;
+  background: var(--color-skeleton-1);
+  background-image: linear-gradient(to right, var(--color-skeleton-1) 0%, var(--color-skeleton-2) 20%, var(--color-skeleton-1) 40%, var(--color-skeleton-1) 100%);
+  background-size: 320px;
+  animation: animationSkelet___SVgY92H 1.4s linear infinite;
+}
+.recomSkelImage___W5uNZIw {
+  width: 100%;
+  height: 82px;
+  margin-bottom: 4px;
+  border-radius: 8px;
+  background: var(--color-skeleton-1);
+  background-image: linear-gradient(to right, var(--color-skeleton-1) 0%, var(--color-skeleton-2) 20%, var(--color-skeleton-1) 40%, var(--color-skeleton-1) 100%);
+  background-size: 200%;
+  animation: animationSkelet___SVgY92H 1.4s linear infinite;
+}
+.recomSkelText___v98zv8x {
+  width: 60px;
+  height: 11px;
+  background: var(--color-skeleton-1);
+  background-image: linear-gradient(to right, var(--color-skeleton-1) 0%, var(--color-skeleton-2) 20%, var(--color-skeleton-1) 40%, var(--color-skeleton-1) 100%);
+  background-size: 120px;
+  animation: animationSkelet___SVgY92H 1.4s linear infinite;
+}
+@keyframes animationSkelet___SVgY92H {
+  0% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: -100%;
+  }
+}
+
+.modal__window--legalAgeConfirmation {
+  max-width: 320px;
+}
+.modal__window--legalAgeConfirmation.modal__window--legalAgeConfirmation {
+  padding: 32px 20px;
+}
+

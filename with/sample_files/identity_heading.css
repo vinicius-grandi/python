@@ -1,0 +1,231 @@
+/* LEFT MENU + CONTENT */
+.heading {
+  display: grid;
+  align-items: center;
+  grid-column-gap: 16px;
+  padding: 12px 16px 16px;
+  border-bottom: solid 1px var(--color-support-1);
+  border-radius: 0 0 8px 8px;
+  grid-template: " logo1       title logo2 " 1fr " logo1       info  logo2 " max-content / max-content 1fr max-content;
+}
+@media only screen and (max-width: 639px) {
+  .heading {
+    grid-column-gap: 10px;
+  }
+}
+.tournament-page .heading,
+.team-page .heading {
+  border-radius: 0;
+}
+.heading__logo {
+  width: 82px;
+  height: 82px;
+  border-radius: 12px;
+  border: solid 1px var(--color-support-1);
+  background: #ffffff no-repeat center / 74px;
+}
+.heading__logo a div {
+  width: 82px;
+  height: 82px;
+  background: no-repeat center / 58px 58px;
+}
+@media only screen and (max-width: 639px) {
+  .heading__logo {
+    width: 68px;
+    height: 68px;
+    background-size: 60px;
+  }
+  .heading__logo a div {
+    width: 68px;
+    height: 68px;
+    background: no-repeat 9px 9px/50px 50px;
+  }
+}
+.heading__logo--1 {
+  grid-area: logo1;
+}
+.heading__logo--2 {
+  grid-area: logo2;
+}
+.heading__title {
+  grid-area: title;
+  display: flex;
+  align-items: center;
+}
+.heading__name {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--color-secondary-2);
+  margin-right: 8px;
+}
+@media only screen and (max-width: 639px) {
+  .heading__name {
+    display: inline;
+    word-break: break-word;
+  }
+}
+.heading__absence {
+  flex: 0 0 14px;
+  width: 14px;
+  height: 14px;
+  margin-right: 8px;
+  color: var(--color-red);
+}
+@media only screen and (max-width: 639px) {
+  .heading__absence {
+    transform: translateX(-3px);
+  }
+}
+.heading__starElement {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+.heading__starElement::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: transparent;
+  opacity: 0;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+}
+.heading__starElement:hover::before {
+  background-color: var(--color-support-3);
+  opacity: 0.15;
+}
+.heading__starElement--active svg {
+  --color-symbol-star-outline: var(--color-yellow);
+  --color-symbol-star-fill: var(--color-yellow);
+}
+.heading__starElement--active:hover::before {
+  background-color: var(--color-yellow);
+  opacity: 0.15;
+}
+.heading__starElement:not(.heading__starElement--active) svg {
+  --color-symbol-star-outline: var(--color-combination-23);
+  --color-symbol-star-fill: transparent;
+}
+.heading__starElement .star--interactive {
+  display: inline-flex;
+}
+@media only screen and (min-width: 639px) {
+  .heading__starElement {
+    display: flex;
+    transform: none;
+  }
+  .heading__starElement .star--interactive {
+    display: flex;
+    transform: none;
+  }
+}
+.heading__starElement svg {
+  width: 18px;
+  height: 18px;
+}
+.heading #tomyleagues {
+  display: inline-flex;
+  margin: 3px 0;
+}
+.heading__pinBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px;
+  background-color: var(--color-support-1);
+  border-radius: 8px;
+  cursor: pointer;
+}
+.heading__pinBox:hover .pinMyLeague.active svg {
+  --pin-fill: transparent;
+  --pin-outline: var(--color-support-4);
+}
+.heading__pinBox:hover .pinMyLeague:not(.active) svg {
+  --pin-fill: var(--color-pin);
+  --pin-outline: var(--color-pin);
+}
+.heading__pinBox .pinMyLeague {
+  display: flex;
+}
+.heading__pinBox .pinMyLeague svg {
+  width: 14px;
+  height: 14px;
+  margin-right: 4px;
+  --pin-fill: transparent;
+  --pin-outline: var(--color-support-4);
+}
+.heading__pinBox .pinMyLeague.active svg {
+  --pin-fill: var(--color-pin);
+  --pin-outline: var(--color-pin);
+}
+.heading__pinText {
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--color-support-4);
+}
+.heading__info {
+  grid-area: info;
+  margin-bottom: 8px;
+  color: var(--color-support-4);
+  font-weight: bold;
+  hyphens: auto;
+}
+.heading__info a:hover {
+  text-decoration: underline;
+}
+.heading__info a,
+.heading__info .jsl-age {
+  font-weight: normal;
+}
+.heading__info .participant-detail-rank,
+.heading__info--rank {
+  font-weight: normal;
+}
+.heading__info .participant-detail-rank a,
+.heading__info--rank a {
+  font-weight: bold;
+}
+.heading__info--type-name {
+  word-break: break-word;
+}
+/* presunout pak pod komponenty */
+/* fix for empty content */
+.lastMatchesWrapper {
+  background-color: var(--color-combination-9);
+  border-radius: 4px;
+}
+.lastMatchesWrapper #player-profile-react:not(:empty) {
+  padding: 12px;
+}
+@media only screen and (max-width: 799px) {
+  .lastMatchesWrapper #player-profile-react:not(:empty) {
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 639px) {
+  .lastMatchesWrapper {
+    border-radius: 0;
+  }
+}
+.careerMatchesWrapper {
+  margin: 12px 0 0;
+}
+.toggleMyTeam,
+.toggleMyLeague {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  z-index: 1;
+}
+

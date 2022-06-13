@@ -1,0 +1,102 @@
+/* @FS_LESS: "../..";
+@FS_LESS_WEB: "../../web";
+@FS_LESS_REACT: "../../react";
+@FS_LESS_LEGACY: "../../legacy"; */
+@font-face {
+  font-family: 'FS_Numbers';
+  font-style: normal;
+  font-weight: normal;
+  font-display: fallback;
+  src: url("/res/font/FS_Numbers.woff2") format("woff2");
+}
+.gameNotification {
+  position: fixed;
+  background-color: var(--color-combination-11);
+  border: solid 1px var(--color-combination-8);
+  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+  border-radius: 8px;
+  bottom: 16px;
+  margin-left: 16px;
+  z-index: var(--zIndex-myGames-notification);
+  cursor: pointer;
+  transition: border-color 0.4s ease;
+}
+.gameNotification:hover {
+  border-color: var(--color-support-2);
+}
+.gameNotification__content {
+  display: grid;
+  grid-template: " label label    label label label label    label " 28px " .     .        .     .     .     .        .     " 12px " .     homeLogo .     score .     awayLogo .     " 42px " .     text     text  text  text  text     .     " 18px " .     .        .     .     .     .        .     " 8px / 16px 42px 12px 120px 12px 42px 16px;
+}
+.gameNotification__label {
+  grid-area: label;
+  line-height: 16px;
+  padding: 6px 26px;
+  font-size: 13px;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: var(--color-secondary-2);
+  border-bottom: 1px solid var(--color-combination-8);
+}
+.gameNotification__score {
+  grid-area: score;
+  font-family: "FS_Numbers", "LivesportFinderLatin", sans-serif;
+  place-self: center;
+  font-size: 26px;
+  text-align: center;
+  color: var(--color-combination-2);
+  white-space: nowrap;
+}
+.gameNotification__score--bold {
+  font-weight: bold;
+}
+.gameNotification__change {
+  color: var(--color-primary);
+}
+.gameNotification__text {
+  grid-area: text;
+  align-self: center;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--color-primary);
+}
+.gameNotification__close {
+  background-image: url("data:image/svg+xml, <svg height=\"10\" viewBox=\"0 0 20 20\" width=\"10\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"m19.008 0-9.008 9.008-9.008-9.008-.992.99 9.009 9.01-9.009 9.01.992.99 9.008-9.009 9.008 9.009.992-.99-9.009-9.01 9.009-9.01z\" fill=\"%23001e28\" fill-rule=\"evenodd\"/></svg>");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  right: 0;
+  top: 0;
+}
+.theme--dark .gameNotification__close {
+  filter: brightness(10) grayscale(1);
+}
+.gameNotification__close:hover {
+  opacity: 0.6;
+}
+.gameNotification__logo {
+  border-radius: 8px;
+  border: solid 1px var(--color-support-1);
+  box-sizing: border-box;
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100% !important;
+  height: 100% !important;
+}
+.gameNotification__homeLogo {
+  grid-area: homeLogo;
+}
+.gameNotification__awayLogo {
+  grid-area: awayLogo;
+}
+
