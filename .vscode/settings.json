@@ -2,7 +2,9 @@
   "python.linting.enabled": true,
   "python.linting.pylintEnabled": true,
   "cSpell.words": [
+    "aiohttp",
     "matplotlib",
     "pyplot"
-  ]
+  ],
+  "cSpell.language": "en,pt"
 }
