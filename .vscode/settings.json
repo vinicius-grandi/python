@@ -3,6 +3,7 @@
   "python.linting.pylintEnabled": true,
   "cSpell.words": [
     "aiohttp",
+    "jojo",
     "matplotlib",
     "pyplot"
   ],
